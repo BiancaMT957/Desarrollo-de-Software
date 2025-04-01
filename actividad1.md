@@ -1,10 +1,10 @@
-# 1. Lectura y Reflexión
+# 1. 
 
-### ¿Qué es DevOps?
-DevOps es una metodología integral que busca unir los equipos de desarrollo, aseguramiento de calidad y operaciones en un proceso colaborativo continuo, con el objetivo de acortar los ciclos de entrega, mejorar la calidad y responder de manera ágil a los cambios en el entorno y en las necesidades del negocio.
+### Concepto de DevOps
+Metodología integral que busca unir los equipos de desarrollo, aseguramiento de calidad y operaciones en un proceso colaborativo continuo, con la finalidad  de acortar los ciclos de entrega, mejorar la calidad y responder de manera ágil a los cambios en el entorno y en las necesidades del negocio.
 
-### Historia y antecedentes de DevOps
-DevOps surgió como una respuesta a los modelos tradicionales de desarrollo de software, donde los equipos de desarrollo y operaciones trabajaban de manera aislada, lo que generaba ciclos largos y problemas de comunicación. Esta metodología emergió para superar los desafíos asociados con estos modelos y mejorar la colaboración, reduciendo el tiempo entre la concepción de una idea y su implementación en producción.
+###  Origenes de DevOps
+Surgió como una respuesta a los modelos tradicionales de desarrollo de software, donde los equipos de desarrollo y operaciones trabajaban de manera aislada, lo que generaba ciclos largos y problemas de comunicación. Estos metodos emergieron para superar los desafíos asociados con estos modelos y mejorar la colaboración, reduciendo el tiempo entre la concepción de una idea y su implementación para producirlos.
 
 ### Diferencias entre los equipos de desarrollo y operaciones en el pasado
 En los modelos tradicionales, los equipos de desarrollo, aseguramiento de calidad (QA) y operaciones trabajaban de forma independiente. El equipo de desarrollo diseñaba y creaba el software, el equipo de QA realizaba pruebas exhaustivas, y el equipo de operaciones se encargaba del despliegue y mantenimiento. Este enfoque generaba una división clara entre roles y causaba problemas de comunicación, lo que alargaba los ciclos de desarrollo y dificultaba la respuesta ante cambios y errores.
