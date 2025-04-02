@@ -2,23 +2,21 @@
 
 ## (a) Problemas o Limitaciones Antes de la Computación en la Nube y Cómo los Solucionó la Centralización de Servidores en Data Centers
 
-Antes del surgimiento de la computación en la nube, las organizaciones enfrentaban una serie de limitaciones y problemas al gestionar su infraestructura tecnológica:
+Antes de la aparición de la computación en la nube, las organizaciones enfrentaban diversas dificultades en la gestión de su infraestructura tecnológica:
 
-1. **Alta inversión en hardware**: Las empresas tenían que realizar grandes inversiones iniciales en servidores, redes y almacenamiento. Estos equipos requerían un mantenimiento continuo y podían volverse obsoletos rápidamente.
-   
-2. **Escalabilidad limitada**: A medida que el volumen de usuarios o la demanda de procesamiento aumentaba, las organizaciones no podían simplemente aumentar su capacidad de forma rápida y eficiente sin incurrir en elevados costos y tiempo de instalación.
+Elevados costos en hardware: Las empresas debían invertir grandes sumas en la adquisición de servidores, redes y sistemas de almacenamiento. Además, estos equipos requerían mantenimiento constante y quedaban obsoletos en poco tiempo.
 
-3. **Gestión y mantenimiento costosos**: Las empresas debían gestionar el ciclo de vida completo de sus servidores y redes, lo que requería personal especializado y mucho tiempo en tareas de administración.
+Capacidad de expansión limitada: Si la demanda de procesamiento o el número de usuarios aumentaba, las organizaciones no podían ampliar su infraestructura de manera ágil y eficiente sin incurrir en altos costos y largos tiempos de implementación.
 
-La centralización de servidores en **data centers** resolvió estos problemas al permitir que las empresas externalizaran la gestión de su infraestructura. Los proveedores de servicios en la nube centralizan recursos en centros de datos masivos, compartiendo la infraestructura entre varias organizaciones (multitenancy). Esto permite una mayor eficiencia en el uso de recursos, escalabilidad dinámica, menor costo de operación y gestión centralizada, eliminando la necesidad de que cada empresa mantenga su propia infraestructura.
+Altos gastos en gestión y mantenimiento: La administración de servidores y redes exigía personal especializado y un esfuerzo considerable para garantizar su correcto funcionamiento.
 
----
+La consolidación de servidores en centros de datos ayudó a mitigar estos problemas al permitir que las empresas delegaran la gestión de su infraestructura. Los proveedores de servicios en la nube operan grandes centros de datos donde los recursos se comparten entre múltiples organizaciones (multitenancy). Esto optimiza el uso de los recursos, facilita la escalabilidad, reduce los costos operativos y permite una administración centralizada, eliminando la necesidad de que cada empresa mantenga su propia infraestructura.
 
 ## (b) "The Power Wall" y la Influencia de los Procesadores Multi-Core en la Nube
 
-**"The Power Wall"** hace referencia a una limitación física en la computación. A medida que los procesadores aumentaban en velocidad, también lo hacía su consumo de energía y la generación de calor. Este fenómeno llevó a un punto donde no era posible seguir aumentando la frecuencia de los procesadores sin superar los límites de energía y disipación térmica.
+El término "The Power Wall" hace referencia a una barrera física en la computación. A medida que la velocidad de los procesadores aumentaba, también lo hacían su consumo energético y la generación de calor. Esto llevó a un punto crítico en el que seguir incrementando la frecuencia del procesador se volvió inviable debido a las limitaciones de energía y disipación térmica.
 
-La aparición de los **procesadores multi-core** fue clave en la evolución hacia la nube. En lugar de intentar hacer que un solo procesador fuera más rápido, los procesadores multi-core permitieron dividir el trabajo en múltiples núcleos de procesamiento, lo que mejoró el rendimiento sin aumentar significativamente el consumo de energía. Este enfoque permitió que los servidores en la nube pudieran manejar cargas de trabajo más grandes y complejas de manera más eficiente, favoreciendo la adopción de centros de datos masivos y escalables que forman la base de la computación en la nube.
+La introducción de los procesadores multi-core fue una solución clave para este problema y un factor fundamental en la evolución de la computación en la nube. En lugar de depender de un solo procesador más rápido, la arquitectura multi-core permitió distribuir las tareas entre varios núcleos de procesamiento. Esto mejoró el rendimiento sin provocar un aumento significativo en el consumo de energía. Gracias a este avance, los servidores en la nube pudieron gestionar cargas de trabajo más complejas y voluminosas de manera más eficiente, facilitando el desarrollo de centros de datos escalables que constituyen la base de la computación en la nube. 
 
 ---
 
@@ -26,13 +24,13 @@ La aparición de los **procesadores multi-core** fue clave en la evolución haci
 
 ### (a) Necesidad de Atender Grandes Volúmenes de Tráfico y la Adopción de Clústeres y Balanceadores de Carga
 
-Cuando los sitios web o aplicaciones web alcanzan una gran cantidad de usuarios o solicitudes simultáneas, un solo servidor puede no ser capaz de manejar todo el tráfico, lo que resulta en tiempos de respuesta lentos o incluso caídas del servicio. Para abordar este problema, se implementan **clústeres de servidores** y **balanceadores de carga**:
+Cuando los sitios web o aplicaciones web reciben un alto número de usuarios o solicitudes simultáneas, un solo servidor puede no ser suficiente para gestionar todo el tráfico, lo que provoca tiempos de respuesta lentos o incluso fallos en el servicio. Para solucionar este problema, se utilizan clústeres de servidores y balanceadores de carga:
 
-- **Clústeres**: Son un conjunto de servidores interconectados que trabajan juntos para ofrecer un servicio común. Cada servidor en el clúster puede manejar parte de la carga de trabajo.
-  
-- **Balanceadores de carga**: Distribuyen el tráfico de manera equitativa entre los servidores del clúster para asegurarse de que no haya un solo servidor sobrecargado, mejorando la disponibilidad y el rendimiento.
+Clústeres: Consisten en un grupo de servidores interconectados que colaboran para proporcionar un mismo servicio. Cada servidor del clúster asume una parte de la carga de trabajo, evitando que un único equipo se sobrecargue.
 
-Esta arquitectura permite que las aplicaciones escalen horizontalmente, gestionando grandes volúmenes de tráfico de manera eficiente y asegurando una alta disponibilidad.
+Balanceadores de carga: Se encargan de distribuir el tráfico de manera equitativa entre los servidores del clúster, garantizando un uso eficiente de los recursos y evitando que un servidor se sature.
+
+Gracias a esta arquitectura, las aplicaciones pueden escalar horizontalmente, manejando grandes volúmenes de tráfico de forma eficiente y asegurando una alta disponibilidad del servicio. 
 
 ---
 
@@ -48,25 +46,20 @@ Con un **balanceador de carga**, el desarrollador podría distribuir el tráfico
 
 ### (a) Definición de Elastic Computing
 
-**Elastic Computing** se refiere a la capacidad de una infraestructura de ajustarse automáticamente en función de la demanda. Esto significa que los recursos (como CPU, memoria, almacenamiento) pueden aumentar o disminuir según las necesidades de la aplicación, de forma dinámica y en tiempo real. La elasticidad permite que los sistemas se escalen hacia arriba (aumentando recursos) o hacia abajo (disminuyendo recursos) de manera eficiente.
+**Elastic Computing** es capacidad de una infraestructura de ajustarse automáticamente en función de la demanda. Esto significa que los recursos (como CPU, memoria, almacenamiento) pueden aumentar o disminuir según las necesidades de la aplicación, de forma dinámica y en tiempo real. La elasticidad permite que los sistemas se escalen hacia arriba (aumentando recursos) o hacia abajo (disminuyendo recursos) de manera eficiente.
 
 ---
 
 ### (b) La Virtualización y Su Papel en la Elasticidad en la Nube
 
-La **virtualización** es una tecnología que permite crear instancias virtuales de servidores físicos, permitiendo ejecutar múltiples **máquinas virtuales (VMs)** en una sola máquina física. Esta es una pieza clave para la elasticidad en la nube porque:
-
-- Permite crear o destruir instancias virtuales rápidamente.
-- Hace posible la asignación dinámica de recursos (como CPU y memoria) a las máquinas virtuales, adaptándolas a las necesidades del momento.
-- Facilita la migración de cargas de trabajo entre diferentes servidores físicos sin interrupciones, lo que permite escalabilidad flexible.
+La **virtualización** es una tecnología que permite crear instancias virtuales de servidores físicos, permitiendo ejecutar múltiples **máquinas virtuales (VMs)** en una sola máquina física. Esta es una pieza clave para la elasticidad en la nube porque:Permite crear o destruir instancias virtuales rápidamente.Hace posible la asignación dinámica de recursos (como CPU y memoria) a las máquinas virtuales, adaptándolas a las necesidades del momento.
+ Facilita la migración de cargas de trabajo entre diferentes servidores físicos sin interrupciones, lo que permite escalabilidad flexible.
 
 ---
 
 ### (c) Escenario de Escalabilidad Sin un Entorno Elástico
 
-Imagina que un desarrollador está creando una **aplicación web** para una campaña de marketing que tendrá picos de tráfico significativos durante un corto período de tiempo (por ejemplo, durante la duración de una oferta especial). Sin un entorno elástico, tendría que predecir y aprovisionar manualmente los recursos para manejar este tráfico adicional, lo que puede ser costoso y poco eficiente. Además, una vez que la campaña termina, los recursos adicionales quedarían infrautilizados.
-
-En un entorno **elástico**, el desarrollador podría aprovechar la computación en la nube para escalar los recursos hacia arriba durante los picos de tráfico y reducirlos cuando la demanda disminuye, optimizando costos y recursos.
+Imagina que un desarrollador está creando una **aplicación web** para una campaña de marketing que tendrá picos de tráfico significativos durante un corto período de tiempo (por ejemplo, durante la duración de una oferta especial). Sin un entorno elástico, tendría que predecir y aprovisionar manualmente los recursos para manejar este tráfico adicional, lo que puede ser costoso y poco eficiente. Además, una vez que la campaña termina, los recursos adicionales quedarían infrautilizados. En un entorno **elástico**, el desarrollador podría aprovechar la computación en la nube para escalar los recursos hacia arriba durante los picos de tráfico y reducirlos cuando la demanda disminuye, optimizando costos y recursos.
 
 ---
 
@@ -86,7 +79,7 @@ En un entorno **elástico**, el desarrollador podría aprovechar la computación
 
 ### (b) ¿Cuándo Optar por PaaS en Lugar de IaaS?
 
-Un desarrollador optaría por **PaaS** cuando no quiera gestionar la infraestructura ni preocuparse por la instalación y mantenimiento de servidores, bases de datos u otros componentes de la infraestructura. **PaaS** es ideal para aplicaciones donde el enfoque principal es el desarrollo y despliegue rápido de la aplicación, sin tener que gestionar el sistema operativo o el hardware.
+cuando no quiera gestionar la infraestructura ni preocuparse por la instalación y mantenimiento de servidores, bases de datos u otros componentes de la infraestructura. **PaaS** es ideal para aplicaciones donde el enfoque principal es el desarrollo y despliegue rápido de la aplicación, sin tener que gestionar el sistema operativo o el hardware.
 
 Por otro lado, **IaaS** es más adecuado cuando el desarrollador necesita un control más detallado sobre la infraestructura subyacente, como la configuración de servidores o redes específicas.
 
@@ -179,22 +172,28 @@ Los **"hyperscalers"** son grandes proveedores de servicios en la nube como **Am
 
 # Estrategia Multi-Cloud o Híbrida
 
-### Escenario: Empresa mediana con infraestructura distribuida entre un data center propio y un proveedor de nube pública (por ejemplo, AWS).
+Una empresa con infraestructura distribuida entre un centro de datos propio y un proveedor de nube pública busca migrar el 50% de sus cargas de trabajo a un segundo proveedor para evitar la dependencia de uno solo y mejorar la resiliencia.
 
-### Estrategia para Migrar el 50% de las Cargas de Trabajo a un Segundo Proveedor de Nube:
-**Objetivo**: Diversificar la infraestructura para evitar depender de un solo proveedor de nube (evitar el "provider lock-in") y aumentar la resiliencia.
+Estrategia de Migración
+Base de Datos: Se mantiene la alta disponibilidad mediante replicación entre proveedores (ej. AWS RDS → Azure SQL).
 
-- **Base de Datos**: La base de datos debe permanecer en un entorno que asegure la consistencia y disponibilidad. Para mantener la alta disponibilidad, la base de datos podría ser distribuida entre ambos proveedores. Esto implicaría:
-    - **Sincronización entre bases de datos**: Usar herramientas de replicación entre los dos proveedores, como AWS RDS replicado a Azure SQL Database o un servicio de base de datos autónoma multi-región.
+Red y Conectividad: Se configuran VPNs y redes privadas virtuales (VPC) para asegurar la comunicación entre los entornos.
 
-- **Red y Conectividad**:
-    - Configurar VPNs o Conexiones Directas entre el data center privado y ambos proveedores de nube.
-    - Utilizar redes privadas virtuales (VPC) para gestionar la conectividad entre los recursos en la nube y los on-premises.
+Plan de Contingencia: Implementación de failover y monitoreo con herramientas como Prometheus y Grafana para detectar fallos y reaccionar rápidamente.
 
-- **Plan de Contingencia**:
-    - **Failover**: Si un proveedor de nube falla, se puede configurar un plan de recuperación ante desastres (DR). Las aplicaciones críticas podrían tener replicas en el segundo proveedor, y las cargas de trabajo podrían ser migradas dinámicamente usando herramientas de automatización.
-    - **Monitoreo**: Utilizar herramientas como Prometheus y Grafana para monitorear la infraestructura en ambos proveedores y activar alertas en caso de fallos.
+Comparativa de Costos y Tipos de Nube
+Tipo de Nube	Ventajas	Desventajas
+Nube Pública	Bajo costo inicial, escalabilidad, sin mantenimiento de hardware	Dependencia del proveedor, preocupaciones de seguridad
+Nube Privada	Control total, mayor seguridad, cumplimiento de regulaciones	Altos costos iniciales, mantenimiento constante
+Nube Híbrida	Flexibilidad, resiliencia	Mayor complejidad y costos de integración
+Multi-Cloud	Reducción de dependencia, optimización de costos	Complejidad en la gestión e integración
+Costos: CAPEX vs OPEX
+CAPEX: Inversión en hardware, mayor costo inicial pero amortizable.
 
+OPEX: Pago por uso en la nube, más flexible pero con costos operativos a largo plazo.
+
+Conclusión
+Las estrategias basadas en nube pública o multi-cloud permiten mayor flexibilidad y menor inversión inicial, aunque pueden generar costos operativos elevados. La nube privada es más costosa al principio pero ideal para organizaciones con requisitos estrictos de seguridad y control.
 ---
 
 # Debate sobre Costos: Comparativa de Nubes
