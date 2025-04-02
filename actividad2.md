@@ -1,34 +1,32 @@
 ## 1. Definición de IaC y su cambio de paradigma frente a la configuración manual
 
-Infraestructura como Código (IaC) es un enfoque que permite gestionar la infraestructura mediante archivos de configuración en lugar de realizar configuraciones manuales a través de interfaces gráficas o herramientas de administración tradicionales. Este enfoque describe el estado deseado de la infraestructura utilizando un lenguaje declarativo o imperativo, lo que facilita la creación, modificación y administración de recursos de manera automática.
+Infraestructura como Código (IaC) es un enfoque que permite gestionar la infraestructura usando archivos de configuración en vez de realizar configuraciones manuales a través de interfaces gráficas o herramientas de administración tradicionales. Este enfoque describe el estado deseado de la infraestructura utilizando un lenguaje declarativo o imperativo, lo que facilita la creación, modificación y administración de recursos de manera automática.
 
 ### Cambio de paradigma
 
-La diferencia principal entre IaC y la configuración manual es que en IaC la infraestructura se gestiona como código, permitiendo la automatización completa del ciclo de vida de los recursos. Esto no solo mejora la eficiencia, sino que reduce significativamente los errores humanos, ya que las configuraciones y cambios se pueden revisar, versionar y auditar a través de herramientas de control de versiones como Git.
+La diferencia principal entre IaC y la configuración manual es que en IaC la infraestructura se gestiona como código, permitiendo la automatización completa del ciclo de vida de los recursos. Esto reduce significativamente los errores humanos, ya que las configuraciones y cambios se pueden revisar, versionar y auditar a través de herramientas de control de versiones como Git.
 
----
-
-## 2. Beneficios de IaC
+### Beneficios de IaC
 
 - **Consistencia en la configuración**: La infraestructura definida como código puede aplicarse de manera consistente en diferentes entornos (desarrollo, prueba, producción) sin la posibilidad de diferencias manuales.
 - **Control de versiones**: Los archivos de configuración son versionados, lo que permite hacer un seguimiento de los cambios, revertir configuraciones erróneas y mantener un historial completo de la infraestructura.
 - **Automatización**: La infraestructura se aprovisiona, configura y gestiona automáticamente sin intervención manual. Esto optimiza el tiempo y esfuerzo de los equipos de TI.
 - **Reducción de errores humanos**: Al evitar configuraciones manuales, el riesgo de cometer errores en el proceso de configuración se reduce considerablemente, ya que todo el proceso está automatizado y auditado.
 
----
 
-## 3. Herramientas populares para IaC
+
+## 2. Herramientas populares para IaC
 
 Algunas de las herramientas más populares para implementar IaC son:
 
-- **Terraform**: Usada ampliamente en múltiples proveedores de nube como AWS, Azure y Google Cloud. Utiliza el HashiCorp Configuration Language (HCL) para definir y gestionar la infraestructura.
-- **Ansible**: Aunque es más conocida por la automatización de configuraciones y aplicaciones, Ansible también permite definir la infraestructura como código. Utiliza YAML para describir las tareas a realizar.
+- **Terraform**: Utilizada para  múltiples proveedores de nube como AWS, Azure y Google Cloud. Utiliza el HashiCorp Configuration Language (HCL) para definir y gestionar la infraestructura.
+- **Ansible**: Ansible npermite definir la infraestructura como código. Utiliza YAML para las describir tareas.
 - **Pulumi**: Permite escribir IaC utilizando lenguajes de programación modernos como JavaScript, TypeScript, Python y Go.
 - **AWS CloudFormation**: Específica para AWS, permite definir recursos de infraestructura en la nube utilizando archivos en JSON o YAML.
 
----
 
-## 4. Buenas prácticas en la escritura de IaC
+
+##  Buenas prácticas en la escritura de IaC
 
 - **Nombres claros de recursos**: Utilizar nombres descriptivos y consistentes para los recursos ayuda a identificar rápidamente su propósito y facilita la gestión en entornos grandes.
 - **Uso de variables**: Las variables permiten reutilizar configuraciones de manera eficiente y hacer que los recursos sean más dinámicos y personalizables según el entorno.
@@ -37,11 +35,11 @@ Algunas de las herramientas más populares para implementar IaC son:
 
 ---
 
-## 5. Patrones para módulos en IaC
+## 3. Patrones para módulos en IaC
 
 ### Modularización
 
-Separar los recursos en módulos lógicos facilita la reutilización y la gestión. Por ejemplo, un módulo para configurar redes, otro para definir bases de datos y otro para gestionar servidores de aplicaciones. Cada módulo puede ser independiente y gestionado de manera aislada, permitiendo su reutilización en diferentes proyectos.
+Ayuda a la reutiliacion y la gestión. Por ejemplo, un módulo para configurar redes, otro para definir bases de datos y otro para gestionar servidores de aplicaciones.Los modulos pueden ser independientes y ggestionados de diferente manera, permitiendo su reutilización en diferentes proyectos.
 
 ### Estructura
 
@@ -61,7 +59,7 @@ Una estructura de módulos típica en IaC podría organizarse de la siguiente ma
 │       ├── main.tf
 │       ├── variables.tf
 │       └── outputs.tf
-├── main.tf
+├──main.tf
 ├── variables.tf
 └── outputs.tf
 ```
@@ -70,7 +68,7 @@ Aquí, cada módulo tiene su propio conjunto de archivos que describen los recur
 
 ---
 
-## 6. Patrones para dependencias en IaC
+## 4. Patrones para dependencias en IaC
 
 ### Gestión de dependencias
 
@@ -93,14 +91,15 @@ module "application" {
 
 En este ejemplo, el módulo de base de datos genera un `output` con la contraseña y este valor se pasa como `input` al módulo de la aplicación.
 
-# Terraform 
+
+
+# Tarea teorica 1
+## Terraform 
 
 Terraform es una herramienta que permite a los usuarios gestionar infraestructura de un proyecto mediante archivos de configuración. Para organizar mejor los proyectos, Terraform usa módulos, los cuales agrupan
 archivos de configuración relacionados para facilitar su reutilización y mantenimiento.
 Un modulo consiste de una colección de archivos .tf y/o .tf.json que se mantienen juntas en un directorio.
 Toda configuración de Terraform tiene al menos un módulo, cono cido como el modulo raíz que consiste en los recursos definidos en los archivos .tf en el directorio de trabajo principal 
-
-# Tarea teorica 1
 -  **main.tf**:  Define los recursos principales del módulo.
 -  **variables.tf**: Contiene los parámetros de entrada
 -  **outputs.tf**: Define las salidas del módulo
@@ -149,11 +148,6 @@ Los contenedores son unidades de software que empaquetan una aplicación y sus d
 - **Máquinas virtuales (VMs):** Virtualizan un sistema operativo completo y requieren una cantidad significativa de recursos (memoria y CPU).
 - **Contenedores:** Solo virtualizan el espacio de usuario y comparten el núcleo del sistema operativo subyacente, lo que los hace más ligeros y eficientes.
 
-### Beneficios de los contenedores:
-
-- **Aislamiento de procesos:** Los contenedores pueden ejecutarse de forma independiente sin interferir entre sí.
-- **Ligereza:** No necesitan un sistema operativo completo y comparten recursos con el sistema host, optimizando el uso de recursos.
-
 ## Dockerfile
 
 Un `Dockerfile` es un archivo de texto que contiene las instrucciones para construir una imagen de Docker. Estas instrucciones definen qué sistema operativo base usar, qué dependencias instalar, cómo configurar la aplicación y cómo ejecutar el contenedor.
@@ -189,8 +183,6 @@ CMD ["python3", "app.py"]
 
 ### Introducción a Kubernetes
 
-Kubernetes es una plataforma de orquestación de contenedores que automatiza el despliegue, la escalabilidad y la gestión de aplicaciones en contenedores.
-
 ### Componentes principales de Kubernetes:
 
 - **Pods:** Unidad más pequeña de despliegue en Kubernetes.
@@ -223,6 +215,8 @@ spec:
           ports:
             - containerPort: 80
 ```
+### Docker y Kubernetes se integran en pipelines de despliegue continuo (CD) para automatizar la creación, configuración, escalado, y gestión de aplicaciones. 
+ 
 # Tarea teorica 2
 -**El desarrollador sube el código a GitHub**
 
