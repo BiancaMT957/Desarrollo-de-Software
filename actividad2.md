@@ -100,11 +100,11 @@ Un modulo consiste de una colección de archivos .tf y/o .tf.json que se mantien
 Toda configuración de Terraform tiene al menos un módulo, cono cido como el modulo raíz que consiste en los recursos definidos en los archivos .tf en el directorio de trabajo principal 
 
 # Tarea teorica 1
--**main.tf:** Define los recursos principales del módulo.
--**variables.tf:** Contiene los parámetros de entrada
--**outputs.tf:** Define las salidas del módulo
--**providers.tf** (opcional): Declara los proveedores de nube o infraestructura usados.
--**terraform.tfvars** (opcional): Permite definir valores por defecto para las variables. 
+-  **main.tf**:  Define los recursos principales del módulo.
+-  **variables.tf**: Contiene los parámetros de entrada
+-  **outputs.tf**: Define las salidas del módulo
+-  **providers.tf**: (opcional): Declara los proveedores de nube o infraestructura usados.
+-  **terraform.tfvars**: (opcional): Permite definir valores por defecto para las variables. 
 
 project-terraform/
 ├── modules/
