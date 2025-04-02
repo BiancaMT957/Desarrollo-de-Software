@@ -92,57 +92,52 @@ module "application" {
 ```
 
 En este ejemplo, el módulo de base de datos genera un `output` con la contraseña y este valor se pasa como `input` al módulo de la aplicación.
-# Infraestructura como Código (IaC) con Terraform
 
-## Investigación sobre cómo organiza Terraform sus módulos
+# Terraform 
+Terraform es una herramienta que permite a los usuarios gestionar infraestructura de un proyecto mediante archivos de configuración. Para organizar mejor los proyectos, Terraform usa módulos, los cuales agrupan
+archivos de configuración relacionados para facilitar su reutilización y mantenimiento.
+Un modulo consiste de una colección de archivos .tf y/o .tf.json que se mantienen juntas en un directorio.
+Toda configuración de Terraform tiene al menos un módulo, cono cido como el modulo raíz que consiste en los recursos definidos en los archivos .tf en el directorio de trabajo principal 
 
-Terraform es una herramienta de infraestructura como código que permite a los usuarios definir y aprovisionar infraestructura a través de archivos de configuración. Terraform organiza su infraestructura en módulos, que son conjuntos de archivos de configuración de Terraform que definen recursos relacionados que se pueden reutilizar.
+# Tarea teorica 1
+-**main.tf:** Define los recursos principales del módulo.
+-**variables.tf:** Contiene los parámetros de entrada
+-**outputs.tf:** Define las salidas del módulo
+-**providers.tf** (opcional): Declara los proveedores de nube o infraestructura usados.
+-**terraform.tfvars** (opcional): Permite definir valores por defecto para las variables. 
 
-Los módulos en Terraform ayudan a organizar y estructurar proyectos complejos de manera que se puedan reutilizar y mantener con facilidad. Un módulo en Terraform puede ser tan simple como un único archivo `.tf` o tan complejo como un conjunto de carpetas y archivos que estructuran el proyecto en bloques lógicos.
-
-### Terraform tiene dos tipos principales de módulos:
-
-- **Módulos raíz:** Son los archivos `.tf` en el directorio principal de un proyecto. Este módulo se llama implícitamente y se refiere a la infraestructura del proyecto.
-- **Módulos reutilizables:** Son módulos que pueden almacenarse en una carpeta separada y ser reutilizados en diferentes partes de la infraestructura.
-
-## Propuesta de estructura de archivos y directorios para un proyecto con tres módulos: `network`, `database` y `application`
-
-Para un proyecto que incluya tres módulos `network`, `database` y `application`, la estructura de archivos y directorios de Terraform podría ser la siguiente:
-
-```bash
-project/
-├── main.tf                # Archivo principal que organiza los módulos y los recursos principales.
-├── variables.tf           # Variables globales que se pueden reutilizar en todo el proyecto.
-├── outputs.tf             # Variables de salida globales (por ejemplo, IP pública, nombre de la base de datos).
+project-terraform/
 ├── modules/
-│   ├── network/           # Módulo para gestionar la red (VPC, subredes, etc.)
-│   │   ├── main.tf        # Definición de recursos de red (subredes, VPC, etc.)
-│   │   ├── variables.tf   # Variables específicas del módulo de red.
-│   │   ├── outputs.tf     # Salidas del módulo de red (por ejemplo, CIDR de la VPC, direcciones IP).
-│   ├── database/          # Módulo para gestionar la base de datos (RDS, configuraciones de acceso).
-│   │   ├── main.tf        # Definición de recursos de base de datos.
-│   │   ├── variables.tf   # Variables específicas del módulo de base de datos.
-│   │   ├── outputs.tf     # Salidas del módulo de base de datos.
-│   └── application/       # Módulo para gestionar la aplicación (EC2, aplicaciones, etc.).
-│       ├── main.tf        # Definición de recursos para la aplicación (servidores, balanceadores).
-│       ├── variables.tf   # Variables específicas del módulo de la aplicación.
-│       ├── outputs.tf     # Salidas del módulo de la aplicación.
-```
-
-### Justificación de la jerarquía elegida
-
-- **`main.tf`**: Organiza los módulos y puede llamar a los módulos `network`, `database` y `application`. Este archivo actúa como el punto de entrada principal para la configuración de la infraestructura.
-- **`variables.tf`**: Define las variables globales que se pueden utilizar en todo el proyecto. Al centralizar las variables, se facilita la reutilización y la flexibilidad en la infraestructura.
-- **`outputs.tf`**: Define las salidas globales del proyecto, lo que permite acceder fácilmente a los recursos creados, como la dirección IP pública de la aplicación.
-- **`modules/`**: Cada módulo es independiente, lo que facilita su reutilización y mantenimiento. Los módulos están organizados por su función, de forma que cada uno contiene los archivos necesarios para gestionar un recurso específico.
-
-La modularización permite un enfoque más organizado y escalable, facilitando la reutilización de la infraestructura y la colaboración entre equipos.
-
----
-
-# Contenerización y Despliegue de Aplicaciones Modernas
-
-## Contenerización de una aplicación con Docker
+│   ├── network/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   │   ├── provider.tf
+│   ├── database/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   │   ├── provider.tf
+│   ├── application/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   │   ├── provider.tf
+├── environments/
+│   ├── dev/
+│   │   ├── main.tf
+│   │   ├── terraform.tfvars
+│   ├── prod/
+│   │   ├── main.tf
+│   │   ├── terraform.tfvars
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── provider.tf
+├── terraform.tfvars
+├── .gitignore
+├── README.md
+ 
 
 ### ¿Qué son los contenedores?
 
@@ -227,106 +222,22 @@ spec:
           ports:
             - containerPort: 80
 ```
+# Tarea teorica 2
+-**El desarrollador sube el código a GitHub**
+
+-**Jenkins detecta el commit utilizando un webhook**
+
+-**La imagen es construida y enviada al Docker Hub después de las pruebas**
+
+-**Jenkins despliega la aplicación en el clúster de Kubernetes**
 
 ### Estrategias de implementación en Kubernetes:
 
-- **Actualizaciones continuas:** Sin tiempo de inactividad.
-- **Lanzamientos Canary:** Se prueba una nueva versión con un subconjunto de usuarios.
-- **Implementaciones azul-verde:** Dos versiones coexisten y el tráfico se redirige a la nueva versión una vez lista.
-
-## **Flujo Simple de Implementación en Kubernetes**
-
-Un flujo típico de implementación de código en un entorno basado en **Docker** y **Kubernetes** sigue estos pasos:
-
-### **1. Desarrollador realiza un cambio en el código**  
-- El desarrollador modifica el código en su entorno local y lo sube a un repositorio Git (por ejemplo, GitHub, GitLab o Bitbucket).
-- Se crea un **pull request (PR)** y se revisan los cambios antes de fusionarlos a la rama principal.
-
-### **2. Construcción de una nueva imagen Docker**  
-- Un pipeline de **CI/CD (por ejemplo, GitHub Actions, GitLab CI/CD, Jenkins, ArgoCD)** detecta los cambios y ejecuta los siguientes pasos:
-  - Descarga el código actualizado.
-  - Construye una nueva imagen Docker con el comando:
-    ```sh
-    docker build -t myapp:v2 .
-    ```
-  - Etiqueta la imagen y la sube a un **registro de contenedores** (Docker Hub, Amazon ECR, Google Container Registry, etc.):
-    ```sh
-    docker push myregistry/myapp:v2
-    ```
-
-### **3. Actualización del Deployment en Kubernetes**  
-- Se actualiza el manifiesto de Kubernetes (`deployment.yaml`) con la nueva imagen:
-  ```yaml
-  apiVersion: apps/v1
-  kind: Deployment
-  metadata:
-    name: myapp
-  spec:
-    replicas: 3
-    selector:
-      matchLabels:
-        app: myapp
-    template:
-      metadata:
-        labels:
-          app: myapp
-      spec:
-        containers:
-          - name: myapp
-            image: myregistry/myapp:v2
-            ports:
-              - containerPort: 80
-  ```
-- Se aplica el cambio en Kubernetes:
-  ```sh
-  kubectl apply -f deployment.yaml
-  ```
-- Kubernetes realiza una **actualización continua (Rolling Update)**, reemplazando los pods con la versión antigua por nuevos pods con la nueva imagen.
-
-### **4. Verificación y monitoreo**  
-- Se supervisa el despliegue para asegurarse de que los nuevos pods están en funcionamiento:
-  ```sh
-  kubectl get pods
-  ```
-- Se revisan los logs para detectar posibles errores:
-  ```sh
-  kubectl logs -f myapp-pod-name
-  ```
-- Si algo falla, se puede hacer un rollback a la versión anterior:
-  ```sh
-  kubectl rollout undo deployment myapp
-  ```
-
----
 
 ## **Ventajas de Kubernetes para Escalar en un Evento de Alto Tráfico**
-
-### **1. Autoescalado basado en demanda**  
-- Kubernetes permite **autoescalar** el número de pods en función del tráfico o el consumo de recursos.  
-- Con el **Horizontal Pod Autoscaler (HPA)**, Kubernetes ajusta automáticamente la cantidad de réplicas según la carga:
-  ```sh
-  kubectl autoscale deployment myapp --cpu-percent=50 --min=3 --max=10
-  ```
-- Así, si el tráfico aumenta, Kubernetes crea más instancias de la aplicación para manejar las solicitudes sin intervención manual.
-
-### **2. Balanceo de carga**  
-- Kubernetes distribuye las solicitudes entre los diferentes pods con un **Service de tipo LoadBalancer** o **Ingress Controller**, evitando la sobrecarga de un solo servidor.
-
-### **3. Orquestación eficiente de contenedores**  
-- Kubernetes programa y reasigna contenedores en nodos disponibles, optimizando los recursos y asegurando alta disponibilidad.
-
-### **4. Escalabilidad vertical y horizontal**  
-- Si un evento de alto tráfico requiere más capacidad, Kubernetes puede:
-  - **Agregar más réplicas de pods (escalado horizontal).**
-  - **Aumentar los recursos de CPU/RAM asignados a los pods (escalado vertical).**
-
-### **5. Recuperación automática (Self-healing)**  
-- Si un pod falla debido a la alta demanda, Kubernetes lo reinicia automáticamente o lo reemplaza en otro nodo disponible.
-
-### **6. Optimización de costos**  
-- En un entorno en la nube, Kubernetes puede reducir costos escalando hacia arriba solo cuando es necesario y reduciendo recursos cuando el tráfico disminuye.
-
----
+Kubernetes posee una característica importante llamada autoescalado. Este permite que las apicaciones se ajusten automáticamente a los cambios den la demanda eficientemente. Para esto, se emplea el escalado horizontal de pods (HPA). Este es un mecanismo que ajusta  automáticamente la cantidad de copias de los Pods en función al uso de la CPU u otras métricas.
+Esto es útil ya que maneja picos de tráfico sin que la aplicación caiga, evita problemas de hardware distribuyendo la carga y también se adapta a las interrupciones de red asegurando que la aplicación siempre
+esté disponible.
 
 ### **Ejemplo práctico**  
 Durante el **Black Friday**, una tienda online experimenta un aumento en la demanda. Kubernetes:
@@ -336,177 +247,41 @@ Durante el **Black Friday**, una tienda online experimenta un aumento en la dema
 4. **Reduce los recursos** después del evento para ahorrar costos.
 
 ✅ **Resultado**: La aplicación maneja el pico de tráfico sin interrupciones y sin intervención manual. 🚀
-  # Integración de Prometheus y Grafana con Kubernetes para monitoreo
+  # Tarea teorica 3
+  ## INTEGRACION DE PROMETHEUS Y GRAFANA CON KUBERNETES PARA EL MONITOREO DE CONTENEDORES Y CLUSTERES
+Prometheus es un sistema de monitoreo y alerta de código abierto. Se integra con Kubernetes para extraer datos sobre el rendimiento de los nodos, pods y contenedores. Utiliza lo que se conoce como pull para consultar periodicamente las metricas de los servicios mediante su lenguaje PromQL. Grafana se utiliza para representar gráficamente las métricas recolectadas por Prometheus. Necesitamos un servidor de 1. Grafana, corriendo 
+1. **Necesitamos un servidor de  Grafana, corriendo**
+2. **Necesitamos que en el mismo servidor donde se encuentre
+Grafana haya un servidor de Prometheus corriendo como
+servicio de Linux**
+3. **Necesitamos que haya un servidor Prometheus en cada uno de los clusters de Kubernetes**
 
-Prometheus y Grafana son herramientas populares utilizadas para monitorear y visualizar métricas de aplicaciones y sistemas. Su integración con Kubernetes permite monitorear contenedores y clusters, proporcionando visibilidad completa del estado de la infraestructura.
-
-## Prometheus
-
-Prometheus es una herramienta de monitoreo de código abierto diseñada para recopilar métricas de aplicaciones y sistemas, almacenarlas de manera eficiente y proporcionar alertas en tiempo real. Su funcionamiento en un entorno Kubernetes incluye varios pasos clave:
-
-### Scraping de métricas
-Prometheus se configura para recolectar métricas de diferentes fuentes, como aplicaciones, bases de datos y otros servicios. En Kubernetes, Prometheus generalmente se implementa como un pod o deployment que usa un servicio de descubrimiento dinámico para encontrar las direcciones de las aplicaciones y nodos.
-
-### Kubernetes discovery
-Prometheus utiliza la API de Kubernetes para descubrir dinámicamente los servicios y contenedores en el clúster. Esto incluye Pods, nodos y servicios, lo que le permite hacer scraping de métricas sin intervención manual.
-
-### Recolección de métricas de contenedores
-Prometheus recolecta métricas de contenedores a través de los exportadores. Algunos ejemplos son:
-
-- **cAdvisor**: para recolectar métricas sobre los contenedores (uso de CPU, memoria, etc.).
-- **Node Exporter**: para monitorear métricas de los nodos, como uso de CPU, memoria y espacio en disco.
-- **Kube-state-metrics**: para obtener métricas del estado de los recursos de Kubernetes como Pods, Deployments, Services, etc.
-
-### Alertas y reglas
-Prometheus también se puede configurar para generar alertas basadas en las métricas que recolecta. Las alertas se pueden definir en un archivo de configuración usando **PromQL** (Prometheus Query Language) y se integran con **Alertmanager** para la gestión de notificaciones.
-
-## Grafana
-
-Grafana es una plataforma de visualización de métricas que se utiliza para crear paneles de control (dashboards) interactivos. Se integra con Prometheus para visualizar las métricas recopiladas.
-
-### Conexión con Prometheus
-Grafana se configura para usar Prometheus como fuente de datos. Una vez configurado, Grafana puede consultar Prometheus utilizando PromQL y mostrar los resultados en gráficos y tablas.
-
-### Dashboards
-Grafana permite crear dashboards personalizados que visualizan diferentes métricas y alertas en tiempo real. Existen dashboards predefinidos disponibles en la **Grafana Dashboard Repository**, o puedes crear los tuyos propios.
-
-### Alertas en Grafana
-Grafana también puede gestionar alertas basadas en las métricas de Prometheus y enviar notificaciones a través de canales como Slack o correo electrónico.
-
----
-
-## Propuesta de métricas y alertas mínimas para una aplicación web
+## SET DE METRICAS Y ALERTAS MÍNIMAS PARA UNA APLICACION WEB
 
 Para una aplicación web, el monitoreo debe centrarse en métricas clave que permitan detectar problemas de rendimiento, disponibilidad y estabilidad.
 
 ### **Métricas mínimas para monitorear**
 
 #### **Latencia de peticiones**
-- **Métrica**: Latencia promedio de las solicitudes HTTP (en milisegundos).
-- **PromQL**:
-  ```promql
-  http_request_duration_seconds_sum / http_request_duration_seconds_count
-  ```
-
-#### **Tasa de errores (Error Rate)**
-- **Métrica**: Tasa de respuestas con código de error (4xx, 5xx).
-- **PromQL**:
-  ```promql
-  sum(rate(http_requests_total{status=~"4..|5.."}[1m])) / sum(rate(http_requests_total[1m]))
-  ```
+- Medirlas en ms y establecer una alerta en el caso de se supere N ms en un intervalo determinado de tiempo.
 
 #### **Uso de CPU**
-- **Métrica**: Porcentaje de uso de CPU de los contenedores de la aplicación.
-- **PromQL**:
-  ```promql
-  avg(rate(container_cpu_usage_seconds_total{container_name!="", pod_name=~"app-.*"}[5m])) by (pod_name)
-  ```
+ - El porcentaje de CPU utilizado en cada nodo o pod y establecer una alerta si el uso supera cierto porcentaje.
 
 #### **Uso de memoria**
-- **Métrica**: Memoria utilizada por los contenedores de la aplicación.
-- **PromQL**:
-  ```promql
-  avg(container_memory_usage_bytes{container_name!="", pod_name=~"app-.*"}) by (pod_name)
-  ```
+ - Medir cuanta memoria se usa respecto a la memoria que no se usa y establecer una alerta en el caso de  que se use mas de la que no se use.
 
-#### **Tasa de solicitudes**
-- **Métrica**: Número total de solicitudes HTTP recibidas por la aplicación.
-- **PromQL**:
-  ```promql
-  sum(rate(http_requests_total{method="GET", status="200"}[5m])) by (pod_name)
-  ```
+#### **Tiempo de respuesta de la base de datos**
+- Tiempo de respuesta en consultas muy importantes y establecer una alerta en el caso de que se supere el umbral de tiempo.
 
-#### **Disponibilidad del servicio**
-- **Métrica**: Estado del pod (si está en estado "Running" o no).
-- **PromQL**:
-  ```promql
-  kube_pod_status_phase{phase="Running"}
-  ```
-
----
-
-### **Alertas mínimas para la aplicación web**
-
-#### **Alerta por alta latencia**
-- **Condición**: Si la latencia promedio de las solicitudes HTTP excede un umbral (por ejemplo, 200 ms).
-- **PromQL**:
-  ```promql
-  http_request_duration_seconds_sum / http_request_duration_seconds_count > 0.2
-  ```
-
-#### **Alerta por alta tasa de errores (4xx o 5xx)**
-- **Condición**: Si la tasa de errores supera un umbral (por ejemplo, 5% de todas las solicitudes).
-- **PromQL**:
-  ```promql
-  sum(rate(http_requests_total{status=~"4..|5.."}[1m])) / sum(rate(http_requests_total[1m])) > 0.05
-  ```
-
-#### **Alerta por uso elevado de CPU**
-- **Condición**: Si el uso de CPU supera un umbral (por ejemplo, 90% durante 5 minutos).
-- **PromQL**:
-  ```promql
-  avg(rate(container_cpu_usage_seconds_total{container_name!="", pod_name=~"app-.*"}[5m])) by (pod_name) > 0.9
-  ```
-
-#### **Alerta por uso elevado de memoria**
-- **Condición**: Si el uso de memoria supera un umbral crítico (por ejemplo, 90% de la memoria disponible).
-- **PromQL**:
-  ```promql
-  avg(container_memory_usage_bytes{container_name!="", pod_name=~"app-.*"}) by (pod_name) > 0.9 * container_spec_memory_limit_bytes
-  ```
-
-#### **Alerta por caída de un pod**
-- **Condición**: Si un pod no está en estado "Running" (por ejemplo, si está en "CrashLoopBackOff").
-- **PromQL**:
-  ```promql
-  kube_pod_status_phase{phase!="Running", pod_name=~"app-.*"}
-  
- # Tarea Teórica
+ # Tarea Teórica 4
 
 ## Diferencia entre Entrega Continua (*Continuous Delivery*) y Despliegue Continuo (*Continuous Deployment*)
+La entrega continua (CD) cierra el ciclo mediante la automatización de aspectos de la entrega de  software. A medida que se abordan los comentarios y se implementan correcciones, estos cambios  se cargan automáticamente hasta que el equipo tome la decisión de enviar la aplicación a producción. La CD da lugar a un producto que se puede desplegar, pero depende de la autorización 
+humana para implantarlo, lo que permite a los equipos decidir qué se debe lanzar y cuándo. Los desarrolladores pueden seguir perfeccionando la aplicación antes de entregarla al usuario final. El despliegue continuo es similar a la entrega continua. La principal diferencia con el despliegue continuo es que, en lugar de requerir una autorización humana para lanzar un producto, el despliegue continuo envía cada cambio de forma automatizada, que luego se envía inmediatamente a producción. No se espera un ciclo de aprobación manual, lo que significa que el código en sí mismo debe haberse probado lo suficiente antes de pasar a producción. 
 
-### **1. Entrega Continua (*Continuous Delivery*)**
-La **entrega continua** es una práctica de desarrollo en la que los cambios en el código son automáticamente probados y preparados para su lanzamiento a producción. Sin embargo, el despliegue en producción **no es automático**; requiere una aprobación manual antes de que la nueva versión del software sea publicada.
+## ¿POR QUÉ ES IMPORTANTE IMPLEMENTAR PRUEBAS AUTOMÁTICAS (UNITARIAS, DE INTEGRACIÓN, DE SEGURIDAD) DENTRO DEL PIPELINE?
 
-**Características principales:**
-- Se garantiza que el código siempre esté en un estado desplegable.
-- Se automatizan las pruebas y la generación de artefactos listos para producción.
-- El equipo puede decidir cuándo y cómo hacer el despliegue en producción.
-
-📌 **Ejemplo:** Un equipo de desarrollo configura un pipeline CI/CD que ejecuta pruebas y construye una nueva versión del software, pero un ingeniero de DevOps debe aprobar manualmente el despliegue en producción.
-
----
-
-### **2. Despliegue Continuo (*Continuous Deployment*)**
-El **despliegue continuo** lleva la entrega continua un paso más allá al automatizar completamente el proceso de despliegue. En este caso, cada cambio en el código que pasa las pruebas **se despliega automáticamente en producción**, sin intervención manual.
-
-**Características principales:**
-- Requiere una estrategia robusta de pruebas automáticas para minimizar riesgos.
-- Reduce el tiempo de entrega de nuevas funcionalidades a los usuarios finales.
-- Aumenta la frecuencia de despliegues en producción.
-
-📌 **Ejemplo:** Cada vez que un desarrollador fusiona (*merge*) cambios en la rama principal, un pipeline automatizado ejecuta pruebas, genera una nueva versión y la despliega directamente en producción sin intervención manual.
-
----
-
-## Importancia de las Pruebas Automáticas en el Pipeline
-
-Implementar pruebas automáticas dentro del pipeline de CI/CD es fundamental para garantizar la calidad del software y evitar errores en producción. Existen varios tipos de pruebas que deben incluirse:
-
-### **1. Pruebas Unitarias**
-- **Objetivo**: Validar que cada unidad de código (*función, módulo o clase*) funciona correctamente de manera aislada.
-- **Beneficio**: Detectar errores en etapas tempranas y garantizar que las funciones individuales operen según lo esperado.
-- **Ejemplo**: Probar que una función que suma dos números devuelva el resultado correcto.
-
-### **2. Pruebas de Integración**
-- **Objetivo**: Evaluar cómo interactúan entre sí los diferentes módulos o servicios de la aplicación.
-- **Beneficio**: Detectar fallos en la comunicación entre componentes y evitar problemas de integración antes del despliegue.
-- **Ejemplo**: Verificar que el backend pueda comunicarse correctamente con la base de datos.
-
-### **3. Pruebas de Seguridad**
-- **Objetivo**: Identificar vulnerabilidades en el código antes de que lleguen a producción.
-- **Beneficio**: Prevenir ataques como inyección SQL, XSS (*Cross-Site Scripting*), fugas de datos o accesos no autorizados.
-- **Ejemplo**: Ejecutar escaneos de seguridad automatizados con herramientas como OWASP ZAP o SonarQube.
-
-📌 **Conclusión**: Implementar pruebas automáticas en el pipeline **reduce riesgos, mejora la estabilidad del software y acelera los tiempos de entrega** en entornos de entrega y despliegue continuo.
+Porque aumentan la confiabilidad, consistencia y efciencia tanto del equipo como del producto final. Ayuda a ahorrar tiempo para que el equipo pueda centrarse en otras tareas. Además, reduce la
+posibilidad de que ocurran errores humana. La automatizacion de pruebas tambien ofrece flexibilidad, ya que los equipos de desarrollo puede reutilizar sus scripts de prueba para cualquier conjunto de pruebas relacionado.
 
