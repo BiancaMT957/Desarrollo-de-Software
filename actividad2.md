@@ -94,6 +94,7 @@ module "application" {
 En este ejemplo, el módulo de base de datos genera un `output` con la contraseña y este valor se pasa como `input` al módulo de la aplicación.
 
 # Terraform 
+
 Terraform es una herramienta que permite a los usuarios gestionar infraestructura de un proyecto mediante archivos de configuración. Para organizar mejor los proyectos, Terraform usa módulos, los cuales agrupan
 archivos de configuración relacionados para facilitar su reutilización y mantenimiento.
 Un modulo consiste de una colección de archivos .tf y/o .tf.json que se mantienen juntas en un directorio.
