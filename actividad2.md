@@ -278,5 +278,23 @@ humana para implantarlo, lo que permite a los equipos decidir qué se debe lanza
 ## ¿POR QUÉ ES IMPORTANTE IMPLEMENTAR PRUEBAS AUTOMÁTICAS (UNITARIAS, DE INTEGRACIÓN, DE SEGURIDAD) DENTRO DEL PIPELINE?
 
 Porque aumentan la confiabilidad, consistencia y efciencia tanto del equipo como del producto final. Ayuda a ahorrar tiempo para que el equipo pueda centrarse en otras tareas. Además, reduce la
-posibilidad de que ocurran errores humana. La automatizacion de pruebas tambien ofrece flexibilidad, ya que los equipos de desarrollo puede reutilizar sus scripts de prueba para cualquier conjunto de pruebas relacionado.
+posibilidad de que ocurran errores humana. 
+## Informe
 
+# Introducción
+La entrega ágil y confiable de software es fundamental en la era digital. Tecnologías como Infrastructure as Code (IaC), contenedores, Kubernetes, observabilidad y CI/CD permiten a las empresas reducir el tiempo de despliegue, mejorar la escalabilidad y garantizar la estabilidad de sus aplicaciones.
+
+# Importancia de cada tecnología
+IaC (Infrastructure as Code): Automatiza la creación y configuración de infraestructura, permitiendo consistencia y repetibilidad en los entornos de desarrollo, prueba y producción. Ejemplo: Terraform y AWS CloudFormation.
+
+Contenedores: Hace aplicaciones portables y consistentes.. Docker es el mas utilizado de todos.
+
+Kubernetes: Gestiona los contenedores. 
+
+Observabilidad: Monitoreo y análisis en tiempo real con herramientas como Prometheus y Grafana.
+
+CI/CD (Integración y Entrega Continua): Automatiza pruebas y despliegues, , reduce errores humanos . Hay herramientas como Jenkins, Gitlab CI y Github Actions. 
+
+#  Riesgos y desafíos
+Sobrecarga cognitiva, Necesidad de capacitación y  Configuración de seguridad
+Configuración de seguridad.
