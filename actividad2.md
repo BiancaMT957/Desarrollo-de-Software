@@ -1,51 +1,38 @@
+# 2. A
+
 ## 1. Definición de IaC y su cambio de paradigma frente a la configuración manual
 
-Infraestructura como Código (IaC) es un enfoque que permite gestionar la infraestructura usando archivos de configuración en vez de realizar configuraciones manuales a través de interfaces gráficas o herramientas de administración tradicionales. Este enfoque describe el estado deseado de la infraestructura utilizando un lenguaje declarativo o imperativo, lo que facilita la creación, modificación y administración de recursos de manera automática.
+La infraestructura como código (IaC) es uno de los fundamentos en la ingeniería de software contemporánea. La infraestructura de TI –que incluye servidores, redes, sistemas de almacenamiento, contenedores, balanceadores de carga y otros recursos necesarios para ejecutar aplicaciones– se trata de un codigo fuente para una aplicación. Esto implica que la configuración, el aprovisionamiento y la administración de los recursos se definen mediante archivos de texto eo configuraciones declarativas, para repositorios git generalmente.
 
-### Cambio de paradigma
-
-La diferencia principal entre IaC y la configuración manual es que en IaC la infraestructura se gestiona como código, permitiendo la automatización completa del ciclo de vida de los recursos. Esto reduce significativamente los errores humanos, ya que las configuraciones y cambios se pueden revisar, versionar y auditar a través de herramientas de control de versiones como Git.
-
-### Beneficios de IaC
-
-- **Consistencia en la configuración**: La infraestructura definida como código puede aplicarse de manera consistente en diferentes entornos (desarrollo, prueba, producción) sin la posibilidad de diferencias manuales.
-- **Control de versiones**: Los archivos de configuración son versionados, lo que permite hacer un seguimiento de los cambios, revertir configuraciones erróneas y mantener un historial completo de la infraestructura.
-- **Automatización**: La infraestructura se aprovisiona, configura y gestiona automáticamente sin intervención manual. Esto optimiza el tiempo y esfuerzo de los equipos de TI.
-- **Reducción de errores humanos**: Al evitar configuraciones manuales, el riesgo de cometer errores en el proceso de configuración se reduce considerablemente, ya que todo el proceso está automatizado y auditado.
-
+## Beneficios de IaC
+Permite una gestión más eficiente de los cambios, con una trazabilidad completa gracias al versionado. Cada modificación se puede revisar mediante Pull Requests, lo que reduce los errores. Además, el uso de IaC libera a los equipos de la dependencia en configuraciones manuales y ayuda compartir harto conocimiento importante.
 
 
 ## 2. Herramientas populares para IaC
 
 Algunas de las herramientas más populares para implementar IaC son:
 
-- **Terraform**: Utilizada para  múltiples proveedores de nube como AWS, Azure y Google Cloud. Utiliza el HashiCorp Configuration Language (HCL) para definir y gestionar la infraestructura.
-- **Ansible**: Ansible npermite definir la infraestructura como código. Utiliza YAML para las describir tareas.
-- **Pulumi**: Permite escribir IaC utilizando lenguajes de programación modernos como JavaScript, TypeScript, Python y Go.
-- **AWS CloudFormation**: Específica para AWS, permite definir recursos de infraestructura en la nube utilizando archivos en JSON o YAML.
-
-
+- **Terraform**: Estas herramientas permiten describir el estado deseado de la infraestructura de forma declarativa. Con un lenguaje propio, Terraform, por ejemplo, utiliza HCL para definir recursos como instancias EC2, bases de datos o redes virtuales.
+- **Ansible**: Se enfocan en la gestión de la configuración del sistema operativo y de aplicaciones, asegurando que cada máquina o contenedor se encuentre en el estado deseado.
+- **Pulumi**: Permite escribir IaC usando lenguajes como JavaScript o Go.
+- **AWS CloudFormation**: es un servicio de infraestructura como código (IaC) que le permite modelar, aprovisionar y administrar de manera sencilla recursos de AWS ...
 
 ##  Buenas prácticas en la escritura de IaC
 
-- **Nombres claros de recursos**: Utilizar nombres descriptivos y consistentes para los recursos ayuda a identificar rápidamente su propósito y facilita la gestión en entornos grandes.
-- **Uso de variables**: Las variables permiten reutilizar configuraciones de manera eficiente y hacer que los recursos sean más dinámicos y personalizables según el entorno.
-- **Modularización del código**: Es recomendable dividir la infraestructura en módulos que se puedan reutilizar en diferentes proyectos o entornos. Por ejemplo, un módulo para redes, otro para bases de datos y otro para aplicaciones.
+- **Nombres claros de recursos**:  ayuda a identificar rápidamente su propósito y facilita la gestión en entornos grandes.
+- **Uso de variables**: Las variables permiten reutilizar configuraciones de manera eficiente.
+- **Modularización del código**: Es recomendable dividir la infraestructura en módulos que se puedan reutilizar en diferentes proyectos.
 - **Uso de repositorios de control de versiones (Git)**: Mantener el código de la infraestructura en un repositorio Git permite un control completo sobre los cambios, además de colaborar y hacer auditoría sobre las configuraciones.
 
----
+
 
 ## 3. Patrones para módulos en IaC
 
 ### Modularización
 
-Ayuda a la reutiliacion y la gestión. Por ejemplo, un módulo para configurar redes, otro para definir bases de datos y otro para gestionar servidores de aplicaciones.Los modulos pueden ser independientes y ggestionados de diferente manera, permitiendo su reutilización en diferentes proyectos.
-
+Ayuda a reutilizar y gestionar.
 ### Estructura
 
-Una estructura de módulos típica en IaC podría organizarse de la siguiente manera:
-
-```
 ├── modules/
 │   ├── network/
 │   │   ├── main.tf
@@ -63,35 +50,7 @@ Una estructura de módulos típica en IaC podría organizarse de la siguiente ma
 ├── variables.tf
 └── outputs.tf
 ```
-
-Aquí, cada módulo tiene su propio conjunto de archivos que describen los recursos y las configuraciones, y luego los módulos se llaman en el archivo `main.tf` del proyecto principal.
-
----
-
-## 4. Patrones para dependencias en IaC
-
-### Gestión de dependencias
-
-Para enlazar módulos que dependen entre sí, como un módulo de base de datos que debe proporcionar credenciales a un módulo de aplicación, se utilizan salidas e entradas. Por ejemplo, un módulo de base de datos puede proporcionar una salida con las credenciales necesarias, y ese valor se pasa como entrada a un módulo de aplicación para que lo utilice.
-
-### Salidas y entradas
-
-El uso de salidas (`outputs`) y entradas (`inputs`) en módulos permite que los datos se pasen entre ellos. Por ejemplo:
-
-```hcl
-output "db_password" {
-  value = aws_secretsmanager_secret.db_password.secret_string
-}
-
-module "application" {
-  source      = "./modules/application"
-  db_password = module.database.db_password
-}
-```
-
-En este ejemplo, el módulo de base de datos genera un `output` con la contraseña y este valor se pasa como `input` al módulo de la aplicación.
-
-
+--- 
 
 # Tarea teorica 1
 ## Terraform 
@@ -141,43 +100,35 @@ project-terraform/
 
 ### ¿Qué son los contenedores?
 
-Los contenedores son unidades de software que empaquetan una aplicación y sus dependencias, como bibliotecas, archivos de configuración y herramientas necesarias para ejecutar el software. A diferencia de las máquinas virtuales (VMs), que requieren un sistema operativo completo para funcionar, los contenedores comparten el mismo núcleo del sistema operativo subyacente, lo que los hace mucho más ligeros y rápidos de arrancar.
+Son tecnologías que permiten empaquetar y aislar las aplicaciones junto con todo el entorno de ejecución
 
 ### Diferencia con máquinas virtuales (VMs):
 
-- **Máquinas virtuales (VMs):** Virtualizan un sistema operativo completo y requieren una cantidad significativa de recursos (memoria y CPU).
-- **Contenedores:** Solo virtualizan el espacio de usuario y comparten el núcleo del sistema operativo subyacente, lo que los hace más ligeros y eficientes.
+Las máquinas virtuales proporcionan una versión abstracta de todo el hardware de una máquina física, incluida la CPU, la memoria y el almacenamiento. Los contenedores en cambio, son instancias portátiles de software con sus dependencias que se ejecutan en una máquina física o virtual
 
-## Dockerfile
-
-Un `Dockerfile` es un archivo de texto que contiene las instrucciones para construir una imagen de Docker. Estas instrucciones definen qué sistema operativo base usar, qué dependencias instalar, cómo configurar la aplicación y cómo ejecutar el contenedor.
+### Aislamiento y ligereza
+El avance de la contenerización ha revolucionado la forma en que se empaquetan y despliegan las aplicaciones. Docker se ha consolidado como el estándar de facto en este ámbito, permitiendo que las aplicaciones se ejecuten en entornos aislados y portátiles, sin importar las diferencias en los sistemas operativos de los hosts.
 
 ### Estructura básica de un Dockerfile:
 
 ```dockerfile
-# 1. Especificar la imagen base
+# 1. 
 FROM ubuntu:20.04
 
-# 2. Instalar dependencias necesarias
-RUN apt-get update && apt-get install -y python3 python3-pip
+# 2. 
+RUN apt-get update && apt-get install -y python3
 
-# 3. Copiar archivos locales al contenedor
-COPY . /app
+# 3.
+ CMD ["python3", "--version"]
+# 4.
+docker build -t mi_imagen:1.0 .
 
-# 4. Establecer el directorio de trabajo
-WORKDIR /app
-
-# 5. Instalar dependencias de la aplicación
-RUN pip3 install -r requirements.txt
-
-# 6. Comando para ejecutar la aplicación
-CMD ["python3", "app.py"]
-```
+# 5.
+docker run --name contenedor_ejemplo -d mi_imagen:1.0
 
 ### Imagen vs Contenedor
 
-- **Imagen:** Es una plantilla inmutable que define lo que contiene un contenedor. Se usa para crear contenedores.
-- **Contenedor:** Es una instancia en ejecución de una imagen.
+Una imagen es una plantilla inmutable quetiene el codigo y tambien las dependencias . Un contenedor es una instancia en ejecución de una imagen, que puede cambiarse temporalmente pero no modificala imagen base. Para hacer cambios permanentes, hay que realizar una nueva imagen.
 
 ## Orquestación con Kubernetes
 
@@ -185,39 +136,39 @@ CMD ["python3", "app.py"]
 
 ### Componentes principales de Kubernetes:
 
-- **Pods:** Unidad más pequeña de despliegue en Kubernetes.
+- **Pods:**  Son la unidad mínima de implementación, encapsulando uno o varios contenedores que comparten rojo y almacenamiento..
 - **Servicios:** Exponen los Pods a una red interna o externa.
-- **Implementaciones:** Aseguran que un número deseado de réplicas de un Pod esté en ejecución.
-- **Conjuntos de réplicas:** Mantienen un número específico de réplicas de un Pod.
+- **ReplicaSet:** Asegúrese de que un número definido de réplicas de un Pod esté siempre en ejecución..
+- **Implementaciones:**  Facilitan actualizaciones progresivas y permiten realizar rollbacks si es necesario, gestionando versiones de la aplicación de forma declarativa..
+- **StatefulSets:** Se utilizan para aplicaciones con estado que requieren identidades de red únicas y volúmenes persistentes.
 
 ## Manifiestos en YAML
 
 Ejemplo básico de un Deployment en Kubernetes:
 
-```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: mi-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-app
+      app: mi-app
   template:
     metadata:
       labels:
-        app: my-app
+        app: mi-app
     spec:
       containers:
-        - name: my-app-container
-          image: my-app-image:v1
-          ports:
-            - containerPort: 80
+      - name: contenedor-web
+        image: nginx:latest 
 ```
 ### Docker y Kubernetes se integran en pipelines de despliegue continuo (CD) para automatizar la creación, configuración, escalado, y gestión de aplicaciones. 
  
 # Tarea teorica 2
+## Describir un flujo simple de despliegue donde un desarrollador hace un cambio en el código, se construye una nueva imagen Docker y se actualiza un Deployment de Kubernetes.
+
 -**El desarrollador sube el código a GitHub**
 
 -**Jenkins detecta el commit utilizando un webhook**
@@ -234,14 +185,6 @@ Kubernetes posee una característica importante llamada autoescalado. Este permi
 Esto es útil ya que maneja picos de tráfico sin que la aplicación caiga, evita problemas de hardware distribuyendo la carga y también se adapta a las interrupciones de red asegurando que la aplicación siempre
 esté disponible.
 
-### **Ejemplo práctico**  
-Durante el **Black Friday**, una tienda online experimenta un aumento en la demanda. Kubernetes:
-1. **Escala automáticamente** de 3 a 20 réplicas según el consumo de CPU.
-2. **Redirige el tráfico** entre los pods disponibles.
-3. **Mantiene la disponibilidad** incluso si algunos nodos fallan.
-4. **Reduce los recursos** después del evento para ahorrar costos.
-
-✅ **Resultado**: La aplicación maneja el pico de tráfico sin interrupciones y sin intervención manual. 🚀
   # Tarea teorica 3
   ## INTEGRACION DE PROMETHEUS Y GRAFANA CON KUBERNETES PARA EL MONITOREO DE CONTENEDORES Y CLUSTERES
 Prometheus es un sistema de monitoreo y alerta de código abierto. Se integra con Kubernetes para extraer datos sobre el rendimiento de los nodos, pods y contenedores. Utiliza lo que se conoce como pull para consultar periodicamente las metricas de los servicios mediante su lenguaje PromQL. Grafana se utiliza para representar gráficamente las métricas recolectadas por Prometheus. Necesitamos un servidor de 1. Grafana, corriendo 
@@ -279,22 +222,25 @@ humana para implantarlo, lo que permite a los equipos decidir qué se debe lanza
 
 Porque aumentan la confiabilidad, consistencia y efciencia tanto del equipo como del producto final. Ayuda a ahorrar tiempo para que el equipo pueda centrarse en otras tareas. Además, reduce la
 posibilidad de que ocurran errores humana. 
-## Informe
 
+
+## . Evaluación y discu sión final
+### Evaluación de la teoría
 # Introducción
-La entrega ágil y confiable de software es fundamental en la era digital. Tecnologías como Infrastructure as Code (IaC), contenedores, Kubernetes, observabilidad y CI/CD permiten a las empresas reducir el tiempo de despliegue, mejorar la escalabilidad y garantizar la estabilidad de sus aplicaciones.
+La entrega ágil y confiable de software es fundamental en esta era nueva que usa mucho la digitalización. Tecnologías como Infrastructure as Code (IaC), contenedores, Kubernetes, observabilidad y CI/CD permiten reducir el tiempo de despliegue, mejorar escalabilidad y garantizar la estabilidad para sus aplicaciones.
 
 # Importancia de cada tecnología
-IaC (Infrastructure as Code): Automatiza la creación y configuración de infraestructura, permitiendo consistencia y repetibilidad en los entornos de desarrollo, prueba y producción. Ejemplo: Terraform y AWS CloudFormation.
+IaC (Infrastructure as Code): Permite gestionar la infraestructura de forma codificada y repetible.Proporciona un lenguaje común para desarrolladores y operaciones. Facilita la colaboración entre equipos de desarrollo y operaciones. Elimina la mayor parte del trabajo de provisionamiento. Garantiza que cada entorno sea idéntico, eliminando errores derivados de configuraciones manuales 
 
 Contenedores: Hace aplicaciones portables y consistentes.. Docker es el mas utilizado de todos.
 
-Kubernetes: Gestiona los contenedores. 
+Kubernetes: Permite escalar y implantar aplicaciones más rápido.Organiza las interacciones de contenedores. Alberga grandes cantidades de datos valiosos.Facilita la implementación de CI/CD. Proporciona un flujo de trabajo eficiente y escalable CI/CD 
 
-Observabilidad: Monitoreo y análisis en tiempo real con herramientas como Prometheus y Grafana.
+Observabilidad: Los entornos Kubernetes albergan grandes cantidades de datos valiosos. Permite monitorizar la infraestructura
 
 CI/CD (Integración y Entrega Continua): Automatiza pruebas y despliegues, , reduce errores humanos . Hay herramientas como Jenkins, Gitlab CI y Github Actions. 
 
-#  Riesgos y desafíos
-Sobrecarga cognitiva, Necesidad de capacitación y  Configuración de seguridad
-Configuración de seguridad.
+#  Riesgos y desafíos.
+Los riesgos que pueden abarcar son:
+Sobrecarga cognitiva y Configuración de seguridad
+
