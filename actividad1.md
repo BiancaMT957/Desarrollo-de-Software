@@ -36,7 +36,7 @@ No  es solo un conjunto de herramientas o procesos muy aislados. En vez de eso, 
 ### 5. Según el texto, ¿cómo contribuyen los equipos autónomos y multifuncionales a una implementación exitosa de DevOps?
 se consigue una mayor consistencia entre los entornos de desarrollo, pruebas y producción, además de reducir errores manuales y acelerar el aprovisionamiento.ADemas de hacer la entrega mas rapida. Reduce la complejidad de las pruebas y permite actualizaciones más ágiles.
 
-# Preguntas de reflexión
+# Parte 2
 
 ### 1. ¿Qué significa "desplazar a la izquierda" en el contexto de DevSecOps y por qué es importante?
 significa implementar pruebas y seguridad en las primeras fases del desarrollo de aplicaciones, lo cual da muchos beneficios como reducir tiempo y esfuerzos para corregir errores; detectar y corregir errores antes, lo que reduce el coste.
