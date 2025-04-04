@@ -1,25 +1,41 @@
 ## ¿Qué problemas o limitaciones existían antes del surgimiento de la computación en la nube y cómo los solucionó la centralización de servidores en centros de datos?
-Mucho antes de el surgimiento de cimputacion en la nube, las organizaciones debian de tener un hardware fisico en sus instalacciones, lo cual era muy costos y tenia problemas en las gestion de recursos.
+Mucho antes de el surgimiento de cimputacion en la nube, las organizaciones debian de tener un hardware fisico en sus instalaciones, lo cual era muy costoos y daba problemas en los recursos.
 ## ¿Por qué se habla de “The Power Wall” y cómo influyó la aparición de procesadores multi-core en la evolución hacia la nube?
-Se habla de eso porque hacia referencia a la barrera termina y de consumo de energia que logro hacer que la frecuencia de procesadores siguiera aumentando.Los multi-core tienen objetivos de mejorar rendimiento sin incrementar el gran consumo y gasto de energia.
+Se habla de eso porque hacia referencia a la barrera termina y de consumo de energia que logro hacer que la frecuencia de procesadores siguiera aumentando. Los procesadores multi-core han permitido que los sistemas manejen más tareas simultáneamente, lo que ha mejorado el rendimiento en tareas como la edición de video y el renderizado 3D. 
+Esto ha sido clave para la evolución hacia la nube, ya que los sistemas con procesadores multi-core son más eficientes para manejar cargas de trabajo grandes y complejas. 
 ## Explique cómo la necesidad de atender grandes volúmenes de tráfico en sitios web condujo a la adopción de clústeres y balanceadores de carga.
-
-Habia mucha necesidad de disstribuir la carga y los clusteres de serviio y balanceadores de carga podian repartise las solicitudes y ademas optimizar el rendimiento de aplicaciones web.
+Se necesitaba distribuir la carga y los clusteres de serviio y balanceadores de carga tenian la habilidad de optimizar la eficiencia de las aplicaciones web.
 ## Describa un ejemplo práctico de cómo un desarrollador de software puede beneficiarse del uso de balanceadores de carga para una aplicación web. 
-Un desarrollador que gestiona una aplicación de e-commerce con alto tráfico podría usar un balanceador de carga para distribuir solicitudes entre varios servidores. Esto evitaría sobrecargas en un solo nodo, mejoraría la experiencia del usuario reduciendo tiempos de respuesta y garantizaría la disponibilidad de la plataforma, incluso si uno de los servidores falla. 
+Un desarrollador de software podria agregar facilmente nuevos servidores a la infraestructura, en caso de el trafico aumentara.
 ## Define con tus propias palabras el concepto de Elastic Computing.
-capacidad de ajustar automaticamente los recursos de infraestructura teniendo mucho en cuenta la demanda, haciendo posible ir hacia arriba o abajo sin problemas.
+Es parte de la computacion en la nube. Es la capacidad para aumentar o disminuir a gran velocidad los recursos de una computadora con la finalidad de resolver las demandas cambiantes.
 ##  ¿Por qué la virtualización es una pieza clave para la elasticidad en la nube? 
-Porque hace posible creary gestionar muchas maquinas virtuales sobre un hardware fisico, haciendo mas facil la asignacion dinamica de recursos de demanda .
+ permite escalar la infraestructura de TI de manera eficiente.
 ##  Menciona un escenario donde, desde la perspectiva de desarrollo, sería muy difícil escalar la infraestructura sin un entorno elástico.
-eventos como "Black Friday" necesitaría una infraestructura que pueda escalar rápidamente para manejar la alta demanda. Sin computación elástica, el sistema podría colapsar o quedar con capacidad infrautilizada el resto del año. 
+eventos como "Black Friday" lo necesitarian. Sin computación elástica, el sistema podría colapsar u obtener  infrautilizada por mucho tiempo, aproximadamente un año.
+##  ¿En qué casos un desarrollador optaría por PaaS en lugar de IaaS?
+Cuando no se puede permitir crear una plataforma de desarrollo y despliegue completa, cuando se necesita una solución fácilmente disponible, cuando se trabaja en un proyecto con varios desarrolladores remotos, cuando se necesita un entorno de desarrollo de aplicaciones compartido 
+
+##  Enumera tres ejemplos concretos de proveedores o herramientas que corresponden a cada tipo de servicio.
+Proveedores de servicios de TI
+Ofrecen servicios como supervisión de red, ciberseguridad, copia de seguridad de datos, asistencia técnica, gestión de software y hardware. 
+Proveedores de servicios en la nube
+Ofrecen servicios como alojamiento de aplicaciones web, analíticas de datos, servicios de IA, entre otros. Algunos ejemplos de proveedores de servicios en la nube son IBM, Alibaba, Oracle, Red Hat, DigitalOcean y Rackspace. 
+Proveedores de servicios gestionados (MSP)
+Son empresas externas que asumen las responsabilidades diarias, la supervisión y el mantenimiento de una serie de tareas y funciones para otra empresa. 
+
+## ¿Cuáles son las ventajas de implementar una nube privada para una organización grande?
+Tiene mayor control mayor seguridad, puede personalizar su infraestructura, hay mejor rendimiento, mayor privacidad y mayor disponiblidad.
+
+
+## ¿Por qué una empresa podría verse afectada por el “bloqueo de proveedor”?
+Porque depende tanto de un solo proveedor que cambiarlo resultaria muy costoro o complicado.Ademaslimitaria la libertad de la empresa y esto podria repercutir sobre su competividad. 
+
+## ¿Qué papel juegan los “hyperscalers” en el ecosistema de la nube?
+Son proveedores que permiten que las empresas de diferentes tipos accedan a tecnologias muy avanzadas.
 # Actividades de investigacion
-Algunas empresas que han migrado a la nube son Amazon, Microsoft y Google. 
+Amazon, Microsoft y Google. 
 ## Motivaciones 
-Reducir costos operativos
-Mejorar el rendimiento
-Proteger los datos
-Modernizar las cargas de trabajo
 Mejorar la escalabilidad
 Acelerar la innovación
 Mejorar la flexibilidad
@@ -28,62 +44,43 @@ Ahorro de costos
 Mayor agilidad y flexibilidad
 Mayor escalabilidad
 Mayor seguridad
-Mejor cumplimiento
-Copia de seguridad, recuperación y conmutación por error
-Administración y supervisión simplificadas
-Tiempo de salida al mercado más rápido
-Colaboración mejorada
-Prevención de pérdida de datos 
 
+## desafios 
+estafas
+fraudes
+proteger el acceso a cuentas y entornos de Amazon Web Services
 # Comparativa de Modelos de Servicio (IaaS, PaaS, SaaS)
 
 | **Aspecto**                 | **IaaS (Infrastructure as a Service)** | **PaaS (Platform as a Service)** | **SaaS (Software as a Service)** |
 |-----------------------------|----------------------------------------|----------------------------------|---------------------------------|
-| **Responsabilidad del desarrollador** | Control total sobre el sistema operativo, redes, y almacenamiento. | Despliegue de aplicaciones, pero sin acceso directo a la infraestructura. | Uso del software, sin acceso a la infraestructura o plataforma subyacente. |
-| **Responsabilidad del proveedor**  | Proporciona la infraestructura subyacente (máquinas virtuales, almacenamiento). | Proporciona la plataforma, herramientas y servicios para desarrollo de aplicaciones. | Proporciona y mantiene el software listo para usar. |
+| **Responsabilidad del desarrollador** | Control total sobre el sistema operativo, redes, y almacenamiento. | Despliegue de aplicaciones, sin acceso  la infraestructura. | Uso del software, sin acceso a la infraestructura o plataforma subyacente. |
+| **Responsabilidad del proveedor**  | Proporciona la infraestructura subyacente (máquinas virtuales, almacenamiento). | Otorga la plataforma, herramientas y servicios para desarrollo de aplicaciones. | Proporciona y mantiene el software listo para su uso. |
 | **Responsabilidad del equipo de operaciones** | Gestionar servidores, redes, almacenamiento, y garantizar la disponibilidad. | Gestionar la plataforma y asegurar el funcionamiento de las aplicaciones. | No es necesario, ya que el proveedor maneja el software y la infraestructura. |
 | **Instalación de S.O.**           | El equipo de operaciones instala y gestiona el S.O. | El proveedor ya gestiona el S.O., el desarrollador usa la plataforma. | El software ya está disponible para usar, sin necesidad de instalación. |
 | **Despliegue de aplicaciones**   | El equipo de desarrollo gestiona el despliegue en máquinas virtuales. | El desarrollador despliega en la plataforma proporcionada sin gestionar infraestructura. | El software se usa tal cual, sin necesidad de desplegarlo. |
-| **Escalado automático**         | Requiere configuración manual o herramientas externas para el escalado. | Generalmente es automático dentro de la plataforma. | El escalado lo maneja el proveedor. |
+| **Escalado automático**         | Requiere configuración manual . | Generalmente es automático . | El escalado lo maneja el proveedor. |
 | **Parches de seguridad**         | El equipo de operaciones se encarga de la aplicación de parches. | El proveedor aplica parches a la plataforma subyacente. | El proveedor aplica parches a la aplicación sin intervención del cliente. |
 
 ---
 
 # Estrategia Multi-Cloud o Híbrida
-
-Una empresa con infraestructura distribuida entre un centro de datos propio y un proveedor de nube pública busca migrar el 50% de sus cargas de trabajo a un segundo proveedor para evitar la dependencia de uno solo y mejorar la resiliencia.
-
-Estrategia de Migración
-Base de Datos: Se mantiene la alta disponibilidad mediante replicación entre proveedores (ej. AWS RDS → Azure SQL).
-
-Red y Conectividad: Se configuran VPNs y redes privadas virtuales (VPC) para asegurar la comunicación entre los entornos.
-
-Plan de Contingencia: Implementación de failover y monitoreo con herramientas como Prometheus y Grafana para detectar fallos y reaccionar rápidamente.
-
-Comparativa de Costos y Tipos de Nube
-Tipo de Nube	Ventajas	Desventajas
-Nube Pública	Bajo costo inicial, escalabilidad, sin mantenimiento de hardware	Dependencia del proveedor, preocupaciones de seguridad
-Nube Privada	Control total, mayor seguridad, cumplimiento de regulaciones	Altos costos iniciales, mantenimiento constante
-Nube Híbrida	Flexibilidad, resiliencia	Mayor complejidad y costos de integración
-Multi-Cloud	Reducción de dependencia, optimización de costos	Complejidad en la gestión e integración
-Costos: CAPEX vs OPEX
-CAPEX: Inversión en hardware, mayor costo inicial pero amortizable.
-
-OPEX: Pago por uso en la nube, más flexible pero con costos operativos a largo plazo.
+Una empresa con infraestructura distribuida busca migrar el 50% de su carga de trabajo a un segundo proveedor para evitar la dependencia y mejorar la resiliencia. Las estrategias de migración incluyen replicación de datos, red y conectividad, y planes de continuidad con herramientas como Prometheus y Grafana. Se comparan los costos y tipos de nube: la nube pública tiene costos iniciales más bajos, la nube privada ofrece mayor seguridad, la nube híbrida ofrece flexibilidad pero mayores costos de integración, y la multinube reduce la dependencia y optimiza los costos. La empresa compara los costos de CAPEX y OPEX: CAPEX representa la inversión en hardware y OPEX el pago por el uso de la nube.
 
 Conclusión
-Las estrategias basadas en nube pública o multi-cloud permiten mayor flexibilidad y menor inversión inicial, aunque pueden generar costos operativos elevados. La nube privada es más costosa al principio pero ideal para organizaciones con requisitos estrictos de seguridad y control.
+Las estrategias basadas en nube pública o multi-cloud son mas flexibles, pero tambien mas caros. La nube privada es más costosa al principio pero ofrece una muy buena seguridad y es muy util en empresas grandes eso.
 ---
 
 # Debate sobre Costos: Comparativa de Nubes
 
 ## Pros y Contras de Cada Tipo de Nube
 
-| **Tipo de Nube**   | **Pros**                                                                                           | **Contras**                                                                                          |
-|--------------------|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| **Nube Pública**    | - Bajo costo inicial (pago por uso) <br> - Escalabilidad y flexibilidad <br> - Sin mantenimiento de hardware | - Dependencia de un proveedor <br> - Preocupaciones de seguridad y privacidad                       |
-| **Nube Privada**    | - Control total sobre los recursos y la seguridad <br> - Cumple con regulaciones estrictas (ej. HIPAA) <br> - Mejor rendimiento | - Altos costos iniciales (CAPEX) <br> - Mantenimiento constante de hardware y personal especializado |
-| **Nube Híbrida**    | - Flexibilidad de combinar lo mejor de nubes públicas y privadas <br> - Redundancia y resiliencia    | - Complejidad en la gestión de recursos <br> - Costos adicionales por gestión y integración           |
-| **Multi-Cloud**     | - No dependencia de un solo proveedor <br> - Optimización de costos entre diferentes proveedores    | - Complejidad en la gestión de recursos y redes <br> - Desafíos de integración y monitoreo            |
+# Comparación de Modelos de Nube
+
+| Característica  | Ventajas | Desventajas |
+|----------------|----------|-------------|
+| **Nube Pública** | - Menor costo inicial.  <br> - Alta escalabilidad y fácil implementación. <br> - Menos carga administrativa. | - Menor control y seguridad compartida. <br> - Personalización limitada. <br> - Dependencia del proveedor. |
+| **Nube Privada** | - Control total y seguridad personalizada. <br> - Alto nivel de personalización. <br> - Optimizada para necesidades específicas. | - Mayor inversión inicial y costos fijos. <br> - Gestión interna más compleja. <br> - Depende de la infraestructura propia. |
+| **Nube Híbrida** | - Flexibilidad y equilibrio entre rendimiento y seguridad. <br> - Adaptabilidad a diferentes necesidades. <br> - optimiza costos según la distribución de recursos. | - Requiere gestión combinada de recursos. <br> - Puede ser más dificil de administrar. <br> - Control variado según el recurso y ubicación. |
+| **Multinube** | - Alta flexibilidad y optimización del rendimiento. <br> - Aprovecha lo mejor de cada proveedor. <br> - Reduce la dependencia de un solo proveedor. | - Compleja gestión de múltiples interfaces y proveedores. <br> - Costos variables según los servicios en uso. <br> - Dependencia de la estabilidad de varios proveedores. |
 
 
