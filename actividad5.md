@@ -390,7 +390,6 @@ $ git log --graph --oneline
 
   # 5
 
-```bash
 cd ..
 mkdir prueba-compare-merge
 cd prueba-compare-merge/
@@ -426,9 +425,9 @@ git commit -m "Característica 3 paso 1"
 
 # 6
 
-# Sesión de Git en Terminal
+#
 
-```bash
+
 $ git checkout main
 Switched to branch 'main'
 
@@ -638,5 +637,4 @@ remote:     https://github.com/WalterRGuni/Prueba/pull/new/colaboracion
 remote:
 To https://github.com/WalterRGuni/Prueba.git
  * [new branch]      colaboracion -> colaboracion
- 
-
+  
