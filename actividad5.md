@@ -1,5 +1,5 @@
 
-# 1 
+# 1 ) Clona un repositorio Git con múltiples ramas.
 Bianca@MSI MINGW64 ~
 $ cd C:/Users/Bianca/Documents/repositorio/activity-5
 
@@ -65,7 +65,10 @@ Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-fast-forward-merge 
 $ git log --graph --oneline
 * 707a811 (HEAD -> master, add-description) agregar descripcion al README.md
 * 24298e2 commit inicial en main
-# 2
+## ¿En qué situaciones recomendaría evitar el uso de git merge --ff? Reflexiona sobre las desventajas de este método.
+cuando uno quiere tener un historial vacio no es recomendable usarlo.
+Pienso que seria mejor usar otras alternativas como --no-ff o git merge, dependiendo de lo que quiera uno.Es mejor esto a arriesgarse a contaminar el historial de rama de funciones.
+# 2 ) Simula un flujo de trabajo de equipo.
 
 $ cd ..
 
@@ -149,10 +152,12 @@ $ git log --graph --oneline
 |/
 * 558fe9c commit inicial en main
 * 91bfe6f commit inicial en main
+## Pregunta: ¿Cuáles son las principales ventajas de utilizar git merge --no-ffen un proyecto en equipo? ¿Qué problemas podrían surgir al depender excesivamente de commits de fusión?
+Facilita una colaboracion entre equipos de desarrollo, nos da el historial conservado completo, resuelve conflictos de manera sencilla, integra correciones dentro del mismo proyecto.
+Uno de los problemas que podriamos tener al usar estos commits seria el de tener un grafico desordenado.
 
  
- 
-# 3
+# 3  ) Crea múltiples commits en una rama.
 $ cd ..
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5 (main)
@@ -256,7 +261,12 @@ Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-squash-merge (main)
 $ git log --graph --oneline
 * e48aaf5 (HEAD -> main) Agregar documentacion estandar del repositorio
 * 9bcc9df (master) commit inicial en main
-  # 4
+## ¿Cuándo es recomendable utilizar una calabaza fusión? ¿Qué ventajas ofrece para proyectos grandes en comparación con fusiones estándar?
+Es recomendable usarlo cuando se tiene una rama principaly se ramifica a una rama de funcionalidad para introducir cambios, tambien para tener mas limpieza en el grafico requerido.
+Ofrece ventajas como evitar el deesorden de muchas confirmaciones y aminorar la canidad de commits.
+
+  # 4  )Resolver conflictos en una fusión sin avance rápido
+
  $ cd ..
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5 (main)
@@ -387,8 +397,17 @@ $ git log --graph --oneline
 * | c69cf61 ....index.html
 |/
 * b4410ae commit inicial del  index.html en main
+## ¿Qué pasos adicionales tuviste que tomar para resolver el conflicto?
+Borre los simbolos ">>>" o "===" del archivo index.html .
 
-  # 5
+
+## ¿Qué estrategias podrías emplear para evitar conflictos en futuros desarrollos colaborativos?
+
+Ver bien mis codigos como los voy ejecutando, fijarme en el historial y concentrarme mas en como realizo los cambios y tod ese proceso importantisimo.
+
+
+
+  # 5 ) Comparar los historiales con git log después de diferentes fusiones
 
 cd ..
 mkdir prueba-compare-merge
@@ -423,11 +442,6 @@ echo "Característica 3 paso 1" >> version.txt
 git add version.txt
 git commit -m "Característica 3 paso 1"
 
-# 6
-
-#
-
-
 $ git checkout main
 Switched to branch 'main'
 
@@ -459,7 +473,15 @@ $ git log --graph --oneline --merges --decorate=all
 * fd8e32d Característica 3 paso 1
 * 0009035 (feature-2) Se agrega característica 2
 * e409dca (feature-1) Agregar característica 1
-# 7
+  
+## ¿Cómo se ve el historial en cada tipo de fusión?
+SE ven completamente iguales
+
+## ¿Qué método prefieres en diferentes escenarios y por qué?
+Prefiero el metodo no fast foward porque  preserva el contexto de la fusión y ada mucha claridad al historil de cambios, que es muy importante para mi y pienso para ver el trabajo entre un grupo de personas que trabajen juntas.
+
+# 7 ) Ejercicio: fusiones Usando automáticas y revertir fusiones
+
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5 (main)
 $ cd ..
 
@@ -583,7 +605,12 @@ $
 Linea 1
 linea2
 linea3
-   # 8
+
+## ¿Cuándo usarías un comando como git revert para deshacer una fusión?
+Lo usaria cuando la fusion no me parezca correcta o me de error.
+## ¿Qué tan útil es la función de fusión automática en Git
+ES demsaiado util.
+   # 8 ) Ejercicio: Fusión remota en un repositorio colaborativo
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/prueba-auto-merge (main)
 $ git clone https://github.com/walterRGUni/Prueba.git
@@ -638,3 +665,175 @@ remote:
 To https://github.com/WalterRGuni/Prueba.git
  * [new branch]      colaboracion -> colaboracion
   
+## ¿Cómo cambia la estrategia de fusión cuando colaboras con otras personas en un repositorio remoto?
+
+El comando git merge toma las líneas de desarrollo independientes creadas por la rama git e integraslas en una sola rama 
+La rama que recibe los cambios siempre es la rama HEAD actualmente desprotegida. 
+
+## ¿Qué problemas comunes pueden surgir al integrar ramas remotas?
+Conflictos de fusion y problemas de permisos he visto mas, pero tambien hay errores en la URL del repositorio(en especial cuando se quiere clonar).
+
+# Ejercicio final: flujo de trabajo completo
+$ cd C:/Users/Bianca/Documents/repositorio/activity5
+bash: cd: C:/Users/Bianca/Documents/repositorio/activity5: No such file or directory
+
+Bianca@MSI MINGW64 ~
+$ cd C:/Users/Bianca/Documentod/repositorio/acitvity5
+bash: cd: C:/Users/Bianca/Documentod/repositorio/acitvity5: No such file or directory
+
+Bianca@MSI MINGW64 ~
+$  C:/Users/Bianca/Documentos/repositorio/activity5
+bash: C:/Users/Bianca/Documentos/repositorio/activity5: No such file or directory
+
+Bianca@MSI MINGW64 ~
+$ cd C:/Users/Bianca/Documents/repositorio/activity-5
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5 (main)
+$ mkdir mi-proyecto
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5 (main)
+$ cd mi-proyect
+bash: cd: mi-proyect: No such file or directory
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5 (main)
+$ cd mi-proyecto
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
+$ git init
+Initialized empty Git repository in C:/Users/Bianca/Documents/repositorio/activity-5/mi-proyecto/.git/
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (master)
+$ git checkout -b main
+Switched to a new branch 'main'
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
+$ git checkout -b feature1
+Switched to a new branch 'feature1'
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature1)
+$ git checkout -b feature2
+Switched to a new branch 'feature2'
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
+$ git branch
+  feature1
+  feature2
+* main
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature1)
+$ git status
+On branch feature1
+nothing to commit, working tree clean
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature1)
+$ echo "Cambios en feature1" > archivo1.txt
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature1)
+$ git add archivo1.txt
+warning: in the working copy of 'archivo1.txt', LF will be replaced by CRLF the next time Git touches it
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature1)
+$ git commit -m "Cambios en feature1"
+[feature1 c7f3578] Cambios en feature1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature1)
+$ git checkout feature2
+Switched to branch 'feature2'
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature2)
+$
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature2)
+$
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature2)
+$ echo "Cambios en feature2" > archivo2.txt
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature2)
+$ git add archivo2.txt
+warning: in the working copy of 'archivo2.txt', LF will be replaced by CRLF the next time Git touches it
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature2)
+$ git commit -m "Cambios en feature2"
+[feature2 372c62b] Cambios en feature2
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo2.txt
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature2)
+$ git checkout main
+Switched to branch 'main'
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
+$ git merge feature1 --ff
+Updating 9a92b78..c7f3578
+Fast-forward
+ archivo1.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
+$ git checkout main
+Already on 'main'
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
+$ git merge feature2 --no-ff
+Merge made by the 'ort' strategy.
+ archivo2.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo2.txt
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
+$ git checkout -b feature3
+Switched to a new branch 'feature3'
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature3)
+$ echo "Cambios en feature3" > archivo3.txt
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature3)
+$ git add archivo3.txt
+warning: in the working copy of 'archivo3.txt', LF will be replaced by CRLF the next time Git touches it
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature3)
+$ git commit -m "Cambios en feature3"
+[feature3 a09f990] Cambios en feature3
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo3.txt
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (feature3)
+$ git checkout main
+Switched to branch 'main'
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
+$ git merge feature3 --squash
+Updating 4907d0d..a09f990
+Fast-forward
+Squash commit -- not updating HEAD
+ archivo3.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo3.txt
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
+$ git commit -m "Fusionando feature3 con squash"
+[main a962016] Fusionando feature3 con squash
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo3.txt
+
+Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
+$ git log --oneline --graph --all
+* a962016 (HEAD -> main) Fusionando feature3 con squash
+| * a09f990 (feature3) Cambios en feature3
+|/
+*   4907d0d Merge branch 'feature2'
+|\
+| * 372c62b (feature2) Cambios en feature2
+* | c7f3578 (feature1) Cambios en feature1
+|/
+* 9a92b78 Cambios en feature1
+
+
+
+
