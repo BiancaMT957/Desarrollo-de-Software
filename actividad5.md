@@ -284,25 +284,6 @@ $ git init
 Initialized empty Git repository in C:/Users/Bianca/Documents/repositorio/activity-5/pruebaa-merge-conflict/.git/
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (master)
-$ git status
-On branch master
-
-No commits yet
-
-nothing to commit (create/copy files and use "git add" to track)
-
-Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (master)
-$ git branch
-
-Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (master)
-$ git checkout main
-error: pathspec 'main' did not match any file(s) known to git
-
-Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (master)
-$ git branch main
-fatal: not a valid object name: 'master'
-
-Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (master)
 $ git checkout -b main
 Switched to a new branch 'main'
 
@@ -319,7 +300,7 @@ warning: in the working copy of 'index.html', LF will be replaced by CRLF the ne
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (main)
 $ git commit -m "commit inicial del  index.html en main"
-[main (root-commit) b4410ae] commit inicial del  index.html en main
+ commit inicial del  index.html en main
  1 file changed, 1 insertion(+)
  create mode 100644 index.html
 
@@ -345,7 +326,7 @@ warning: in the working copy of 'index.html', LF will be replaced by CRLF the ne
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (feature-update)
 $ git commit -m"Actualiza..."
-[feature-update d7e7810] Actualiza...
+Actualiza...
  1 file changed, 1 insertion(+)
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (feature-update)
@@ -369,7 +350,6 @@ warning: in the working copy of 'index.html', LF will be replaced by CRLF the ne
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (main)
 $ git commit -m "....index.html"
-[main c69cf61] ....index.html
  1 file changed, 1 insertion(+)
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (main)
@@ -391,7 +371,7 @@ $ git add index.html
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (main|MERGING)
 $ git commit
-[main 00dbca3] Merge branch 'feature-update'
+Merge branch 'feature-update'
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/pruebaa-merge-conflict (main)
 $ git log --graph --oneline
