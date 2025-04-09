@@ -263,7 +263,7 @@ Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-squash-merge (main)
 $ git log --graph --oneline
 * e48aaf5 (HEAD -> main) Agregar documentacion estandar del repositorio
 * 9bcc9df (master) commit inicial en main
-## Comentario: Se crreo una nueva carpeta con tematica del problema, "prueba-squash-merge", se agrega contenido a la rama master y como queriaque fuera main, por defecto se cambiaba master asique la cambie a "main"; luego de eso cree una rama " add-basic-files" y se agregaron dos archivos de diferente naturaleza .Al final desde la rama main se hizo la fusion usando "git merge --squash add-basic-files".
+## Comentario: Se crreo una nueva carpeta con tematica del problema, "prueba-squash-merge", se agrega contenido a la rama master y como queri aque fuera main, por defecto se cambiaba master asi que yo la cambie a "main"; luego de eso cree una rama " add-basic-files" y se agregaron dos archivos de diferente naturaleza .Al final desde la rama main se hizo la fusion usando "git merge --squash add-basic-files".
 
 ## ¿Cuándo es recomendable utilizar una calabaza fusión? ¿Qué ventajas ofrece para proyectos grandes en comparación con fusiones estándar?
 Es recomendable usarlo cuando se tiene una rama principaly se ramifica a una rama de funcionalidad para introducir cambios, tambien para tener mas limpieza en el grafico requerido.
@@ -401,7 +401,7 @@ $ git log --graph --oneline
 * | c69cf61 ....index.html
 |/
 * b4410ae commit inicial del  index.html en main
-## 
+## Comentario: Lo que genero un conflicto fue que Git detectó que ambas ramas modificaron el mismo archivo.
 ## ¿Qué pasos adicionales tuviste que tomar para resolver el conflicto?
 Borre los simbolos ">>>" o "===" del archivo index.html .
 
@@ -478,7 +478,7 @@ $ git log --graph --oneline --merges --decorate=all
 * fd8e32d Característica 3 paso 1
 * 0009035 (feature-2) Se agrega característica 2
 * e409dca (feature-1) Agregar característica 1
-  
+## Este ejercicio es importante porque nos da una vision de como se ve cada tipo de fusion .
 ## ¿Cómo se ve el historial en cada tipo de fusión?
 SE ven completamente iguales
 
@@ -610,7 +610,7 @@ $
 Linea 1
 linea2
 linea3
-
+## Comentario:  Se puede apregiar como la herramienta "Git"  puede fusionar ramas en el momento que no hay conflictos, y cómo manejar ramas que ya no utiles y estan innecesarias en el proyecto.
 ## ¿Cuándo usarías un comando como git revert para deshacer una fusión?
 Lo usaria cuando la fusion no me parezca correcta o me de error.
 ## ¿Qué tan útil es la función de fusión automática en Git
