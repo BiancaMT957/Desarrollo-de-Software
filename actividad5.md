@@ -400,7 +400,7 @@ $ git log --graph --oneline
 | * d7e7810 (feature-update) Actualiza...
 * | c69cf61 ....index.html
 |/
-* b4410ae commit inicial del  index.html en main
+* b4410ae commit inicial del  index.html en main 
 ## Comentario: Lo que genero un conflicto fue que Git detectó que ambas ramas modificaron el mismo archivo.
 ## ¿Qué pasos adicionales tuviste que tomar para resolver el conflicto?
 Borre los simbolos ">>>" o "===" del archivo index.html .
