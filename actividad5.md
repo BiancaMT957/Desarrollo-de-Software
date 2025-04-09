@@ -718,7 +718,7 @@ Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
 $ git branch
   feature1
   feature2
-* main
+  main
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/mi-proyecto (main)
 $ git checkout feature1
