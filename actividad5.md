@@ -269,7 +269,7 @@ $ git log --graph --oneline
 Es recomendable usarlo cuando se tiene una rama principaly se ramifica a una rama de funcionalidad para introducir cambios, tambien para tener mas limpieza en el grafico requerido.
 Ofrece ventajas como evitar el deesorden de muchas confirmaciones y aminorar la canidad de commits.
 
-  # 4  )Resolver conflictos en una fusión sin avance rápido
+# 4  )Resolver conflictos en una fusión sin avance rápido
 
  $ cd ..
 
@@ -485,7 +485,7 @@ SE ven completamente iguales
 ## ¿Qué método prefieres en diferentes escenarios y por qué?
 Prefiero el metodo no fast foward porque  preserva el contexto de la fusión y ada mucha claridad al historil de cambios, que es muy importante para mi y pienso para ver el trabajo entre un grupo de personas que trabajen juntas.
 
-# 7 ) Ejercicio: fusiones Usando automáticas y revertir fusiones
+# 6 ) Ejercicio: fusiones Usando automáticas y revertir fusiones
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5 (main)
 $ cd ..
@@ -615,7 +615,7 @@ linea3
 Lo usaria cuando la fusion no me parezca correcta o me de error.
 ## ¿Qué tan útil es la función de fusión automática en Git
 ES demsaiado util.
-   # 8 ) Ejercicio: Fusión remota en un repositorio colaborativo
+   # 7 ) Ejercicio: Fusión remota en un repositorio colaborativo
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/prueba-auto-merge (main)
 $ git clone https://github.com/walterRGUni/Prueba.git
@@ -678,7 +678,7 @@ La rama que recibe los cambios siempre es la rama HEAD actualmente desprotegida.
 ## ¿Qué problemas comunes pueden surgir al integrar ramas remotas?
 Conflictos de fusion y problemas de permisos he visto mas, pero tambien hay errores en la URL del repositorio(en especial cuando se quiere clonar).
 
-# Ejercicio final: flujo de trabajo completo
+# 8) Ejercicio final: flujo de trabajo completo
 $ cd C:/Users/Bianca/Documents/repositorio/activity5
 bash: cd: C:/Users/Bianca/Documents/repositorio/activity5: No such file or directory
 
