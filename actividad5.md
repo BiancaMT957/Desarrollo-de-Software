@@ -1,21 +1,22 @@
 
-# 1 ) Clona un repositorio Git con múltiples ramas.
+## 1 ) Clona un repositorio Git con múltiples ramas.
 Bianca@MSI MINGW64 ~
 $ cd C:/Users/Bianca/Documents/repositorio/activity-5
+## me voy a la carpeta donde quiero trabajar
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5 (main)
 $ mkdir prueba-fast-forward-merge
-
+## creo otra carpeta, dentro d ela anterior y segun el nombre del problema
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5 (main)
 $ cd prueba-fast-forward-merge/
-
+## me voy a esa carpeta
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-fast-forward-merge (main)
 $ git init
 Initialized empty Git repository in C:/Users/Bianca/Documents/repositorio/activity-5/prueba-fast-forward-merge/.git/
-
+## inicializo
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-fast-forward-merge (master)
 $ echo "#mi proyecto" > README.md
-
+## comienzo a agregar un README.md
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-fast-forward-merge (master)
 $ git add README.md
 warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
@@ -25,11 +26,11 @@ $ git commit -m"commit inicial en main"
 [master (root-commit) 24298e2] commit inicial en main
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
-
+## se hizo el primero commit
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-fast-forward-merge (master)
 $ git checkout -b add-description
 Switched to a new branch 'add-description'
-
+## cambie a la rama "add-description"
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-fast-forward-merge (add-description)
 $ echo "este proyecto es un ejemplo de como usar Git." >> README.md
 
@@ -41,15 +42,15 @@ Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-fast-forward-merge 
 $ git commit -m "agregar descripcion al README.md"
 [add-description 707a811] agregar descripcion al README.md
  1 file changed, 1 insertion(+)
-
+## a esa nueva rama se le agrego un README en lenguaje markdown y se hizo primer commit
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-fast-forward-merge (add-description)
 $ git checkout main
 error: pathspec 'main' did not match any file(s) known to git
-
+## cambio a rama main
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-fast-forward-merge (add-description)
 $ git merge add-description
 Already up to date.
-
+## se hace el "merge" o la fusion a la rama "add-description"
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-fast-forward-merge (add-description)
 $ git checkout master
 Switched to branch 'master'
@@ -60,11 +61,12 @@ Updating 24298e2..707a811
 Fast-forward
  README.md | 1 +
  1 file changed, 1 insertion(+)
-
+## se hizo la fusion Fast-forward
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-fast-forward-merge (master)
 $ git log --graph --oneline
 * 707a811 (HEAD -> master, add-description) agregar descripcion al README.md
 * 24298e2 commit inicial en main
+## aca se puede apreciar mejor el historial
 ## ¿En qué situaciones recomendaría evitar el uso de git merge --ff? Reflexiona sobre las desventajas de este método.
 cuando uno quiere tener un historial vacio no es recomendable usarlo.
 Pienso que seria mejor usar otras alternativas como --no-ff o git merge, dependiendo de lo que quiera uno.Es mejor esto a arriesgarse a contaminar el historial de rama de funciones.
@@ -74,14 +76,14 @@ $ cd ..
 
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5 (main)
 $ mkdir prueba-no-fast-forward-merge
-
+## creo nueva carpeta
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5 (main)
 $ cd prueba-no-fast-forward-merge/
-
+##  voy a la carpeta
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-no-fast-forward-merge (main)
 $ git init
 Initialized empty Git repository in C:/Users/Bianca/Documents/repositorio/activity-5/prueba-no-fast-forward-merge/.git/
-
+## inicio ahi
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-no-fast-forward-merge (master)
 $ echo "#Mi proyecto" > README.md
 
@@ -94,13 +96,13 @@ $ git commit -m"commit inicial en main"
 [master (root-commit) 91bfe6f] commit inicial en main
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
-
+## primer commit
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-no-fast-forward-merge (master)
 $ git reset --hard HEAD~1
 fatal: ambiguous argument 'HEAD~1': unknown revision or path not in the working tree.
 Use '--' to separate paths from revisions, like this:
 'git <command> [<revision>...] -- [<file>...]'
-
+## borro lo que paso en esa rama
 Bianca@MSI MINGW64 ~/Documents/repositorio/activity-5/prueba-no-fast-forward-merge (master)
 $ git branch -m main
 
