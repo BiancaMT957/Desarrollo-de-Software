@@ -9,12 +9,13 @@ crearse la nueva rama “feature”. Como desventaja no puedes preservar el cont
 ## 2)  Simula un flujo de trabajo de equipo.  
 ### Pregunta: ¿Cuáles son las principales ventajas de utilizar git merge --no-ffen un proyecto en equipo? ¿Qué problemas podrían surgir al depender excesivamente de commits de fusión?  
 Haber como ventaja podria resaltar que se preserva el contexto de fusion, esto es esencial para los que desarrolladores que deseen mucha claridad en el historial de cambios(por ejemplo cuando hacemos commits o aggregamos codigo de python o texto o archivo html).
+![2](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen2.png?raw=true)
 
 
 ## 3)))  Crea múltiples commits en una rama.  
 ### Pregunta: ¿Cuándo es recomendable utilizar una calabaza fusión? ¿Qué ventajas ofrece para proyectos grandes en Corparacion con fusiones estándar?
 Es recomendable usar “git rebase-2 o “calabaza fusión” cuando deseas tener un historial de confirmaciones tipo lineal, pero también reescribir tu historial y no borrarlo como en otros casos. 
-
+![3](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen3.png?raw=true)
 
 ## 4)))  Resolver conflictos en una fusión sin avance rápido 
 Preguntas: 
@@ -23,6 +24,7 @@ Tuve que arreglarlos manualmente, osea tecnicamente hablando abri el archivo usa
 
 ###  ¿Qué estrategias podrías emplear para evitar conflictos en futuros desarrollos colaborativos? 
 Uhm podria revisar paso por paso los comandos que voy escribiendo en el terminal, pensando bien en lo que hago y bien concentrada , de paso que aprendo mas y no me confundo. Mas que todo seguiría  el proceso usando bien la teoría aprendida, podria ver el historial y el archivo que voy agregando. 
+![4](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen4.png?raw=true)
 
 ## 5))) Ejercicio: Comparar los historiales con git log después de diferentes fusiones 
 ### Preguntas: 
@@ -36,11 +38,11 @@ historial más corto.
  
 Caso 3: git log --graph --oneline --merges --decorate –all  
 Se tiene el historial mas largo. 
- 
+![5](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen5.png) 
 ###  ¿Qué método prefieres en diferentes escenarios y por qué? 
 Prefiero el método donde se usa “git log --graph --oneline --merges --first-parent –
 branches”, porque tiene los commits mas importantes a mi parecer. 
-
+![by](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen5b.png)
 ## 6))) Ejercicio: fusiones Usando automáticas y revertir fusiones 
   
 Acá se pudo apreciar en la interfaz de “Visual Studio Code” el archivo del “MERGE_MSG”. 
