@@ -1,8 +1,10 @@
 ## 1) Clona un repositorio Git con multiples ramas
-![imagen-1](Archivo5/img/imagen1.png)
+
 ### Pregunta: ¿En qué situaciones recomendaría evitar el uso de git merge --ff? Reflexiona sobre las desventajas de este método. 
 No usaria cuando se tienen ramas con historiales de commits configurados  anterormente. Tampoco cuando la rama base haya recibido commits al momento de 
 crearse la nueva rama “feature”. Como desventaja no puedes preservar el contexto de fusion ni tampoco tener claridad de historial de cambios. 
+![Diagrama de ramas](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen1.png?raw=true)
+
 
 ## 2)  Simula un flujo de trabajo de equipo.  
 ### Pregunta: ¿Cuáles son las principales ventajas de utilizar git merge --no-ffen un proyecto en equipo? ¿Qué problemas podrían surgir al depender excesivamente de commits de fusión?  
