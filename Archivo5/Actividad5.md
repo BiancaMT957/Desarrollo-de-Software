@@ -38,25 +38,25 @@ Se tiene el historial mas largo.
 Prefiero el método donde se usa “git log --graph --oneline --merges --first-parent –
 branches”, porque tiene los commits mas importantes a mi parecer. 
 
-### 6))) Ejercicio: fusiones Usando automáticas y revertir fusiones 
+## 6))) Ejercicio: fusiones Usando automáticas y revertir fusiones 
   
 Acá se pudo apreciar en la interfaz de “Visual Studio Code” el archivo del “MERGE_MSG”. 
 Preguntas: 
-#### ¿Cuándo usarías un comando como git revert para deshacer una fusión? 
+### ¿Cuándo usarías un comando como git revert para deshacer una fusión? 
 Cuando acab de realizar una fusion y luego me arrepiento y procedo a deshacerla 
 sin alteral el historial. 
-####  ¿Qué tan útil es la función de fusión automática en Git? 
+###  ¿Qué tan útil es la función de fusión automática en Git? 
 Demasiado util y por esa razon muchos profesionales destacados la usan.  
 
-### 7)))  Ejercicio: Fusión remota en un repositorio colaborativo 
-#### ¿Cómo cambia la estrategia de fusión cuando colaboras con otras personas en un repositorio remoto? 
+## 7)))  Ejercicio: Fusión remota en un repositorio colaborativo 
+### ¿Cómo cambia la estrategia de fusión cuando colaboras con otras personas en un repositorio remoto? 
 Se deja de realizar merge directo y ahora se utiliza o se cambia por “pull request” para poder realizar la fusion de rama. 
-#### ¿Qué problemas comunes pueden surgir al integrar ramas remotas? 
+### ¿Qué problemas comunes pueden surgir al integrar ramas remotas? 
 Pueden ocurrrir conflictos de fusion o tambien llamados “merge conflicts”, tambien puedo ocasionar un historial medio incompleto o desordenado.  
 
-### 8))) Ejercicio final: flujo de trabajo completo
-#### Revisa el historial para entender cómo los diferentes métodos de fusión afectan el árbol de commits. 
-#### Compara los resultados y discute con tus compañeros de equipo cuál sería la mejor estrategia de fusión para proyectos más grandes. 
+## 8))) Ejercicio final: flujo de trabajo completo
+### Revisa el historial para entender cómo los diferentes métodos de fusión afectan el árbol de commits. 
+### Compara los resultados y discute con tus compañeros de equipo cuál sería la mejor estrategia de fusión para proyectos más grandes. 
 
  
 
