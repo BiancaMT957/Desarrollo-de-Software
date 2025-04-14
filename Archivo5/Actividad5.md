@@ -50,20 +50,34 @@ Preguntas:
 ### ¿Cuándo usarías un comando como git revert para deshacer una fusión? 
 Cuando acab de realizar una fusion y luego me arrepiento y procedo a deshacerla 
 sin alteral el historial. 
+
+![uu](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen6a.png)
+
 ###  ¿Qué tan útil es la función de fusión automática en Git? 
 Demasiado util y por esa razon muchos profesionales destacados la usan.  
+![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen6b.png)
+
+![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen6c.png)
+
+![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen6d.png)
+
 
 ## 7)))  Ejercicio: Fusión remota en un repositorio colaborativo 
 ### ¿Cómo cambia la estrategia de fusión cuando colaboras con otras personas en un repositorio remoto? 
-Se deja de realizar merge directo y ahora se utiliza o se cambia por “pull request” para poder realizar la fusion de rama. 
+Se deja de realizar merge directo y ahora se utiliza o se cambia por “pull request” para poder realizar la fusion de rama.
+
+![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen7a.png)
 ### ¿Qué problemas comunes pueden surgir al integrar ramas remotas? 
 Pueden ocurrrir conflictos de fusion o tambien llamados “merge conflicts”, tambien puedo ocasionar un historial medio incompleto o desordenado.  
 
+![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen7b.png)
+
+![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen7c.png)
 ## 8))) Ejercicio final: flujo de trabajo completo
 ### Revisa el historial para entender cómo los diferentes métodos de fusión afectan el árbol de commits. 
-### Compara los resultados y discute con tus compañeros de equipo cuál sería la mejor estrategia de fusión para proyectos más grandes. 
+### Compara los resultados y discute con tus compañeros de equipo cuál sería la mejor estrategia de fusión para proyectos más grandes.
 
- 
+![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8.png)
 
  
 
