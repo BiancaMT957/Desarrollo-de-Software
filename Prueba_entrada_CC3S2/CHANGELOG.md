@@ -33,7 +33,8 @@ Cree dos archivos en python y tambien les agregue los códigos pedidos. Luego in
 
 ![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/2c.png)
 
-## Resumen : Se crearon los archivos  "trivia.py" y "test_trivia.py", luego se procedio a agregarles códigos para hacer pruebas unitarias. Después se instalo "pytest" para luego ejecutarlo. También se creo la rama "feature/dia2". También se realizo el compromiso en la rama. Después se realizaron los comandos "git diff" y " git blame test_trivia.py". Al final se realizo la respectiva fusión diaria con "feature/dia2" y al final se puso su etiqueta "tag log …." y también se vio el historial usando el comando "git log".
+## Resumen 
+Se crearon los archivos  "trivia.py" y "test_trivia.py", luego se procedio a agregarles códigos para hacer pruebas unitarias. Después se instalo "pytest" para luego ejecutarlo. También se creo la rama "feature/dia2". También se realizo el compromiso en la rama. Después se realizaron los comandos "git diff" y " git blame test_trivia.py". Al final se realizo la respectiva fusión diaria con "feature/dia2" y al final se puso su etiqueta "tag log …." y también se vio el historial usando el comando "git log".
 
 # 3) Dia 3 - Implementación de la clase Quiz y flujo básico del juego (Sprint 1 – Parte 3)
 ![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/3a.png)
@@ -45,7 +46,8 @@ Realizo mi commit :
 ![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/3c.png)
 Al final agrego el tag3  y hago la fusion en la rama main. Revise con “git log” y me sale el historial de cada rama diaria.
 
-## Resumen: Se creo la clase Quiz en el archivo trivia.py, después se agregaron las preguntas en consola para la funcion "run_quiz()", después se realizo el compromiso en la nueva rama creada"feature/dia3". Al final use "git diff" y "git blame"(comandos muy importantes). Al final hize la fusión respectiva "merge"  y tambien puse la etiqueta respectiva. Al final se registro todo y se reviso el historial.
+## Resumen:
+Se creo la clase Quiz en el archivo trivia.py, después se agregaron las preguntas en consola para la funcion "run_quiz()", después se realizo el compromiso en la nueva rama creada"feature/dia3". Al final use "git diff" y "git blame"(comandos muy importantes). Al final hize la fusión respectiva "merge"  y tambien puse la etiqueta respectiva. Al final se registro todo y se reviso el historial.
 # 4) Día 4 - Sistema de puntuación, manejo de rondas y finalización del juego (Sprint 2)
 Hago cambios en los codigos de python, en sus respectivos archivos.  Se procedio a implementar cosas a la función run:quiz(), para una ronda de 10. 
 ![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/4a.png)
@@ -62,7 +64,8 @@ Tambien pongo la etiqueta respectiva.
 
 Esto de aca aparece cuando utilizo el comando importante “git log”, para ver lo que paso hoy. 
 
-## Resumen: Se abrió un archivo  desde "Visual Studio Code", después se procedio a hacer cambios en la clase "class Quiz", luego se actualizo para hacer pruebas unitarias y  se implemento la función para hacer para 10 rondas. Luego se realizo el propio commit respectivo para realizar el compromiso. A nueva  la rama "feature/dia4" se le hizo su respectiva fusión desde la rama "main"(rama base para el trabajo). Después se realizo la propia documentación para el dia. 
+## Resumen: 
+Se abrió un archivo  desde "Visual Studio Code", después se procedio a hacer cambios en la clase "class Quiz", luego se actualizo para hacer pruebas unitarias y  se implemento la función para hacer para 10 rondas. Luego se realizo el propio commit respectivo para realizar el compromiso. A nueva  la rama "feature/dia4" se le hizo su respectiva fusión desde la rama "main"(rama base para el trabajo). Después se realizo la propia documentación para el dia. 
  
 # 5) Día 5 - Mejoras en la interfaz de usuario y refinamientos (Sprint 3)
 ![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/5a.png)
@@ -75,7 +78,8 @@ Se ccambio por un momento a la rama “develop”, luego se creo la rama diaria 
 Aca se puede apreciar la fusion 
 ![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/5d.png)
 
-## Resumen: Se abrió el archivo trivia.py para cambiar la función "run_quiz()"  y luego se realizaron pruebas. Luego se creo la rama "feature/dia5" y se trabajo con esa rama, se registraron y revisaron los cambios con "git diff" y "git blame". Al final se hizo la fusión y documentación diaria.
+## Resumen: 
+Se abrió el archivo trivia.py para cambiar la función "run_quiz()"  y luego se realizaron pruebas. Luego se creo la rama "feature/dia5" y se trabajo con esa rama, se registraron y revisaron los cambios con "git diff" y "git blame". Al final se hizo la fusión y documentación diaria.
 
 
 # 6) Día 6 - Pipeline CI/CD y pruebas de integración
@@ -83,6 +87,7 @@ Aca se puede apreciar la fusion
 Se creo el archivo .yml ,manualmente, y se agrego el contenido pedido. 
 ![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/6b.png)
 Se agregaron pruebas de integracion
+
 # 7) Día 7 - Gestión de configuración, seguridad y pruebas de rendimiento
 Se creo el archivo nuevo .env: 
 
