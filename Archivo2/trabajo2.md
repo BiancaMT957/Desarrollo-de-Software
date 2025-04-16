@@ -42,8 +42,7 @@ Ayuda a reutilizar y gestionar.
 ├──main.tf
 ├── variables.tf
 └── outputs.tf
-```
---- 
+
 
 # Tarea teorica 1
 ## Terraform 
@@ -163,7 +162,7 @@ spec:
       containers:
       - name: contenedor-web
         image: nginx:latest 
-```
+
 ### Docker y Kubernetes se integran en pipelines de despliegue continuo (CD) para automatizar la creación, configuración, escalado, y gestión de aplicaciones. 
  
 # Tarea teorica 2
