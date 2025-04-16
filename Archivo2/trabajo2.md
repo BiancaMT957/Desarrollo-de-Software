@@ -89,7 +89,7 @@ project-terraform/
 ├── .gitignore
 ├── README.md
  
-
+-----
 ### ¿Qué son los contenedores?
 
 Son tecnologías que permiten empaquetar y aislar las aplicaciones junto con todo el entorno de ejecución
@@ -103,7 +103,7 @@ El avance de la contenerización ha revolucionado la forma en que se empaquetan 
 
 ### Estructura básica de un Dockerfile:
 
-```dockerfile
+''' dockerfile
 # 1. 
 FROM ubuntu:20.04
 
@@ -117,8 +117,8 @@ docker build -t mi_imagen:1.0 .
 
 # 5.
 docker run --name contenedor_ejemplo -d mi_imagen:1.0
-
-#¿Qué son los contenedores?
+--- 
+# ¿Qué son los contenedores?
 
 Los contenedores son tecnologías que permiten empaquetar y aislar aplicaciones con todo su entorno de ejecución.
 
