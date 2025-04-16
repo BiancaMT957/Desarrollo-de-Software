@@ -25,7 +25,7 @@ Algunas de las herramientas más populares para implementar IaC son:
 
 Ayuda a reutilizar y gestionar.
 ### Estructura
-
+---
 ├── modules/
 │   ├── network/
 │   │   ├── main.tf
@@ -43,7 +43,7 @@ Ayuda a reutilizar y gestionar.
 ├── variables.tf
 └── outputs.tf
 
-
+--- 
 # Tarea teorica 1
 ## Terraform 
 
