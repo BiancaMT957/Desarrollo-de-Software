@@ -1,61 +1,56 @@
 # 1. 
 
-### Concepto de DevOps
-Es una metodología integral que uno de los equipos de desarrollo, aseguramiento de calidad y operaciones en un proceso colaborativo continuo. Este enfoque permite acortar los ciclos de entrega, mejorar la calidad y responder de manera ágil a los cambios en el entorno tecnológico y en las necesidades del negocio.
+### Concepto de DevOps:
+Desarrollo de una metodología integral que una uno de los equipos de desarrollo, aseguramiento de calidad y operaciones haciendo una ejecución colaborativa continuo. El manejo promueve bajar ciclos de entrega, mejorar la calidad y responder con agilidad en en canal de los cambios a cambio del entorno tecnológico y las necesidades del negocio.
 
-###  Origenes de DevOps
-Los orignes de DevOps  se  marcan en la necesidad de superar los modelos tradicionales de desarrollo de software, caracterizados por equipos aislados y ciclos largos de actualización.
+### Origenes De DevOps
+Los orígenes de  DevOps se inician en la necesidad de romper con los modelos tradicionales de desarollo de software que tuviesen equipos autónomos y ciclos largos de actualización.
 
-### Diferencias entre los equipos de desarrollo y operaciones en el pasado
-En los modelos tradicionales, los equipos de desarrollo, aseguramiento de calidad (QA) y operaciones trabajaban de forma separada, autosuficiente. Este enfoque dividia a la gente y tambien hacia que hubiera problemas de comunicacion. 
+### equipos de desarrollo y operaciones del pasado(diferencias)
+Los equipos de desarrollo y operaciones estaban en lante antes
+En sistemas en caché, los equipos de desarrollo, QA, y operaciones eran autónomos, independientemente la otro y se desarrollaban de forma independiente clientes… este método dividía a la gente para que haya casos como mayor comunicaciones mal funcionados.
 
-### Principios fundamentales de DevOps
+### Principios básicos de DevOps
+Inclusión continua              : corresponde a pequeños cambios en el código frecuentes para detectar errores inicialmente y no permitir una acumulación sistemática de errores en versiones esenciales.
+Entrega continua              : Procesos mediante los cuales se despliegan regularmente para asegurar que cada cambio se someta a pruebas valor antes de ser enviado a producción. De esta manera obtener una renovación lo más nueva del software posible y, reducir; el riesgo de principal
 
- La integración continua (CI): Tiene que ver con realizar pequeños cambios frecuentes en el código para detectar errores de forma inmediata y evitar la acumulación de defectos en versiones importantes. 
- La entrega continua (CD): Que tiene comom finalidad automatizar el despliegue y garantizar que cada cambio se someta a pruebas rigurosas antes de llegar a producción. Asi  consigue una actualización constante del software y se minimiza el riesgo asociado a grandes lanzamientos.
-
-### Qué NO es DevOps
-
-No  es solo un conjunto de herramientas o procesos aislados. Más bien, requiere de un cambio cultural profundo: se trata de fomentar la comunicación, la transparencia y la responsabilidad compartida entre todos los actores involucrados. En este sentido, DevOps no es una solución mágica, sino una transformación que abarca desde la mentalidad organizacional hasta la implementación técnica en cada fase del ciclo de vida del software.
+### NO es DevOps
+No es simplemente un grupo de herramientas o cursos aislados. Más bien es, un profundo cambio cultural: es sobre contagiar; La comunicación, la transparencia y la responsabilidad compartida entre todos las partes involucradas. A fin de cuentas, DevOps no es una cura sino un cambio que inicia desde la mentalidad organizacional para llegar implementación técnica en cada fase del ciclo de vida de la creación de software.
 
 # 2. Preguntas de Reflexión
+### 1. ¿Por qué fue necesario DevOps en el desarrollo de software?
+Se prentee por actualizar los modelos antiguos de desarrollo de software del tipo equipo aislado y ciclo largo de actualización
 
-### 1. ¿Por qué surgió la necesidad de DevOps en el desarrollo de software?
-Surgio debido a la necesidad de superar los modelos tradicionales de desarrollo de software, caracterizados por equipos aislados y ciclos largos de actualización.
+### 2. ¿Cómo llegó a ser DevOps sin comunicación y sin coordinación de equipos de desarrollo y operación en el pasado?
+La falta de les llevaba a errores en la producción, conflicto por expectativas comentarios y limitaba la capacidad de respuesta de emergencia
 
-### 2. Explica cómo la falta de comunicación y coordinación entre los equipos de desarrollo y operaciones en el pasado llevó a la creación de DevOps.
-Generaba errores en la producción, conflictos por las expectativas y dificultaba la capacidad de respuesta ante emergencias. 
+### 3. Describe cómo el principio de mejorar continua afecta tanto a los aspectos técnicos y culturales de una organización.
+En el ámbito tecnico: tiene rol en los automatizados de tareas, optimizacion de pipelines;
+En el ambito cultural: abrir con los cambios, retroalimentación y aprendizaje;
 
-### 3. Describe cómo el principio de mejora continua impacta tanto en los aspectos técnicos como en los culturales de una organización.
-A nivel tecnico: Tiene que ver con la automatizacion de tareas y optimizacion de pipelines.
-A nivel cultural: Le da la bienvenidada a los cambios, retroalimentacion y ademas fomenta el aprendizaje.
+### 4 How ‘DevOps is not just about tools, people or processes?’
+necesario que no este estructurado en un solo conjunto de herramienta o procesos muy aislado. Es más, devop se basa en cambios : se basa en mejorar comunicaci  –n, transparencia y responsabilidad entre los partes deกระบวนการ involucrados en el proceso.
 
-### 4. ¿Qué significa que DevOps no se trata solo de herramientas, individuos o procesos?
-No  es solo un conjunto de herramientas o procesos muy aislados. En vez de eso, fomenta los cambios : se trata de fomentar la comunicación, la transparencia y la responsabilidad entre los implicados en el proceso.
-
-### 5. Según el texto, ¿cómo contribuyen los equipos autónomos y multifuncionales a una implementación exitosa de DevOps?
-se consigue una mayor consistencia entre los entornos de desarrollo, pruebas y producción, además de reducir errores manuales y acelerar el aprovisionamiento.ADemas de hacer la entrega mas rapida. Reduce la complejidad de las pruebas y permite actualizaciones más ágiles.
+### 5. Según lo planteados en el curso ¿qué contribuyen a la implementación los equipo autónomos y multifuncionales?
+Más consistencia entre los entornos de desarrollo, pruebas y producción, en error manuales, y acelero el aprovisionamiento.ADEMás esta vez hacer la entrega mas rapida, en completo se pruebas y son actualizaciones más ágiles.  .           .           .           .           .               .                  .                          .                   .                          .                             .                       .
 
 # Parte 2
+### 1. ¿Qué significa “desplazar a la izquierda” y por qué es crucial para DevSecOps?
+en el contexto de DevSecOps, desplazar a la izquierda significa que la prueba y la seguridad del software se implementan en las primeras fases del desarrollo de las aplicaciones; esto proporciona muchos beneficios reduce el tiempo y los esfuerzos necesarios para corregir los errores; detectar y corregir el error temprano que mantiene la no costo.
 
-### 1. ¿Qué significa "desplazar a la izquierda" en el contexto de DevSecOps y por qué es importante?
-significa implementar pruebas y seguridad en las primeras fases del desarrollo de aplicaciones, lo cual da muchos beneficios como reducir tiempo y esfuerzos para corregir errores; detectar y corregir errores antes, lo que reduce el coste.
- 
-### 2. Explica cómo IaC mejora la consistencia y escalabilidad en la gestión de infraestructuras.
-Ofrece recursos virtualizados – como servidores, almacenamiento y redes – que pueden configurarse y gestionarse a través de scripts y herramientas automatizada. 
+### 2. ¿Cómo la IaC contribuye a la consistencia y a la escalabilidad de la administración de la infraestructura?
+Ofrece recursos alojados – sergios, almacenamiento y redes  – que pueden sincronizarse y administrarse mediante scritps y herramientas de automatización.
 
-### 3. ¿Cuál es la diferencia entre monitoreo y observabilidad? ¿Por qué es crucial la observabilidad en sistemas complejos?
+### 3. ¿Qué diferencia entre monitoreo y observabilidad? Para qué es crucial la observabilidad en sistemas complejos?
+El canto de máquina es asegurar que con cada cambio se evalúe no solo respuesta, sino practicamente, con un mínimo de adformación a las garantías de seguridad. Integrado es lo propio detectar y dar cuenta de errores desde temprano,reducir el riesgo de aver batting enproducción.
 
-La herramienta de monitoreo es garantizar que cada cambio se evalúe no solo por su funcionalidad, sino también por su adherencia a las mejores prácticas de seguridad. Esta integración permite detectar y corregir anomalías de forma temprana, reduciendo el riesgo de incidentes en producción.
+La observabilidad es una capacidad del servidor para observar correr el rendimiento, errores y otros indicadores críticos. La integración de loggin, métricas y traza y más entregar instalaciones a los equipos indices del hecho antes de que alguien lo haga de una manera más útil, con un entorno de desarrollo continuo.
 
-La observabilidad se refiere a la capacidad de monitorear en tiempo real el rendimiento, los errores y otros indicadores críticos del sistema. La integración de herramientas de logging, métricas y trazabilidad permite a los equipos darse cuenta de  anomalías de forma proactiva y reaccionar rápidamente, lo cual es muy apreciado  en un entorno de despliegues continuos.
+Entonces el monitoreo son las respuestas adformidadas para asegurar que ninguna modificación sea util para beschş, osea que lo mides y la observabilidad, es la capacidad de comprender el comportamiento del servidor..
 
-El monitoreo entonces es la capacidad de garantizar que cada cambio sea util, osea que lo mide y  la observabilidad, es la capacidad de comprender el comportamiento del sistema.
-### 4. ¿Cómo puede la experiencia del desarrollador impactar el éxito de DevOps en una organización?
-La colaboración entre desarrolladores y expertos en seguridad se fortalece mediante la capacitación en técnicas de codificación segura y la implementación de políticas de seguridad que se adaptan a las necesidades específicas de cada proyecto. La creación de entornos de pruebas seguros y la simulación de ataques controlados (red teaming) son prácticas adicionales que ayudan a robustecer la postura de seguridad de las aplicaciones.Invertir en la capacitación técnica y en habilidades blandas es esencial para lograr la integración de equipos y la adopción de nuevas metodologías.
-
+### 4¿Cómo puede la experiencia del desarrollador impactar el éxito de DevOps en una organización? 
+La colaboración entre desarrolladores y expertos en seguridad se fortalece mediante la capacitación en técnicas de codificación segura y la implementación de políticas de seguridad que se adaptan a las necesidades específicas de cada proyecto. La creación de entornos de pruebas seguros y la simulación de ataques controlados son prácticas adicionales que ayudan a robustecer la postura de seguridad de las aplicaciones. Invertir en la capacitación técnica y en habilidades blandas es esencial para lograr la integración de equipos y la adopción de nuevas metodologías. 
 ### 5. Describe cómo InnerSource puede ayudar a reducir silos dentro de una organización.
-Puede ayudar al promover la colaboración entre equipos y unidades de negocio
-
+Puede al promover la colaboración entre equipos y unidades de negocio
 ### 6. ¿Qué rol juega la ingeniería de plataformas en mejorar la eficiencia y la experiencia del desarrollador?
-Da un ambiente de trabajo estandarizado, seguro y escalable.Esto permite a los desarrrolladores agilizar su trabajo.
+Da un ambiente de trabajo que es estandarizado, seguro y escalable. Esto permite a los desarrrolladores agilizar su trabajo.
