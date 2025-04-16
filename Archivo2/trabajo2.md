@@ -1,29 +1,22 @@
 # 2. A
 
 ## 1. Definición de IaC y su cambio de paradigma frente a la configuración manual
+Una de las ideas fundamentales en ingeniería de software contemporánea es la infraestructura como código, IaC. La infraestructura de TI – que incluye servidores, redes, sistemas de almacenamiento, contenedores, balanceadores de carga y así sucesivamente, todo lo que necesita para ejecutar una aplicación en producción, es un archivo de código fuente para una aplicación. En otras palabras, la configuración, el aprovisionamiento y la administración de los recursos se hacen en textos y archivos de configuración declarativa, normalmente en un repositorio git.
 
-La infraestructura como código (IaC) es uno de los fundamentos en la ingeniería de software contemporánea. La infraestructura de TI –que incluye servidores, redes, sistemas de almacenamiento, contenedores, balanceadores de carga y otros recursos necesarios para ejecutar aplicaciones– se trata de un codigo fuente para una aplicación. Esto implica que la configuración, el aprovisionamiento y la administración de los recursos se definen mediante archivos de texto eo configuraciones declarativas, para repositorios git generalmente.
-
-## Beneficios de IaC
-Permite una gestión más eficiente de los cambios, con una trazabilidad completa gracias al versionado. Cada modificación se puede revisar mediante Pull Requests, lo que reduce los errores. Además, el uso de IaC libera a los equipos de la dependencia en configuraciones manuales y ayuda compartir harto conocimiento importante.
+## Ventajas
+dirección más efectiva de los cambios, con una trazabilidad completa posible gracias al versionado. Cada cambio se puede revisar utilizando Pull Requests, lo que reduce los errores. Ayuda a no depender de un equipo para escribir configuraciones y a compartir mucho conocimiento importante.
 
 
 ## 2. Herramientas populares para IaC
 
 Algunas de las herramientas más populares para implementar IaC son:
 
-- **Terraform**: Estas herramientas permiten describir el estado deseado de la infraestructura de forma declarativa. Con un lenguaje propio, Terraform, por ejemplo, utiliza HCL para definir recursos como instancias EC2, bases de datos o redes virtuales.
-- **Ansible**: Se enfocan en la gestión de la configuración del sistema operativo y de aplicaciones, asegurando que cada máquina o contenedor se encuentre en el estado deseado.
-- **Pulumi**: Permite escribir IaC usando lenguajes como JavaScript o Go.
-- **AWS CloudFormation**: es un servicio de infraestructura como código (IaC) que le permite modelar, aprovisionar y administrar de manera sencilla recursos de AWS ...
+- **Terraform**:  Aquí hay algunas de las herramientas más populares para IaC: Terraform: Herramientas que permiten describir lo que ustedes quieren decir de la infraestructura de manera declarativa.
+- **Terraform** se dedica al lenguaje HCL – que permite definir recursos como instancias EC2, bases de datos o redes virtuales
+- **Ansible:** se especializa en la administración de configuración de máquinas de software y máquinas de estado, asegurando que cada máquina o contenedor esté en estado de acuerdo con el manual de construcción - **Pulumi:** herramientas permiten escribir IaC en lenguajes como javascript o go. Modelo de AWS CloudFormation. AWS CloudFormation es un servicio de infraestructura como código que le permite modelar y aprovisionar de forma segura todos sus recursos en AWS...
 
 ##  Buenas prácticas en la escritura de IaC
-
-- **Nombres claros de recursos**:  ayuda a identificar rápidamente su propósito y facilita la gestión en entornos grandes.
-- **Uso de variables**: Las variables permiten reutilizar configuraciones de manera eficiente.
-- **Modularización del código**: Es recomendable dividir la infraestructura en módulos que se puedan reutilizar en diferentes proyectos.
-- **Uso de repositorios de control de versiones (Git)**: Mantener el código de la infraestructura en un repositorio Git permite un control completo sobre los cambios, además de colaborar y hacer auditoría sobre las configuraciones.
-
+ Buenas prácticas : nombres de recursos claros, buen uso de variables, modularización de su código escritura, uso de repositorios de git.
 
 
 ## 3. Patrones para módulos en IaC
@@ -126,24 +119,31 @@ docker build -t mi_imagen:1.0 .
 # 5.
 docker run --name contenedor_ejemplo -d mi_imagen:1.0
 
-### Imagen vs Contenedor
+#¿Qué son los contenedores?
 
-Una imagen es una plantilla inmutable quetiene el codigo y tambien las dependencias . Un contenedor es una instancia en ejecución de una imagen, que puede cambiarse temporalmente pero no modificala imagen base. Para hacer cambios permanentes, hay que realizar una nueva imagen.
+Los contenedores son tecnologías que permiten empaquetar y aislar aplicaciones con todo su entorno de ejecución.
 
-## Orquestación con Kubernetes
+# Diferencia con las máquinas virtuales (VM):
 
-### Introducción a Kubernetes
+Las máquinas virtuales proporcionan una vista abstracta de todo el hardware físico de la computadora, como CPU, memoria y almacenamiento. Por otro lado, los contenedores son instancias de software portátiles con sus dependencias, que pueden ejecutarse en una máquina física o virtual.
 
-### Componentes principales de Kubernetes:
+# Aislamiento y ligereza
 
-- **Pods:**  Son la unidad mínima de implementación, encapsulando uno o varios contenedores que comparten rojo y almacenamiento..
-- **Servicios:** Exponen los Pods a una red interna o externa.
-- **ReplicaSet:** Asegúrese de que un número definido de réplicas de un Pod esté siempre en ejecución..
-- **Implementaciones:**  Facilitan actualizaciones progresivas y permiten realizar rollbacks si es necesario, gestionando versiones de la aplicación de forma declarativa..
-- **StatefulSets:** Se utilizan para aplicaciones con estado que requieren identidades de red únicas y volúmenes persistentes.
+El avance de la contenerización ha cambiado la forma en que se empaquetan y distribuyen las aplicaciones. Docker se ha convertido en el estándar de facto, permitiendo que las aplicaciones se ejecuten en entornos aislados y portátiles independientemente de las diferencias en los sistemas operativos host.
 
-## Manifiestos en YAML
+# Imagen vs contenedor
 
+Una imagen es un modelo inmutable que contiene el código así como sus dependencias. Un contenedor es una instancia en ejecución de una imagen y puede modificarse temporalmente sin modificar la imagen original. Cualquier cambio permanente debe realizarse en una nueva imagen que usted cree.
+
+Orquestación a través de Kubernetes
+
+# ¿Qué es Kubernetes?
+
+# Componentes principales de Kubernetes:
+
+- Pods: Las unidades de trabajo más pequeñas, uno o más contenedores que comparten redes y almacenamiento.
+- Servicios: Expuestos a una red interna o externa mediante Pods.
+- ReplicaSet: garantiza que una gran mejora al equipo.
 Ejemplo básico de un Deployment en Kubernetes:
 
 apiVersion: apps/v1
