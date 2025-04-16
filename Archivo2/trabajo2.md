@@ -42,6 +42,9 @@ Ayuda a reutilizar y gestionar.
 ├──main.tf
 ├── variables.tf
 └── outputs.tf ``` </pre>
+
+
+
 # Tarea teorica 1
 ## Terraform 
 
