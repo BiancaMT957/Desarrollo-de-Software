@@ -77,9 +77,8 @@ Pueden ocurrrir conflictos de fusion o tambien llamados “merge conflicts”, t
 ### Revisa el historial para entender cómo los diferentes métodos de fusión afectan el árbol de commits. 
 ### Compara los resultados y discute con tus compañeros de equipo cuál sería la mejor estrategia de fusión para proyectos más grandes.
 
-![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8.png)
 
- ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8.png)
+ 
  
  ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8a.png)
  
