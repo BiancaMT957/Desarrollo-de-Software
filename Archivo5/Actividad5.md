@@ -70,7 +70,6 @@ Se deja de realizar merge directo y ahora se utiliza o se cambia por “pull req
 ### ¿Qué problemas comunes pueden surgir al integrar ramas remotas? 
 Pueden ocurrrir conflictos de fusion o tambien llamados “merge conflicts”, tambien puedo ocasionar un historial medio incompleto o desordenado.  
 
-![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen7b.png)
 
 ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen7c.png)
 ## 8))) Ejercicio final: flujo de trabajo completo
