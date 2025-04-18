@@ -79,6 +79,19 @@ Pueden ocurrrir conflictos de fusion o tambien llamados “merge conflicts”, t
 
 ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8.png)
 
+ ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8.png)
+ 
+ ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8a.png)
+ 
+ ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8b.png)
+ 
+ ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8c.png)
+
+  ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8cpng.png)
+  
+   ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8d.png)
+ 
+ 
  
 
   
