@@ -77,19 +77,20 @@ Pueden ocurrrir conflictos de fusion o tambien llamados “merge conflicts”, t
 ### Revisa el historial para entender cómo los diferentes métodos de fusión afectan el árbol de commits. 
 ### Compara los resultados y discute con tus compañeros de equipo cuál sería la mejor estrategia de fusión para proyectos más grandes.
 
-
- 
  
  ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8a.png)
+ Cree todo, tambien hize cambios en las ramas feature1 y feature2.Despues leshize sus commits, los confirme y despues hize sus fusiones.
  
  ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8b.png)
  
  ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8c.png)
-
-  ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8cpng.png)
-  
-   ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8d.png)
+Se arreglo la fusion en la rama feature2
+![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8cpng.png)
+Se puede apreciar la fusion "squash", que aplasta commits, en la rama feature3
+ ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo5/img/imagen8d.png)
  
+ Al final se pueden apreciar los commits y tambien sus cambios que se hicieron.
+
  
  
 
