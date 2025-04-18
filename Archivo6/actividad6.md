@@ -11,7 +11,7 @@
 
 
 ### Pregunta: ¿Qué ventajas proporciona el rebase durante el desarrollo de un sprint en términos de integración continua?
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/ejercicio2.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/ejercico2.png)
 
 ## Fase 3: Revisión del sprint (sprint review)
 ## Ejercicio 3: Integración selectiva con git cherry-pick
