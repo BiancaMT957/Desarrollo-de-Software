@@ -14,6 +14,14 @@
 
 
 ## ¿De qué manera el uso git bisectpuede acelerar la localización de un error introducido recientemente?
+
+
+
+## ¿Qué desafíos podrían enfrentar al administrar ramas y alijos en un proyecto con múltiples colaboradores?
+
+
+## Actividades
+
 ## 1
 
 ## 2
@@ -23,12 +31,4 @@
 ## 4
 
 ## 5
-
-
-
-## ¿Qué desafíos podrían enfrentar al administrar ramas y alijos en un proyecto con múltiples colaboradores?
-
-
-## Preguntas
-
 
