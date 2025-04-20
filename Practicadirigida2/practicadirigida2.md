@@ -37,19 +37,30 @@ Asegúrese de ejecutar el script dentro de la raíz de un repositorio Git, ya qu
 
 ## ¿Qué diferencias observas en el historial del repositorio después de restaurar un commit mediante reflog?
 
+El reflog actúa como una especie de "historial secreto" que registra todos los movimientos del puntero HEAD, incluso si un commit fue eliminado o sobrescrito. Al restaurar un commit desde ahí, el historial visible no se borra, pero pueden aparecer ramas "fantasma" o estados antiguos que si no se gestionan bien pueden causar confusión. Sin embargo, es una herramienta valiosa para recuperar trabajo perdido sin perder la trazabilidad.
 
 ## ¿Cuáles son las ventajas y desventajas de utilizar submódulos en comparación con subárboles?
 
+Submódulos:
 
+ Permiten mantener repositorios completamente independientes, ideal si el proyecto externo se desarrolla por separado.
+
+ Requieren comandos adicionales para clonar y actualizar, lo que puede complicar el flujo.
+
+Subárboles:
+
+ Son más fáciles de manejar para equipos pequeños, ya que se integran de forma más transparente.
+
+ Menos flexibilidad si necesitas mantener separados los historiales o colaborar en el proyecto externo.
 ## ¿Cómo impacta la creación y gestión de ganchos en el flujo de trabajo y la calidad del código?
-
+Implementar hooks mejora el flujo de trabajo automatizando tareas como linters, validación de commits y ejecución de pruebas. Esto permite detectar errores antes de que lleguen al repositorio remoto, fomentando calidad desde el origen. Sin embargo, si no se configuran adecuadamente, pueden ser molestos o incluso bloquear el trabajo, especialmente para quienes no entienden qué está fallando.
 
 ## ¿De qué manera el uso git bisectpuede acelerar la localización de un error introducido recientemente?
 
-
+permite identificar rápidamente el commit que introdujo un error usando búsqueda binaria. En vez de revisar manualmente muchos commits, divide el historial en mitades, probando hasta encontrar el punto exacto. En grandes repositorios, esto puede reducir horas de investigación a minutos.
 
 ## ¿Qué desafíos podrían enfrentar al administrar ramas y alijos en un proyecto con múltiples colaboradores?
-
+Al aplicar un stash, pueden aparecer conflictos si el código base cambió demasiado. Si los nombres de ramas no son claros o se usan convenciones distintas, puede haber confusión o errores. Los stash son volátiles: si alguien se olvida de aplicar uno o lo sobrescribe, se puede perder trabajo. La falta de comunicación puede llevar a que dos personas trabajen en lo mismo sin saberlo, o a sobrescribir avances ajenos.
 
 ## Ejercicios 
 ### 1 . Extiende el menú de gestión de ramas para incluir la funcionalidad de renombrar ramas
@@ -64,7 +75,6 @@ Asegúrese de ejecutar el script dentro de la raíz de un repositorio Git, ya qu
 
 ### 2 . Amplia la sección de "Gestión de git diff" para permitir ver las diferencias de un archivo específico entre dos commits o ramas.
 
-![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejercicio2.png)
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejer2a.png)
 
