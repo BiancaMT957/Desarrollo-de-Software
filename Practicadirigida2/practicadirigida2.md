@@ -56,7 +56,7 @@ Asegúrese de ejecutar el script dentro de la raíz de un repositorio Git, ya qu
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejer1b.png)
 
-![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejer1c.png)
+![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejerc1c.png)
 
 
 
@@ -102,11 +102,7 @@ Asegúrese de ejecutar el script dentro de la raíz de un repositorio Git, ya qu
 ### 5.  Implemente una opción en el script que genere un reporte con información relevante del repositorio (estado, ramas, últimas confirmaciones, stashes, etc.) y lo guarde en un archivo.
 
 
-![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejer5.png)
-
-
-
-![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejerc5a.png)
+![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejer5a.png)
 
 
 
@@ -115,6 +111,9 @@ Asegúrese de ejecutar el script dentro de la raíz de un repositorio Git, ya qu
 
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejerc5c.png)
+
+
+![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejerc5d.png)
 
 
 
