@@ -236,6 +236,11 @@ Escenario: Verificar que el estómago gruñe tras comer suficientes pepinos y es
   Dado que he comido 20 pepinos
   Cuando espero 2 horas
   Entonces mi estómago debería gruñir
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/121.png)
+
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/12b.png)
 ## Ejercicio 12: Ciclo completo de TDD a BDD – Añadir nueva funcionalidad
 Objetivo
 
@@ -260,6 +265,8 @@ Escenario: Predecir si mi estómago gruñirá tras comer y esperar
   Dado que he comido 12 pepinos
   Cuando espero 1.5 horas
   Entonces mi estómago debería gruñir
+
+  
 ## Ejercicio 13: Añadir criterios de aceptación claros
 Objetivo
 
@@ -277,6 +284,11 @@ Escenario: Ver cuántos pepinos puedo comer antes de que el estómago gruña
   Dado que he comido 8 pepinos
   Cuando pregunto cuántos pepinos más puedo comer
   Entonces debería decirme que puedo comer 2 pepinos más
+
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/14.png)
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/14b.png)
 ## Ejercicio 14: Integración con Mocking, Stubs y Fakes (para DevOps)
 Objetivo
 
@@ -298,6 +310,8 @@ def before_scenario(context, scenario):
     fake_clock = MagicMock()
     fake_clock.return_value = 10000  # tiempo fijo
     context.belly = Belly(clock_service=fake_clock)
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/15a.png)
 ## Ejercicio 15: Despliegue y validación continua en un entorno de integración (CI/CD)
 Objetivo
 
@@ -311,4 +325,6 @@ Ejecutar pruebas de comportamiento (Behave).
 Generar informes (HTML, JUnit) y publicarlos como artefactos .
 Incluye verificación de calidad de código (por ejemplo, flake8 o black).
 Al aprobarse el pipeline, despliega (si corresponde) tu aplicación o script a un entorno de staging/producción.
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/16.png)
 
