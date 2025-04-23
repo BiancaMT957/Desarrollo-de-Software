@@ -20,7 +20,7 @@ Escenario: Comer pepinos y esperar en minutos y segundos
   Cuando espero "1 hora y 30 minutos y 45 segundos"
   Entonces mi estómago debería gruñir
 
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/act71.png)
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/act72.png)
 Primero abrimos visual studio y vamos abriendo los codigos dados, para luego seguir trabajando.
 ## Ejercicio 2: Manejo de cantidades fraccionarias de pepinos
 Objetivo
@@ -45,7 +45,6 @@ En un entorno DevOps :
 Asegúrese de que la falla (excepción por valor negativo) sea reportada como falla de construcción si ocurre.
 Configura notificaciones (por correo/Slack/Teams) si alguna de las pruebas falla.
 
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/act72.png)
 
 ## Ejercicio 3: Soporte para idiomas múltiples (Español e Inglés)
 Objetivo
