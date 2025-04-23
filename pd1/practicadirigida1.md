@@ -76,10 +76,10 @@ Realiza el primer compromiso revisando el historial con git log --oneline.
 ## Ejercicio 13: Verificación extendida de pruebas de Merkle
 
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod20dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod20dir1.png)
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod21dir1.png)
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod22dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod21dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod22dir1.png)
 ## Ejercicio 14: Soporte para algoritmos de variables hash
 
 
@@ -99,16 +99,16 @@ Realiza el primer compromiso revisando el historial con git log --oneline.
 
 ## Ejercicio 19: Validación ante modificaciones adversariales
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir2.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir2.png)
 ## Ejercicio 20: Actualización dinámica y monitorización de cambios
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir4.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir4.png)
 
 
 ## Ejercicio 21: Gancho precommit para validar la integridad del árbol de Merkle
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir5.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir5.png)
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir6.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir6.png)
 ## Ejercicio 22: Commit-msg Hook para validar mensajes de commit y verificación de pruebas
 
 
@@ -116,12 +116,12 @@ Realiza el primer compromiso revisando el historial con git log --oneline.
 
 ## Ejercicio 24: Hook post-commit para actualización automática del hash de integridad
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir7.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir7.png)
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir8.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/1dir8.png)
 ## Ejercicio 25: Gancho personalizado para comparación entre ramas
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod25dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod25dir1.png)
 ## Ejercicio 26: Integración de monitoreo y gancho dinámico de archivos
 
 ## Ejercicio 27: Validación de pruebas de integridad en ganchos
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod26dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod26dir1.png)
