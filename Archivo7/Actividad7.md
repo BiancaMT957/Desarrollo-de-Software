@@ -64,7 +64,7 @@ Escenario: Esperar usando horas en inglés
   Cuando espero "two hours and thirty minutes"
   Entonces mi estómago debería gruñir
 
-
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/4.png)
 ## Ejercicio 4: Manejo de tiempos aleatorios
 Objetivo
 
@@ -83,7 +83,9 @@ Escenario: Comer pepinos y esperar un tiempo aleatorio
   Dado que he comido 25 pepinos
   Cuando espero un tiempo aleatorio entre 1 y 3 horas
   Entonces mi estómago debería gruñir
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/4.png)
+
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/5.png)
 ## Ejercicio 5: Validación de cantidades no válidas
 Objetivo
 
@@ -99,8 +101,8 @@ Ejemplo de pepinillo :
 Escenario: Manejar una cantidad no válida de pepinos
   Dado que he comido -5 pepinos
   Entonces debería ocurrir un error de cantidad negativa.
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/5.png)
 
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/6.png) 
 Se hicieron cambios en los codigos(funciones), para poder cambiar lo pedido. Finalmente nos da 
 ## Ejercicio 6: Escalabilidad con grandes cantidades de pepinos
 Objetivo
@@ -120,8 +122,10 @@ Escenario: Comer 1000 pepinos y esperar 10 horas
   Dado que he comido 1000 pepinos
   Cuando espero 10 horas
   Entonces mi estómago debería gruñir
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/6.png)
+
 Hicimos cambios en la funcion gerkhin(agregamos cosas) , depues de eso procedimos a cambiar cosas en el codigo.
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/7.png)
+
 ## Ejercicio 7: Descripciones de tiempos complejos
 Objetivo
 
@@ -139,7 +143,7 @@ Escenario: Manejar tiempos complejos
   Dado que he comido 50 pepinos
   Cuando espero "1 hora, 30 minutos y 45 segundos"
   Entonces mi estómago debería gruñir
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/7.png)
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/8.png)
 ## Ejercicio 8: De TDD a BDD – Convertir requisitos técnicos a pruebas en Gherkin
 Objetivo
 
@@ -164,7 +168,7 @@ Escenario: Comer muchos pepinos y esperar el tiempo suficiente
   Dado que he comido 15 pepinos
   Cuando espero 2 horas
   Entonces mi estómago debería gruñir
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/8.png)
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/9.png)
 ## Ejercicio 9: Identificación de criterios de aceptación para historias de usuario
 Objetivo
 
@@ -190,7 +194,7 @@ Escenario: Comer pocos pepinos y no esperar suficiente tiempo
   Dado que he comido 5 pepinos
   Cuando espero 1 hora
   Entonces mi estómago no debería gruñir
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/9.png)
+
 ## Ejercicio 10: Escribir pruebas unitarias antes de escenarios BDD
 Objetivo
 
@@ -214,7 +218,7 @@ Ejemplo de pepinillo :
 Escenario: Saber cuántos pepinos he comido
   Dado que he comido 15 pepinos
   Entonces debería haber comido 15 pepinos
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/10.png)
+
 ## Ejercicio 11: Refactorización guiada por TDD y BDD
 Objetivo
 
@@ -269,6 +273,7 @@ Escenario: Predecir si mi estómago gruñirá tras comer y esperar
   Dado que he comido 12 pepinos
   Cuando espero 1.5 horas
   Entonces mi estómago debería gruñir
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/14.png)
 
   
 ## Ejercicio 13: Añadir criterios de aceptación claros
@@ -290,7 +295,7 @@ Escenario: Ver cuántos pepinos puedo comer antes de que el estómago gruña
   Entonces debería decirme que puedo comer 2 pepinos más
 
 
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/14.png)
+
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/14b.png)
 ## Ejercicio 14: Integración con Mocking, Stubs y Fakes (para DevOps)
@@ -315,7 +320,7 @@ def before_scenario(context, scenario):
     fake_clock.return_value = 10000  # tiempo fijo
     context.belly = Belly(clock_service=fake_clock)
 
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/15a.png)
+
 ## Ejercicio 15: Despliegue y validación continua en un entorno de integración (CI/CD)
 Objetivo
 
