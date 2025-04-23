@@ -14,27 +14,27 @@ Si se ha pasado una URL de clonación, verifique la creación del directorio rep
 El script crea automáticamente los directorios src, testsy docs, además de generar un archivo .gitignore.
 En el archivo src/main.pyse encuentra la implementación avanzada del árbol de Merkle; repasa el código para identificar la clase MerkleTreeNodey las funciones compute_hash, build_merkle_treey print_tree.
 Realiza el primer compromiso revisando el historial con git log --oneline.
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/dir1cod.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/dir1cod.png)
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod2dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod2dir1.png)
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod3dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod3dir1.png)
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/codi3dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/codi3dir1.png)
 
 
 ## Ejercicio 2: Estructuración y compromiso inicial
 ## Paso 3. Manejo de cambios y uso de stash
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod8dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod8dir1.png)
 
 ## Ejercicio 3: Comparación de versiones y uso de stash
 
 ## Paso 4. Inspección del historial y análisis de cambios.
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod9dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod9dir1.png)
 ## Paso 5. Deshacer cambios y experimentar con reset
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod10dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod10dir1.png)
 
 
 ## Ejercicio 5: Deshacer cambios y resetear
@@ -42,27 +42,27 @@ Realiza el primer compromiso revisando el historial con git log --oneline.
 
 ## Paso 6. Reescritura del historial con rebase interactiva y uso de reflog
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod11dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod11dir1.png)
 
 
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod12dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod12dir1.png)
 
 ## Ejercicio 6: Rebase interactivo y reflog
 
 ## Paso 7. Sincronización de repositorios remotos
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod15dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod15dir1.png)
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod16dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod16dir1.png)
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod17dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod17dir1.png)
 ## Ejercicio 7: Sincronización de repositorios
 ## Paso 8. Estrategias avanzadas de ramificación y fusión
 ## Ejercicio 8: Ramificación y fusión avanzada
 ## Paso 9. Uso de git bisect para identificar errores
 
-¡[trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod25dir1.png)
+![trt](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/pd1/img/cod25dir1.png)
 
 ## Ejercicio 9: Localización de errores con bisect
 ## Paso 10. Gestión de submódulos y configuración de ganchos
