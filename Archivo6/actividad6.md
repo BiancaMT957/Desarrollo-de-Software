@@ -4,13 +4,14 @@
 
 ![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/Fase1.png)
 ### Pregunta: ¿Por qué es importante trabajar en ramas de funcionalidades separadas durante un sprint?
-
+Trabajar en ramas independientes permite que cada desarrollador avance en su funcionalidad sin interferir con el trabajo de los demás. Esto fomenta la autonomía, reduce conflictos y facilita la integración de código más limpia al final del sprint.
 ## Fase 2: Desarrollo del sprint (ejecución del sprint)
 
 
 
 
 ### Pregunta: ¿Qué ventajas proporciona el rebase durante el desarrollo de un sprint en términos de integración continua?
+El rebase ayuda a mantener una historia de commits más lineal y coherente. Esto facilita el trabajo en equipo, reduce los conflictos de integración y hace más claro el flujo de cambios cuando otros revisan el historial. También es ideal para detectar problemas antes de integrarlos a la rama principal.
 ![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/ejercico2.png)
 
 ## Fase 3: Revisión del sprint (sprint review)
@@ -20,6 +21,8 @@
 
 
 ### Pregunta: ¿Cómo ayuda git cherry-picka mostrar avances de forma selectiva en un sprint review?
+Permite seleccionar solo los commits que realmente queremos mostrar, sin tener que fusionar una rama completa. Es útil cuando algunas funcionalidades aún están en progreso o tienen errores. De esta manera, presentamos únicamente lo que está listo y aprobado.
+
 
 ![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/ejercicio3.png)
 ![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase3a.png)
@@ -30,9 +33,9 @@
 
 
 ### Pregunta: ¿Cómo manejas los conflictos de fusión al final de un sprint? ¿Cómo puede el equipo mejorar la comunicación para evitar conflictos grandes?
-
+Detectarlos temprano: hacer git fetch y merge o rebase de forma habitual ayuda a anticiparlos.Usar herramientas de ayuda visual como git mergetool o editores modernos que muestren los cambios claramente.Consultar al autor del código en caso de dudas.
 ### Pregunta : ¿Cómo manejas los conflictos de fusión al final de un sprint? ¿Cómo puede el equipo mejorar la comunicación para evitar conflictos grandes? 
-
+Hacer merges frecuentes desde main o develop para mantener el código actualizado.Tener sincronizaciones diarias rápidas para comentar en qué archivos está trabajando cada persona.Establecer zonas o módulos de responsabilidad clara dentro del proyecto.Documentar y etiquetar bien los PRs.Revisar código anticipadamente para prever colisiones antes de que sean un problema.
 
 ![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase4c.png)
 
@@ -51,6 +54,14 @@
 ## Ejercicio 5: Automatización de rebase con hooks de Git
 
 ### Pregunta: ¿Qué ventajas y desventajas observas al automatizar el rebase en un entorno de CI/CD?
+* Ventajas:
+Mantiene una historia de commits limpia, sin merges innecesarios.Facilita entender la evolución del código y seguir qué se hizo en cada paso.Permite detectar conflictos temprano, antes del mergeMejora herramientas como git bisect para rastrear errores.Evita que los desarrolladores tengan que hacer el rebase manualmente.
+
+
+* Desventajas:
+Riesgo de sobrescribir historial compartido y Conflictos automáticos sin intervención humana. Si el rebase automático se ejecuta sobre ramas que ya están en uso colaborativo, puede causar conflictos o pérdida de trabajo si no se maneja bien.
+
+
 
 ![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase5a.png)
 
