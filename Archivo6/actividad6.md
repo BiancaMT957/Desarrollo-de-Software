@@ -2,6 +2,10 @@
 ## Fase 1: Planificación del sprint (planificación del sprint)
 ## Ejercicio 1: Crear ramas de funcionalidades
 
+
+
+Aca se creo la carpeta scrum-Project. Después se inicializo, como por defecto git nos da la rama master, entonces vamos a la rama main. Agregamos un readme.md , hacemos nuestro primer commit y luego creamos y cambiamos a la rama "feature-use-story-1".  
+
 ![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/Fase1.png)
 ### Pregunta: ¿Por qué es importante trabajar en ramas de funcionalidades separadas durante un sprint?
 Trabajar en ramas independientes permite que cada desarrollador avance en su funcionalidad sin interferir con el trabajo de los demás. Esto fomenta la autonomía, reduce conflictos y facilita la integración de código más limpia al final del sprint.
@@ -13,10 +17,12 @@ Trabajar en ramas independientes permite que cada desarrollador avance en su fun
 ### Pregunta: ¿Qué ventajas proporciona el rebase durante el desarrollo de un sprint en términos de integración continua?
 El rebase ayuda a mantener una historia de commits más lineal y coherente. Esto facilita el trabajo en equipo, reduce los conflictos de integración y hace más claro el flujo de cambios cuando otros revisan el historial. También es ideal para detectar problemas antes de integrarlos a la rama principal.
 ![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/ejercico2.png)
+Cambiamos a la rama main, agregamos un archivo a "updates.md", luego hacemos nuestro primer commit pa confirmar eso. Al final vamos a la rama "feature-user-story-1"
+
 
 ## Fase 3: Revisión del sprint (sprint review)
 ## Ejercicio 3: Integración selectiva con git cherry-pick
-
+Agregamos cambios por primera vez a la rama "feature2.md", después al archivo "progress.md" .Después vemos el historial.
 
 
 
@@ -49,6 +55,7 @@ Hacer merges frecuentes desde main o develop para mantener el código actualizad
 
 ![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase4g.png)
 
+Aca borramos los encabezados de los archivos de visual studio, para arreglar la fusión.Abrimos el archivo de visual studio manualmente y luego borramos los errores.Previamente estuvimos practicando la fusion.
 ## Fase 5: Fase de desarrollo, automatización de integración continua (CI) con git rebase
 
 ## Ejercicio 5: Automatización de rebase con hooks de Git
