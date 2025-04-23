@@ -22,6 +22,8 @@ Escenario: Comer pepinos y esperar en minutos y segundos
 
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer1.png)
+
+En steps.py y en @then hago cambios(agregando funciones para horas, minutos y segundos) y por ultimo agrego lo pedido en el archivo belly.feature. Por ultimo hago las pruebas corresponidientes, por ultimo aca se tiene la salidda.
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/act72.png)
 Primero abrimos visual studio y vamos abriendo los codigos dados, para luego seguir trabajando.
 ## Ejercicio 2: Manejo de cantidades fraccionarias de pepinos
@@ -49,7 +51,7 @@ Configura notificaciones (por correo/Slack/Teams) si alguna de las pruebas falla
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ee.png)
 
 
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ff.png)
+
 
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/gg.png)
