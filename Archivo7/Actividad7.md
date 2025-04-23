@@ -19,6 +19,8 @@ Escenario: Comer pepinos y esperar en minutos y segundos
   Dado que he comido 35 pepinos
   Cuando espero "1 hora y 30 minutos y 45 segundos"
   Entonces mi estómago debería gruñir
+
+  ¡[dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/tree/main/Archivo7/img/5.png)
 ## Ejercicio 2: Manejo de cantidades fraccionarias de pepinos
 Objetivo
 
