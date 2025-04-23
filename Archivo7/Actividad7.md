@@ -46,6 +46,14 @@ En un entorno DevOps :
 
 Asegúrese de que la falla (excepción por valor negativo) sea reportada como falla de construcción si ocurre.
 Configura notificaciones (por correo/Slack/Teams) si alguna de las pruebas falla.
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ee.png)
+
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ff.png)
+
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/gg.png)
+
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer2.png)
 ## Ejercicio 3: Soporte para idiomas múltiples (Español e Inglés)
@@ -66,6 +74,8 @@ Escenario: Esperar usando horas en inglés
   Cuando espero "two hours and thirty minutes"
   Entonces mi estómago debería gruñir
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer3.png)
+
+
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/4.png)
 ## Ejercicio 4: Manejo de tiempos aleatorios
 Objetivo
@@ -87,6 +97,10 @@ Escenario: Comer pepinos y esperar un tiempo aleatorio
   Entonces mi estómago debería gruñir
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer4.png)
+
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/44.png)
+
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/5.png)
 ## Ejercicio 5: Validación de cantidades no válidas
 Objetivo
@@ -104,6 +118,8 @@ Escenario: Manejar una cantidad no válida de pepinos
   Dado que he comido -5 pepinos
   Entonces debería ocurrir un error de cantidad negativa.
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer5.png)
+
+
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/6.png) 
 Se hicieron cambios en los codigos(funciones), para poder cambiar lo pedido. Finalmente nos da 
 ## Ejercicio 6: Escalabilidad con grandes cantidades de pepinos
@@ -127,6 +143,10 @@ Escenario: Comer 1000 pepinos y esperar 10 horas
 
 Hicimos cambios en la funcion gerkhin(agregamos cosas) , depues de eso procedimos a cambiar cosas en el codigo.
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer6.png)
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/66.png)
+
+
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/7.png)
 
 ## Ejercicio 7: Descripciones de tiempos complejos
@@ -148,6 +168,10 @@ Escenario: Manejar tiempos complejos
   Entonces mi estómago debería gruñir
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer7.png)
+
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/77.png)
+
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/8.png)
 ## Ejercicio 8: De TDD a BDD – Convertir requisitos técnicos a pruebas en Gherkin
 Objetivo
@@ -174,6 +198,10 @@ Escenario: Comer muchos pepinos y esperar el tiempo suficiente
   Cuando espero 2 horas
   Entonces mi estómago debería gruñir
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer8.png)
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/88.png)
+
+
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/9.png)
 ## Ejercicio 9: Identificación de criterios de aceptación para historias de usuario
 Objetivo
@@ -201,6 +229,8 @@ Escenario: Comer pocos pepinos y no esperar suficiente tiempo
   Cuando espero 1 hora
   Entonces mi estómago no debería gruñir
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer9.png)
+
+
 ## Ejercicio 10: Escribir pruebas unitarias antes de escenarios BDD
 Objetivo
 
@@ -251,8 +281,10 @@ Escenario: Verificar que el estómago gruñe tras comer suficientes pepinos y es
   Cuando espero 2 horas
   Entonces mi estómago debería gruñir
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer11.png)
-![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/121.png)
 
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/121.png)
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/111.png)
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/12b.png)
 ## Ejercicio 12: Ciclo completo de TDD a BDD – Añadir nueva funcionalidad
@@ -280,6 +312,12 @@ Escenario: Predecir si mi estómago gruñirá tras comer y esperar
   Cuando espero 1.5 horas
   Entonces mi estómago debería gruñir
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer12.png)
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/112.png)
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/112a.png)
+
+
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/14.png)
 
   
@@ -304,6 +342,13 @@ Escenario: Ver cuántos pepinos puedo comer antes de que el estómago gruña
 
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer13.png)
+
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/113.png)
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/113a.png)
+
+
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/14b.png)
 ## Ejercicio 14: Integración con Mocking, Stubs y Fakes (para DevOps)
 Objetivo
@@ -326,8 +371,10 @@ def before_scenario(context, scenario):
     fake_clock = MagicMock()
     fake_clock.return_value = 10000  # tiempo fijo
     context.belly = Belly(clock_service=fake_clock)
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/114.png)
 
 
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/114a.png)
 ## Ejercicio 15: Despliegue y validación continua en un entorno de integración (CI/CD)
 Objetivo
 
@@ -343,4 +390,9 @@ Incluye verificación de calidad de código (por ejemplo, flake8 o black).
 Al aprobarse el pipeline, despliega (si corresponde) tu aplicación o script a un entorno de staging/producción.
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/16.png)
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/115.png)
+
+
+
 
