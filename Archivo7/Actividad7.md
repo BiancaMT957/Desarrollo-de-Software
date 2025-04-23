@@ -21,6 +21,7 @@ Escenario: Comer pepinos y esperar en minutos y segundos
   Entonces mi estómago debería gruñir
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/act71.png)
+Primero abrimos visual studio y vamos abriendo los codigos dados, para luego seguir trabajando.
 ## Ejercicio 2: Manejo de cantidades fraccionarias de pepinos
 Objetivo
 
@@ -45,6 +46,7 @@ Asegúrese de que la falla (excepción por valor negativo) sea reportada como fa
 Configura notificaciones (por correo/Slack/Teams) si alguna de las pruebas falla.
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/act72.png)
+
 ## Ejercicio 3: Soporte para idiomas múltiples (Español e Inglés)
 Objetivo
 
@@ -99,6 +101,8 @@ Escenario: Manejar una cantidad no válida de pepinos
   Dado que he comido -5 pepinos
   Entonces debería ocurrir un error de cantidad negativa.
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/5.png)
+
+Se hicieron cambios en los codigos(funciones), para poder cambiar lo pedido. Finalmente nos da 
 ## Ejercicio 6: Escalabilidad con grandes cantidades de pepinos
 Objetivo
 
@@ -118,6 +122,7 @@ Escenario: Comer 1000 pepinos y esperar 10 horas
   Cuando espero 10 horas
   Entonces mi estómago debería gruñir
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/6.png)
+Hicimos cambios en la funcion gerkhin(agregamos cosas) , depues de eso procedimos a cambiar cosas en el codigo.
 ## Ejercicio 7: Descripciones de tiempos complejos
 Objetivo
 
