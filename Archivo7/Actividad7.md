@@ -20,6 +20,8 @@ Escenario: Comer pepinos y esperar en minutos y segundos
   Cuando espero "1 hora y 30 minutos y 45 segundos"
   Entonces mi estómago debería gruñir
 
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer1.png)
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/act72.png)
 Primero abrimos visual studio y vamos abriendo los codigos dados, para luego seguir trabajando.
 ## Ejercicio 2: Manejo de cantidades fraccionarias de pepinos
@@ -45,7 +47,7 @@ En un entorno DevOps :
 Asegúrese de que la falla (excepción por valor negativo) sea reportada como falla de construcción si ocurre.
 Configura notificaciones (por correo/Slack/Teams) si alguna de las pruebas falla.
 
-
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer2.png)
 ## Ejercicio 3: Soporte para idiomas múltiples (Español e Inglés)
 Objetivo
 
@@ -63,7 +65,7 @@ Escenario: Esperar usando horas en inglés
   Dado que he comido 20 pepinos
   Cuando espero "two hours and thirty minutes"
   Entonces mi estómago debería gruñir
-
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer3.png)
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/4.png)
 ## Ejercicio 4: Manejo de tiempos aleatorios
 Objetivo
@@ -84,7 +86,7 @@ Escenario: Comer pepinos y esperar un tiempo aleatorio
   Cuando espero un tiempo aleatorio entre 1 y 3 horas
   Entonces mi estómago debería gruñir
 
-
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer4.png)
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/5.png)
 ## Ejercicio 5: Validación de cantidades no válidas
 Objetivo
@@ -101,7 +103,7 @@ Ejemplo de pepinillo :
 Escenario: Manejar una cantidad no válida de pepinos
   Dado que he comido -5 pepinos
   Entonces debería ocurrir un error de cantidad negativa.
-
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer5.png)
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/6.png) 
 Se hicieron cambios en los codigos(funciones), para poder cambiar lo pedido. Finalmente nos da 
 ## Ejercicio 6: Escalabilidad con grandes cantidades de pepinos
@@ -124,6 +126,7 @@ Escenario: Comer 1000 pepinos y esperar 10 horas
   Entonces mi estómago debería gruñir
 
 Hicimos cambios en la funcion gerkhin(agregamos cosas) , depues de eso procedimos a cambiar cosas en el codigo.
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer6.png)
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/7.png)
 
 ## Ejercicio 7: Descripciones de tiempos complejos
@@ -143,6 +146,8 @@ Escenario: Manejar tiempos complejos
   Dado que he comido 50 pepinos
   Cuando espero "1 hora, 30 minutos y 45 segundos"
   Entonces mi estómago debería gruñir
+
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer7.png)
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/8.png)
 ## Ejercicio 8: De TDD a BDD – Convertir requisitos técnicos a pruebas en Gherkin
 Objetivo
@@ -168,6 +173,7 @@ Escenario: Comer muchos pepinos y esperar el tiempo suficiente
   Dado que he comido 15 pepinos
   Cuando espero 2 horas
   Entonces mi estómago debería gruñir
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer8.png)
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/9.png)
 ## Ejercicio 9: Identificación de criterios de aceptación para historias de usuario
 Objetivo
@@ -194,7 +200,7 @@ Escenario: Comer pocos pepinos y no esperar suficiente tiempo
   Dado que he comido 5 pepinos
   Cuando espero 1 hora
   Entonces mi estómago no debería gruñir
-
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer9.png)
 ## Ejercicio 10: Escribir pruebas unitarias antes de escenarios BDD
 Objetivo
 
@@ -218,7 +224,7 @@ Ejemplo de pepinillo :
 Escenario: Saber cuántos pepinos he comido
   Dado que he comido 15 pepinos
   Entonces debería haber comido 15 pepinos
-
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer10.png)
 ## Ejercicio 11: Refactorización guiada por TDD y BDD
 Objetivo
 
@@ -244,7 +250,7 @@ Escenario: Verificar que el estómago gruñe tras comer suficientes pepinos y es
   Dado que he comido 20 pepinos
   Cuando espero 2 horas
   Entonces mi estómago debería gruñir
-
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer11.png)
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/121.png)
 
 
@@ -273,6 +279,7 @@ Escenario: Predecir si mi estómago gruñirá tras comer y esperar
   Dado que he comido 12 pepinos
   Cuando espero 1.5 horas
   Entonces mi estómago debería gruñir
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer12.png)
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/14.png)
 
   
@@ -296,7 +303,7 @@ Escenario: Ver cuántos pepinos puedo comer antes de que el estómago gruña
 
 
 
-
+![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/ejer13.png)
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/14b.png)
 ## Ejercicio 14: Integración con Mocking, Stubs y Fakes (para DevOps)
 Objetivo
