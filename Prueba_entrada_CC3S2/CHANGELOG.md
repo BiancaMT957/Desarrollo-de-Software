@@ -52,7 +52,6 @@ Se creo la clase Quiz en el archivo trivia.py, después se agregaron las pregunt
 
 # 4) Día 4 - Sistema de puntuación, manejo de rondas y finalización del juego (Sprint 2)
 Hago cambios en los codigos de python, en sus respectivos archivos.  Se procedio a implementar cosas a la función run:quiz(), para una ronda de 10. 
-![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/4a.png)
 
 ![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/4b.png)
 
