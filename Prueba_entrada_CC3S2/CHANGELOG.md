@@ -1,6 +1,7 @@
 # 1) Día 1 - Configuración del entorno y estructura básica (Sprint 1 – Parte 1)
 ![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/1a.png)
 
+
 Me conecte a mi carpeta de repositorio, despues de eso procedi a confirmar que tenia python instalado, despues cree mi entorno virtual, luego procedi a instalar las fastapi, uvicorn y los que pedian.Cree la rama “develop”  
 
 ![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/1b.png)
@@ -48,6 +49,7 @@ Se crearon los archivos  "trivia.py" y "test_trivia.py", luego se procedio a agr
 
 ## Resumen:
 Se creo la clase Quiz en el archivo trivia.py, después se agregaron las preguntas en consola para la funcion "run_quiz()", después se realizo el compromiso en la nueva rama creada"feature/dia3". Al final use "git diff" y "git blame"(comandos muy importantes). Al final hize la fusión respectiva "merge"  y tambien puse la etiqueta respectiva. Al final se registro todo y se reviso el historial.
+
 # 4) Día 4 - Sistema de puntuación, manejo de rondas y finalización del juego (Sprint 2)
 Hago cambios en los codigos de python, en sus respectivos archivos.  Se procedio a implementar cosas a la función run:quiz(), para una ronda de 10. 
 ![ds](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Prueba_entrada_CC3S2/img/4a.png)
