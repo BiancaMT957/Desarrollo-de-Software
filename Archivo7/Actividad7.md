@@ -26,8 +26,8 @@ cambios en eel escenario, que esta en belly.feature
 
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/4.png)
-aca se aprecia el cambio en el esccenario.Tambien se creo nueva funcion para poder realizar esto.
-resultados
+
+aca se aprecia el cambio en el esccenario.Tambien se creo nueva funcion para poder realizar esto.Resultados
 ## Ejercicio 4: Manejo de tiempos aleatorios
 
 
@@ -46,8 +46,7 @@ resultados
 
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/6.png) 
-cambios en el escenario
-Se hicieron cambios en los codigos(funciones), para poder cambiar lo pedido. Finalmente nos da  el resultado
+cambios en el escenario.Se hicieron cambios en los codigos(funciones), para poder cambiar lo pedido. Finalmente nos da  el resultado
 ## Ejercicio 6: Escalabilidad con grandes cantidades de pepinos
 
 
