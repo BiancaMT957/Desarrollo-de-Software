@@ -110,11 +110,11 @@ se hicieron cambios, se agrego esta funcion que da "true", que esta gruñendo, s
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/112.png)
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/112a.png)
-escenario, cambio en el test.
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/14.png)
 
-  
+escenario, cambio en el test.
+
 ## Ejercicio 13: Añadir criterios de aceptación claros
 
 
@@ -130,22 +130,25 @@ cambio en los codigos
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/14b.png)
 ## Ejercicio 14: Integración con Mocking, Stubs y Fakes (para DevOps)
 
-Modificar Belly para aceptar (clock_service).
+
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/114.png)
 
-Se creo un archivo con clock().py
+
 
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/114a.png)
+Se modifico la clase Belly()
+Se creo un archivo con clock().py
 Escribir tests unitarios con mocks (usando unittest.mock).
 ## Ejercicio 15: Despliegue y validación continua en un entorno de integración (CI/CD)
 
-Se hicieron cambios en los codigos
 
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/16.png)
-Se comienza a utilizar la herramienta mocking. Tuve que descargar dentro del entorno virtual flake8.
+
 ![dgdg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo7/img/115.png)
 
+Se hicieron cambios en los codigos
+Se comienza a utilizar la herramienta mocking. Tuve que descargar dentro del entorno virtual flake8.
 Se ejectuto pytest y Behave. Tambien se uso el "requeriments.txt".
 
 
