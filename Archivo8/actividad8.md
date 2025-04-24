@@ -9,7 +9,7 @@ Se creo la funcion test_vaciar_carrito(), para vaciar el carrito, luego se va a 
 Se creo un nuevo metodo "aplicar_descuento_condicional(porcentaje, minimo).
 Luego de eso se procedio a hacer pruebas para los escenarios(se creo la funcion aplicar_descuento_condicional).
 
-![ee](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo8/img/1md.png)
+![ee](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo8/img/1.md.png)
 
 
 ![ee](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo8/img/2.png)
