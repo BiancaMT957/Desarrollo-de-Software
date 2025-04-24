@@ -1,11 +1,5 @@
 # Ejercicio 1: Método para vaciar el carrito
 
-
-## Agregue el método vaciaren src/carrito.pyque realiza self.items = [].
-
-
-
-
 ![ee](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo8/img/codi1.png)
 
 Se creo la funcion test_vaciar_carrito(), para vaciar el carrito, luego se va a averificar si la lista de productos este vacio y el total de cosas sea 0.
@@ -14,6 +8,7 @@ Se creo la funcion test_vaciar_carrito(), para vaciar el carrito, luego se va a 
 
 Se creo un nuevo metodo "aplicar_descuento_condicional(porcentaje, minimo).
 Luego de eso se procedio a hacer pruebas para los escenarios(se creo la funcion aplicar_descuento_condicional).
+
 ![ee](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo8/img/1md.png)
 
 
