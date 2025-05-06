@@ -1,4 +1,4 @@
-
+# Indicaciones 
 Se clona la raiz del proyecto. 
 
 
@@ -36,6 +36,8 @@ Ejecute flake.8:
 
 ![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b6.png)
 
+
+# Ejercicio 1: Análisis y evaluación de la cobertura actual
 
 Corro los test despues y todo esta bien , por el 100 porciento.
 
@@ -122,7 +124,7 @@ Descargue DB Browser para SQLite pa poder abrir el archivo test.db
 
 
 
-Ejercicio 2: Ampliar las pruebas para mejorar la cobertura 
+# Ejercicio 2: Ampliar las pruebas para mejorar la cobertura 
 
 a) 
 Verificar que es un diccionario 
@@ -185,7 +187,7 @@ Aseguramos que sea exactamente del formato <Account 'nombre'>
 
  
 
-Ejercicio 3: Ampliación y optimización del Makefile 
+# Ejercicio 3: Ampliación y optimización del Makefile 
  
 
 Cree un nuevo objetivo en elarchivo Makefile ,con la finaidad de combinar todos los informes individuales en uno solo.
@@ -223,9 +225,7 @@ Despues de usar “make clean” pa borrar los archivos cache y otros inservible
 
  
 
-4.  
-
- 
+# Ejercicio 4: Integración y pruebas con una base de datos temporales
 
 Configurar una base de datos temporales para pruebas: se condiciona la configuración de la base de datos para que, en modo de prueba, se utilice una base de datos en memoria o un archivo temporal 
 
