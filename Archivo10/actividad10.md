@@ -1,4 +1,6 @@
 
+
+# Actividad 10
 Cree las carpetas y archivos en Visual Studio Code, segun las instrucciones de la actividad 10.
 
 
@@ -6,7 +8,7 @@ Cree las carpetas y archivos en Visual Studio Code, segun las instrucciones de l
 
 
 
-# Paso 1: Instalación de pytest y pytest-cov:
+## Paso 1: Instalación de pytest y pytest-cov:
 Use el comando python3 -m pip install pytest pytest-cov para instalar pytest y pytest-cov
 Paso 1: Instalación de pytest y pytest-cov:
 
@@ -14,7 +16,6 @@ Paso 1: Instalación de pytest y pytest-cov:
 ![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a2.png)
 
 
-# Paso 2: Archivos de prueba
 
 # Paso 2: Archivos de prueba
 Abro el archivo test_pila:
@@ -75,37 +76,43 @@ Esta es la modificacion del metodo test_peek:
 
 # Paso 6: Escribiendo aserciones para el método pop():
 
+Se puede apreciar el metodo pop() de pila
 
 ![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a11.png)
 
 
+le agrego aserciones al metodo pop.
 
 
 ![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a12.png)
 
 
 
-# Paso 7: Escribiendo aserciones para elmétodo push()
+## Paso 7: Escribiendo aserciones para elmétodo push()
 
+Se puede apreciar el metodo push() de pila
 
 ![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a13.png)
 
+
+le agrego aserciones al metodo push.
 
 
 ![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a14.png)
 
 
 
-# Paso 8: Ejecuta pytest para verificar todas las pruebas
+## Paso 8: Ejecuta pytest para verificar todas las pruebas
 
-
+Ejecuto el comando"pytest" en la terminal de Visual Studio Code, esperando que se ejecuten los tests trabajados.
+se ve la eejcucuion de los 4 tests, ademas de su porcentaje para cada uno.
 
 ![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a15.png)
 
 
 
-# Paso 9: Agregando cobertura de pruebas con pytest-cov
+## Paso 9: Agregando cobertura de pruebas con pytest-cov
 
-
+Aca se puede apreciar de una manera mas elegante y con porcentajes adecuados 
 
 ![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a16.png)
