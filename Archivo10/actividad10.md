@@ -17,7 +17,7 @@ Paso 1: Instalación de pytest y pytest-cov:
 
 
 
-# Paso 2: Archivos de prueba
+## Paso 2: Archivos de prueba
 Abro el archivo test_pila:
 
 
@@ -37,7 +37,7 @@ Ejecuto el comando pytest-v para poder correr las pruebas
 ![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a5.png)
 
 
-# Paso 3:
+## Paso 3:
 
 
 ![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a6.png)
@@ -51,7 +51,7 @@ Modifique el metodo test_is_empty para el test_stack(te devuelve “True” si l
 
 
 Tambien test_pop, que es un metodo de pila para borrar elementos.
-# Paso 4: Ejecuta pytest para verificaris_empty()
+## Paso 4: Ejecuta pytest para verificaris_empty()
 Corri el test y me sale esto, significa que esta todo bien, que todos los metodos passaron.
 
 
@@ -61,7 +61,7 @@ Corri el test y me sale esto, significa que esta todo bien, que todos los metodo
 
 
 
-# Paso 5: Escribiendo aserciones para el método peek():
+## Paso 5: Escribiendo aserciones para el método peek():
 Este método test_peek lo modifico
 
 
@@ -74,7 +74,7 @@ Esta es la modificacion del metodo test_peek:
 ![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a10.png)
 
 
-# Paso 6: Escribiendo aserciones para el método pop():
+## Paso 6: Escribiendo aserciones para el método pop():
 
 Se puede apreciar el metodo pop() de pila
 
