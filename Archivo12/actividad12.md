@@ -1,6 +1,9 @@
 
 
-Primero se guardan todos los archivos en una carpeta, de manera ordenadataly como estn en las instrucciones. 
+Primero se guardan todos los archivos en una carpeta, de manera ordenada taly como estan en las instrucciones. 
+# Paso 1: Ejecutar pytest
+Ejecuto pytest mediante el comando importante : pytest --cov=models.
+
 
 ```
 (venv) C:\Users\Bianca\Documents\repositorio\Desarrollo-de-Software>pytest --cov=models
