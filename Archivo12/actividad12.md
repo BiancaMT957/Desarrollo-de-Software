@@ -2,6 +2,8 @@
 
 Primero se guardan todos los archivos en una carpeta, de manera ordenada taly como estan en las instrucciones. 
 Despues nos aseguramos de  que cuando corran los tests todo tenga 100 porciento.
+
+
 ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo12/img/c1.png)
 
 
