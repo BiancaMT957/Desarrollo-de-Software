@@ -1,5 +1,7 @@
 
 Se clona la raiz del proyecto. 
+
+
 ![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b1.png)
 
 
@@ -156,4 +158,118 @@ Caso2:
 NUEVO: Verificar que se genera un ID . NUEVO: El ID debe ser entero 
 
 
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b21.png)
+
+
+
+Cambiamos varios atributos.Verificamos que se guardaron en la BD.
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b22.png)
+
+
+penultima linea:ya no debe estar .Utima linea:  # find() debe devolver None 
+
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b23.png)
+
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b24.png)
+
+
+Aseguramos que sea exactamente del formato <Account 'nombre'> 
+
+ 
+
+Ejercicio 3: Ampliación y optimización del Makefile 
+ 
+
+Cree un nuevo objetivo en elarchivo Makefile ,con la finaidad de combinar todos los informes individuales en uno solo.
+
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b25.png)
+
+
+Ejecute flake.8: 
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b26.png)
+
+
+Ejecuto todas las pruebas  
+
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b27.png)
+
+
+Ejecuto tmb con coverage report para tener un reporte de todas las lineas, aca me sale lo que tiene una cobertura de 100 porciento, lo cual esta bien. 
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b28.png)
+
+
+
+Despues de usar “make clean” pa borrar los archivos cache y otros inservibles 
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b29.png)
+
+
+ 
+
+4.  
+
+ 
+
+Configurar una base de datos temporales para pruebas: se condiciona la configuración de la base de datos para que, en modo de prueba, se utilice una base de datos en memoria o un archivo temporal 
+
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b30.png)
+
+
+Modificar el accesorio de la base de datos en test_account.py: 
+
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b31.png)
+
+
+
+Ejecuto las pruebas 
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b32.png)
+
+Aca puedo agregar o crear el metodo validatepara verificar que el correo electrónico tenga un formato válido y que el nombre no esté vacío. 
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b33.png)
+
+
+Procedo a crear 3 pruebas 
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b34.png)
+
+
+1 ra prueba: 
+
+Crea una cuenta con name="". Espera DataValidationError y verifica en el mensaje que la clave hable de “nombre vacío”. 
+
+2 da prueba: 
+
+Crea una cuenta con un email sin @ ni dominio. Espera la misma excepción y busca en su texto algo como “formato de email inválido”. 
+
+
+![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b35.png)
+
+
+Crea una cuenta con datos correctos. 
+
+Comprueba que no hay excepción y que account.id se ha asignado correctamente. 
 
