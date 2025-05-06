@@ -257,11 +257,11 @@ Procedo a crear 3 pruebas
 ![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/b34.png)
 
 
-1 ra prueba: 
+1ra prueba: 
 
 Crea una cuenta con name="". Espera DataValidationError y verifica en el mensaje que la clave hable de “nombre vacío”. 
 
-2 da prueba: 
+2da prueba: 
 
 Crea una cuenta con un email sin @ ni dominio. Espera la misma excepción y busca en su texto algo como “formato de email inválido”. 
 
@@ -270,6 +270,7 @@ Crea una cuenta con un email sin @ ni dominio. Espera la misma excepción y busc
 
 
 Crea una cuenta con datos correctos. 
+
 
 Comprueba que no hay excepción y que account.id se ha asignado correctamente. 
 
