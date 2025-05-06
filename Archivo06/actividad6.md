@@ -6,7 +6,7 @@
 
 Aca se creo la carpeta scrum-Project. Después se inicializo, como por defecto git nos da la rama master, entonces vamos a la rama main. Agregamos un readme.md , hacemos nuestro primer commit y luego creamos y cambiamos a la rama "feature-use-story-1".  
 
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/Fase1.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/Fase1.png)
 ### Pregunta: ¿Por qué es importante trabajar en ramas de funcionalidades separadas durante un sprint?
 Trabajar en ramas independientes permite que cada desarrollador avance en su funcionalidad sin interferir con el trabajo de los demás. Esto fomenta la autonomía, reduce conflictos y facilita la integración de código más limpia al final del sprint.
 ## Fase 2: Desarrollo del sprint (ejecución del sprint)
@@ -16,7 +16,7 @@ Trabajar en ramas independientes permite que cada desarrollador avance en su fun
 
 ### Pregunta: ¿Qué ventajas proporciona el rebase durante el desarrollo de un sprint en términos de integración continua?
 El rebase ayuda a mantener una historia de commits más lineal y coherente. Esto facilita el trabajo en equipo, reduce los conflictos de integración y hace más claro el flujo de cambios cuando otros revisan el historial. También es ideal para detectar problemas antes de integrarlos a la rama principal.
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/ejercico2.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/ejercico2.png)
 Cambiamos a la rama main, agregamos un archivo a "updates.md", luego hacemos nuestro primer commit pa confirmar eso. Al final vamos a la rama "feature-user-story-1"
 
 
@@ -30,9 +30,9 @@ Agregamos cambios por primera vez a la rama "feature2.md", después al archivo "
 Permite seleccionar solo los commits que realmente queremos mostrar, sin tener que fusionar una rama completa. Es útil cuando algunas funcionalidades aún están en progreso o tienen errores. De esta manera, presentamos únicamente lo que está listo y aprobado.
 
 
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/ejercicio3.png)
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase3a.png)
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/ejercicio3b.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/ejercicio3.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/fase3a.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/ejercicio3b.png)
 
 ## Fase 4: Retrospectiva del sprint
 ## Ejercicio 4: Revisión de conflictos y resolución
@@ -43,17 +43,17 @@ Detectarlos temprano: hacer git fetch y merge o rebase de forma habitual ayuda a
 ### Pregunta : ¿Cómo manejas los conflictos de fusión al final de un sprint? ¿Cómo puede el equipo mejorar la comunicación para evitar conflictos grandes? 
 Hacer merges frecuentes desde main o develop para mantener el código actualizado.Tener sincronizaciones diarias rápidas para comentar en qué archivos está trabajando cada persona.Establecer zonas o módulos de responsabilidad clara dentro del proyecto.Documentar y etiquetar bien los PRs.Revisar código anticipadamente para prever colisiones antes de que sean un problema.
 
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase4c.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/fase4c.png)
 
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase4d.png)
-
-
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase4e.png)
-
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase4f.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/fase4d.png)
 
 
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase4g.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/fase4e.png)
+
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/fase4f.png)
+
+
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/fase4g.png)
 
 Aca borramos los encabezados de los archivos de visual studio, para arreglar la fusión.Abrimos el archivo de visual studio manualmente y luego borramos los errores.Previamente estuvimos practicando la fusion.
 ## Fase 5: Fase de desarrollo, automatización de integración continua (CI) con git rebase
@@ -70,11 +70,11 @@ Riesgo de sobrescribir historial compartido y Conflictos automáticos sin interv
 
 
 
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase5a.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/fase5a.png)
 
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase5b.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/fase5b.png)
 
-![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo6/img/fase5c.png)
+![u](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo06/img/fase5c.png)
 
 # Preguntas 
 ## 1. Ejercicio para git checkout --ours y git checkout --theirs
