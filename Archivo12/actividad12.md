@@ -1,7 +1,7 @@
 
 
 Primero se guardan todos los archivos en una carpeta, de manera ordenada taly como estan en las instrucciones. 
-
+Despues nos aseguramos de  que cuando corran los tests todo tenga 100 porciento.
 ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo12/img/c1.png)
 
 
@@ -93,6 +93,7 @@ Se hicieron los cambios respectivos de borrar los rastros de ACCOUNT_DATA Y Acco
 # Paso 8: Actualizar test_id_invalido_al_actualizar()
 
 
+
 ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo12/img/c10.png)
 
 
@@ -123,6 +124,8 @@ Agrego un nuevo metodo de clase, para crear trablas SQLAlchemy
 
 
 ![er](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo12/img/c13.png)
+
+La ejecucion final de todos los tests:
 
 
 ```
