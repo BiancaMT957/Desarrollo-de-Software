@@ -40,7 +40,7 @@ Ejecuto el comando pytest-v para poder correr las pruebas
 ## Paso 3:
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a6.png)
+
 
 
 Modifique el metodo test_is_empty para el test_stack(te devuelve “True” si la pila esta vacia, devuelve “False” lo contrario).
@@ -71,7 +71,6 @@ Este método test_peek lo modifico
 Esta es la modificacion del metodo test_peek:
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a10.png)
 
 
 ## Paso 6: Escribiendo aserciones para el método pop():
