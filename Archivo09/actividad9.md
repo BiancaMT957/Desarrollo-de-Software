@@ -27,9 +27,17 @@ def test_agregar_usuario_exitoso():
 
 ``` 
 
+
+
+``` 
+
+
 C:\Users\Bianca\Documents\repositorio\user_management>pytest =========================================== test session starts =========================================== platform win32 -- Python 3.11.0, pytest-8.3.5, pluggy-1.5.0 rootdir: C:\Users\Bianca\Documents\repositorio\user_management plugins: anyio-4.6.2.post1, Faker-37.1.0, cov-6.1.1 collected 0 items / 1 error  
 
 ================================================= ERRORS ================================================== _______________________________ ERROR collecting tests/test_user_manager.py _______________________________ ImportError while importing test module 'C:\Users\Bianca\Documents\repositorio\user_management\tests\test_user_manager.py'. Hint: make sure your test modules/packages have valid Python names. Traceback: ......\AppData\Local\Programs\Python\Python311\Lib\importlib_init_.py:126: in import_module return _bootstrap._gcd_import(name[level:], package, level) tests\test_user_manager.py:2: in from user_manager import UserManager, UserAlreadyExistsError E ModuleNotFoundError: No module named 'user_manager' ========================================= short test summary info ========================================= ERROR tests/test_user_manager.py !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ============================================ 1 error in 0.41s ============================================= 
+
+
+
 
 ``` 
 
@@ -47,7 +55,6 @@ Paso 2 (Verde): Implementamos lo mínimo:
 
 ``` 
 
- 
 
 C:\Users\Bianca\Documents\repositorio\user_management>pytest 
 
@@ -60,6 +67,7 @@ rootdir: C:\Users\Bianca\Documents\repositorio\user_management
 plugins: anyio-4.6.2.post1, Faker-37.1.0, cov-6.1.1 
 
 collected 1 item 
+
 
 ``` 
 
@@ -112,8 +120,9 @@ Paso 2 (Verde): Implementación con inyección de hash_service
 
 En el archivo de Python agregue: user_manager.py,  
 
- 
 
+
+``` 
 C:\Users\Bianca\Documents\repositorio\user_management>pytest 
 
 =========================================== test session starts =========================================== 
@@ -125,8 +134,8 @@ rootdir: C:\Users\Bianca\Documents\repositorio\user_management
 plugins: anyio-4.6.2.post1, Faker-37.1.0, cov-6.1.1 
 
 collected 1 item  
+```
 
- 
 
 Aca la prueba da color verde porque ahora se agrego authenticate_user. 
 
