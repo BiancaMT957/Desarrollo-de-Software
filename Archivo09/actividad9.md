@@ -1,12 +1,10 @@
-Paso 1 (Rojo): Primera prueba 
+# Paso 1 (Rojo): Primera prueba 
 
 En el archivo tests/test_user_manager.py,copie este codigo,q que da error porque le falta su implementacion 
 
  
 
 ``` 
-
- 
 
 import pytest 
 from user_manager import UserManager, UserAlreadyExistsError 
@@ -47,7 +45,7 @@ C:\Users\Bianca\Documents\repositorio\user_management>pytest ===================
 
  
 
-Paso 2 (Verde): Implementamos lo mínimo: 
+# Paso 2 (Verde): Implementamos lo mínimo: 
 
  
 
@@ -77,22 +75,15 @@ Ahora pasa la prueba
 
  
 
-Paso 3 (Refactorización) 
-
- 
-
-Iteración 2 
-
- 
-
- Paso 1 (Rojo): Nueva prueba 
+# Paso 3 (Refactorización) 
+## Iteración 2 
+## Paso 1 (Rojo): Nueva prueba 
 
  
 
  
 
 ``` 
-
 class FakeHashService: """ Servicio 'fake' que devuelve un hash simplificado con un prefijo, y lo verifica. """ def hash(self, plain_text: str) -> str: return f"fakehash:{plain_text}" 
 
 def verify(self, plain_text: str, hashed_text: str) -> bool: 
@@ -110,16 +101,16 @@ autenticado = manager.authenticate_user(username, password)
  
 # Assert 
 assert autenticado, "El usuario debería autenticarse correctamente con la contraseña correcta." 
+```
 
  
 Aca se agrega esto y la prueba da señal color rojo  porque aun no se utiliza un servidor importante de hash ni un metodo authenticate_user.. 
 
  
 
-Paso 2 (Verde): Implementación con inyección de hash_service 
-
+## Paso 2 (Verde): Implementación con inyección de hash_service 
 En el archivo de Python agregue: user_manager.py,  
-```
+
 
 
 
@@ -143,7 +134,7 @@ Aca la prueba da color verde porque ahora se agrego authenticate_user.
 
  
 
-Paso 3 (Refactorización) 
+# Paso 3 (Refactorización) 
 
  
 
@@ -168,7 +159,7 @@ collected 0 items / 1 error
 
  
 
-Paso 2 (Verde): Implementación 
+## Paso 2 (Verde): Implementación 
 
  
 
