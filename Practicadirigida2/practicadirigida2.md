@@ -21,17 +21,21 @@ Asegúrese de ejecutar el script dentro de la raíz de un repositorio Git, ya qu
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejemplosdir22.png)
 
+Se procede a ver las ramas existentes, las que se crearon en otros trabajos
+
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejemplosdir2.png)
 
-
+Se pudo abrir el archivo que contiene un menu interactivo, esta en lenguaje Bash.
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejemplosdir234.png)
 
-
+Se ve la opcion de gestion de ramas
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejemplosdir45.png)
 
+
+Se io la diferencia entre las ramas "perrito" y feature/login"
 
 # Preguntas
 
@@ -67,10 +71,14 @@ Al aplicar un stash, pueden aparecer conflictos si el código base cambió demas
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejer1b.png)
 
+
+Se entra al archivo y se agrega en el menu principal y en el codigo, una nuev opción
+
+
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejerc1c.png)
 
 
-
+"cat" se cambio a "pet"
 
 
 ### 2 . Amplia la sección de "Gestión de git diff" para permitir ver las diferencias de un archivo específico entre dos commits o ramas.
@@ -78,10 +86,12 @@ Al aplicar un stash, pueden aparecer conflictos si el código base cambió demas
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejer2a.png)
 
+Ahora se pueden compara diferencias entre un archivo especifico, esto se logro porque se agrego algo nuevo en la seccion de Git Diff.
+
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejer2b.png)
 
 
-
+"desarrollo" y "funcion_x"
 
 ### 3 . Crea una función que permita instalar automáticamente un gancho que, por ejemplo, verifique si se han agregado comentarios de documentación en cada confirmación.
 
@@ -114,14 +124,17 @@ Al aplicar un stash, pueden aparecer conflictos si el código base cambió demas
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejer5a.png)
 
+Se crea una nueva fucnion en el menu desde el Sscript
 
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejerc5b.png)
 
 
+Se aprecian todas las ramas trabajadas
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejerc5c.png)
 
+Se ven los ultimos 5 commits
 
 ![o](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Practicadirigida2/img/ejerc5d.png)
 
