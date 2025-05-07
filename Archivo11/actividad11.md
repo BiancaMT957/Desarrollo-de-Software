@@ -4,7 +4,7 @@
 Cree las carpetas y archivos en Visual Studio Code, segun las instrucciones de la actividad 10.
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a1.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a1.png)
 
 
 
@@ -13,7 +13,7 @@ Use el comando python3 -m pip install pytest pytest-cov para instalar pytest y p
 Paso 1: Instalación de pytest y pytest-cov:
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a2.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a2.png)
 
 
 
@@ -21,33 +21,33 @@ Paso 1: Instalación de pytest y pytest-cov:
 Abro el archivo test_pila:
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a3.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a3.png)
 
 
 
 Abro el archivo : pila.py y e¿mde doy cuenta que estan los metodos pop, push, peek , is_empty
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a4.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a4.png)
 
 
 Ejecuto el comando pytest-v para poder correr las pruebas
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a5.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a5.png)
 
 
 ## Paso 3:
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a6.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a6.png)
 
 
 Modifique el metodo test_is_empty para el test_stack(te devuelve “True” si la pila esta vacia, devuelve “False” lo contrario).
 
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a7.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a7.png)
 
 
 Tambien test_pop, que es un metodo de pila para borrar elementos.
@@ -57,7 +57,7 @@ Corri el test y me sale esto, significa que esta todo bien, que todos los metodo
 
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a8.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a8.png)
 
 
 
@@ -65,26 +65,26 @@ Corri el test y me sale esto, significa que esta todo bien, que todos los metodo
 Este método test_peek lo modifico
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a9.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a9.png)
 
 
 Esta es la modificacion del metodo test_peek:
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a10.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a10.png)
 
 
 ## Paso 6: Escribiendo aserciones para el método pop():
 
 Se puede apreciar el metodo pop() de pila
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a11.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a11.png)
 
 
 le agrego aserciones al metodo pop.
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a12.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a12.png)
 
 
 
@@ -92,13 +92,13 @@ le agrego aserciones al metodo pop.
 
 Se puede apreciar el metodo push() de pila
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a13.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a13.png)
 
 
 le agrego aserciones al metodo push.
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a14.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a14.png)
 
 
 
@@ -107,7 +107,7 @@ le agrego aserciones al metodo push.
 Ejecuto el comando"pytest" en la terminal de Visual Studio Code, esperando que se ejecuten los tests trabajados.
 se ve la eejcucuion de los 4 tests, ademas de su porcentaje para cada uno.
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a15.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a15.png)
 
 
 
@@ -115,4 +115,4 @@ se ve la eejcucuion de los 4 tests, ademas de su porcentaje para cada uno.
 
 Aca se puede apreciar de una manera mas elegante y con porcentajes adecuados 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/a16.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a16.png)
