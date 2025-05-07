@@ -46,9 +46,7 @@ Test/test_account.py .
 ```
 # Paso 4: Escribir un caso de prueba para crear todas las cuentas
 
-```
-def test_create_all_accounts(self): """Probar la creación de múltiples cuentas""" for data in ACCOUNT_DATA: account = Account(**data) account.create() assert len(Account.all()) == len(ACCOUNT_DATA)
-```
+
 
 ```
 C:\Users\Bianca\Documents\pruebas pytest\actividad12>pytest
