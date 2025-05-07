@@ -31,7 +31,7 @@ pytest --cov=triangle --cov-report=term-missing
 ![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/y6.png)
 
 
- Una manera interesante de verlo con un reporte html.
+Una manera interesante de verlo con un reporte html.
 pytest --cov=triangle --cov-report=term-missing --cov-report=html
 
 # Paso 4: Añadiendo colores automáticamente
