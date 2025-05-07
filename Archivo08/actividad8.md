@@ -62,7 +62,57 @@ Al final se tiene el resultado en verde de la ejecucion, lo cual significa que e
 
 # Ejercicio 7: Calcular impuestos en el carrito
 
-![ee](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo08/img/7a.png)
+![et](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo08/img/7a.png)
 
 Se procede a ver el error a la hora de ejecutar "pytest".Tal como se habia pedido
 
+# Ejercicio 8: Aplicar cupón de descuento con límite máximo
+
+```
+# tests/test_cupon.py
+import pytest
+from src.carrito import Carrito
+from src.factories import ProductoFactory
+
+def test_aplicar_cupon_con_limite():
+    """
+    Red: Se espera que al aplicar un cupón, el descuento no supere el límite máximo.
+    """
+    # Arrange
+    carrito = Carrito()
+    producto = ProductoFactory(nombre="Producto", precio=200.00)
+    carrito.agregar_producto(producto, cantidad=2)  # Total = 400
+
+    # Act
+    total_con_cupon = carrito.aplicar_cupon(20, 50)  # 20% de 400 = 80, pero límite es 50
+
+    # Assert
+    assert total_con_cupon == 350.00
+```
+
+Crea un archivo, por ejemplo, tests/test_cupon.pyy escribe una prueba que verifique que haya un porcentaje de compra
+
+# Ejercicio 9: Validación de stock al agregar productos (RGR)
+Se escribe una falla:
+En un nuevo archivo, por ejemplo tests/test_stock.py,
+```
+# tests/test_stock.py
+import pytest
+from src.carrito import Carrito, Producto
+
+def test_agregar_producto_excede_stock():
+    """
+    Red: Se espera que al intentar agregar una cantidad mayor a la disponible en stock se lance un ValueError.
+    """
+    # Arrange
+    # Suponemos que el producto tiene 5 unidades en stock.
+    producto = Producto("ProductoStock", 100.00)
+    producto.stock = 5
+    carrito = Carrito()
+
+    # Act & Assert
+    with pytest.raises(ValueError):
+        carrito.agregar_producto(producto, cantidad=6)
+```
+
+Se implementa: agregar_productoCarrito para validar el stock y lueog se refactoriza
