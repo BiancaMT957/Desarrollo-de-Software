@@ -4,8 +4,6 @@
 Cree las carpetas y archivos en Visual Studio Code, segun las instrucciones de la actividad 10.
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/ñ1.png)
-
 
 
 ## Paso 1: Instalación de pytest y pytest-cov:
