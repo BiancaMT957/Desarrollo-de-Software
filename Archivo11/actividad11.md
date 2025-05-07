@@ -4,7 +4,7 @@
 Cree las carpetas y archivos en Visual Studio Code, segun las instrucciones de la actividad 10.
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a1.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/ñ1.png)
 
 
 
@@ -13,7 +13,7 @@ Use el comando python3 -m pip install pytest pytest-cov para instalar pytest y p
 Paso 1: Instalación de pytest y pytest-cov:
 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a2.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/ñ8.png)
 
 
 
@@ -107,7 +107,7 @@ le agrego aserciones al metodo push.
 Ejecuto el comando"pytest" en la terminal de Visual Studio Code, esperando que se ejecuten los tests trabajados.
 se ve la eejcucuion de los 4 tests, ademas de su porcentaje para cada uno.
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a15.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/ñ8.png)
 
 
 
@@ -115,4 +115,4 @@ se ve la eejcucuion de los 4 tests, ademas de su porcentaje para cada uno.
 
 Aca se puede apreciar de una manera mas elegante y con porcentajes adecuados 
 
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/a16.png)
+![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/ñ9.png)
