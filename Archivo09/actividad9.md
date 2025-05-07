@@ -119,6 +119,7 @@ Aca se agrega esto y la prueba da señal color rojo  porque aun no se utiliza un
 Paso 2 (Verde): Implementación con inyección de hash_service 
 
 En el archivo de Python agregue: user_manager.py,  
+```
 
 
 
@@ -137,6 +138,7 @@ collected 1 item
 ```
 
 
+
 Aca la prueba da color verde porque ahora se agrego authenticate_user. 
 
  
@@ -146,7 +148,6 @@ Paso 3 (Refactorización)
  
 
 ``` 
-
 C:\Users\Bianca\Documents\repositorio\user_management>pytest 
 
 =========================================== test session starts =========================================== 
@@ -162,10 +163,8 @@ collected 0 items / 1 error
   
 
 ================================================= ERRORS ================================================== 
-
- 
-
 ``` 
+
 
  
 
