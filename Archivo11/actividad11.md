@@ -110,6 +110,4 @@ se ve la eejcucuion de los 4 tests, ademas de su porcentaje para cada uno.
 
 ## Paso 9: Agregando cobertura de pruebas con pytest-cov
 
-Aca se puede apreciar de una manera mas elegante y con porcentajes adecuados 
-
-![fg](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo11/img/ñ9.png)
+Se hizo de manera mas elegante todo, despues de agregar coberturas de pruebas de pytest-cov
