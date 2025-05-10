@@ -10,6 +10,7 @@ Procedi a instalar Pytest-cov de Python
 # Paso 2: Escribiendo y ejecutando pruebas con pytest
 
 
+
 ![e](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo10/img/y3.png)
 
 
