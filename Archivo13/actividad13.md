@@ -30,7 +30,10 @@ Este código instancia un objeto IMDbinicializándolo con una clave de API. Lueg
 
 ``` 
 
-import json import pytest from unittest.mock import patch, Mock from models.imdb import IMDb 
+import json
+import pytest from unittest.mock
+import patch, Mock from models.imdb
+import IMDb 
 
 Fixture para cargar los datos de IMDb desde un archivo JSON 
 
