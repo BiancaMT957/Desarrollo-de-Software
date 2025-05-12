@@ -176,3 +176,29 @@ Luego se hicieron de manera parecidad los pasos 6,7,8 y 9.
 Por ultimo se corren todos los tests con el comando pytest –cov=models . 
 
  ![rer](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo14/img/15.png)
+
+```
+ C:\Users\Bianca\Documents\repositorio\actividad14>pytest --cov=models
+=============================================================== test session starts ================================================================
+platform win32 -- Python 3.11.0, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\Bianca\Documents\repositorio\actividad14
+plugins: anyio-4.6.2.post1, Faker-37.1.0, cov-6.1.1
+collected 8 items                                                                                                                                   
+
+tests\test_account.py ........                                                                                                                [100%]
+
+================================================================== tests coverage ==================================================================
+_________________________________________________ coverage: platform win32, python 3.11.0-final-0 __________________________________________________
+
+Name                 Stmts   Miss  Cover
+----------------------------------------
+models\__init__.py       6      0   100%
+models\account.py       43      0   100%
+----------------------------------------
+TOTAL                   49      0   100%
+================================================================ 8 passed in 1.96s =================================================================
+
+C:\Users\Bianca\Documents\repositorio\actividad14>
+```
+
+
