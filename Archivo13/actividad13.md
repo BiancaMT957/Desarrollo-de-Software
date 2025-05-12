@@ -1,34 +1,22 @@
 Cree el entorno virtual 
 
- 
-
-´´´ 
 
 C:\Users\Bianca\Documents\repositorio\actividad13>python -m venv venv 
-
-´´´ 
 
  
 
 Procedi a activar el entorno virtual 
 
- 
-
- 
-
-´´´ 
 
 C:\Users\Bianca\Documents\repositorio\actividad13>venv\Scripts\activate 
 
-  
-
 (venv) 
 
-´´´ 
+
 
  
 
-Cree el archivo .gitignore para poner cosas que no deben estar ahi, par que no las lea Visual Stduio Code, sino muy pesado. 
+Cree el archivo .gitignore para poner cosas que no deben estar ahi, para que no las lea Visual Studio Code, sino muy pesado. 
 
  
 
@@ -164,6 +152,7 @@ Al ultimo se tiene la solucion de todas las implementaciones  hechas.
 
  
 
-Despues se corren los tests 
+Despues se corren los tests, luego verificamos que todo esta correctamente implementado.
+
 
   
