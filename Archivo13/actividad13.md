@@ -14,9 +14,7 @@ C:\Users\Bianca\Documents\repositorio\actividad13>venv\Scripts\activate
 
 
 
- 
-
-## Cree el archivo .gitignore para poner cosas que no deben estar ahi, para que no las lea Visual Studio Code, sino muy pesado. 
+ Cree el archivo .gitignore para poner cosas que no deben estar ahi, para que no las lea Visual Studio Code, sino muy pesado. 
 
  
 
@@ -26,7 +24,7 @@ C:\Users\Bianca\Documents\repositorio\actividad13>venv\Scripts\activate
 
 Se agrego este método que i implementa la búsqueda por título sin ningún patching o mocking. 
 
-Este código instancia un objeto IMDbinicializándolo con una clave de API. Luego llama a imdb.search_titles()la película "Bambi" y afirma que los resultados no son None. También verifica que el mensaje de error esté vacío y que el idretornado sea tt1375666. 
+Este código instancia un objeto IMDbinicializándolo con una clave de API. Luego llama a imdb.search_titles()la película "Bambi" y afirma que los resultados no son None. También verifica que el mensaje de error esté vacío y que el id retornado sea tt1375666. 
 
  
 
@@ -67,7 +65,7 @@ def test_search_by_title(self, imdb_mock):
 
 ## Paso 2: Búsqueda sin resultados 
 
-Aca se implemento cosas para la “prueba triste”,  se parcheo la biblioteca de terceros “requests”, tambien se parcho la funcion “get”, porque se sabe que IMDb.search_titles()eventualmente llamará al método requests.get() para la llamada a la API. 
+Aca se implemento cosas para la “prueba triste”,  se parcheo la biblioteca de terceros “requests”, tambien se parcheo la funcion “get”, porque se sabe que IMDb.search_titles() eventualmente llamará al método requests.get() para la llamada a la API. 
 
  
 
@@ -85,7 +83,7 @@ def test_search_with_no_results(self, imdb_mock):
 
 ## Paso 3: Búsqueda por título fallida 
 
-Aca se construyo un caso de prueba, se necesito un MOCK que se porta como objeto Response .Se retorno un codigo de 200.  
+Aca se construyo un caso de prueba, se necesito un MOCK que se porta como objeto Response . Se retorno un codigo de 200.  
 
 Luego se agrego una linea de codigo antes del metodo test_search_by_title_failed(), y se agrego un parametro para el simulacro de tipo mock. 
 
@@ -111,7 +109,7 @@ Esto genero un parcheo a una llamada requests.get, esto permitio controlar lo qu
 
 ## Paso 4: Probar calificaciones de películas 
 
-A el metodo de calificaciones de peliculas, se le agrego una linea de codigo un poco antes dle metodo y luego se agreg un parámetro para un nuevo simulacro , lo cual parcha a request.gets() y permite controlar la cosas que rertorna usando la variable imdb_mock. 
+A el metodo de calificaciones de peliculas, se le agrego una linea de codigo un poco antes del metodo y luego se agreg un parámetro para un nuevo simulacro , lo cual parcha a request.gets() y permite controlar la cosas que rertorna usando la variable imdb_mock. 
 
  
 
