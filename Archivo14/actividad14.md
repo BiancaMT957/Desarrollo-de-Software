@@ -175,4 +175,4 @@ Luego se hicieron de manera parecidad los pasos 6,7,8 y 9.
 
 Por ultimo se corren todos los tests con el comando pytest –cov=models . 
 
- 
+ ![t](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo14/img/15.png)
