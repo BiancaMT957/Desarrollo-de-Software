@@ -9,7 +9,7 @@ Instale Terraform en Ubuntu.
 Ahora me aseguro que esta instalado
 
 
-![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C2.png)
+![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/c2.png)
 
 
 
@@ -40,7 +40,7 @@ variable "python_executable" { description = "Ruta al ejecutable de Python (pyth
 
 Al hacer “terraform init” y luego “terraform plan” no tuve problemas, despues al hacer “terraform apply”, tuve problemas porque no habia permisos para los archivos bash.
 
-![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C3.png)
+![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/c3.png)
 
 Luego les di permisos mediante :
 
@@ -53,12 +53,12 @@ chmod +x scripts/bash/start_simulated_service.sh
 Y ahora despues volvi a hacer “terraform apply”, despues escribir “yes”, tuve exito :
 
 
-![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C4.png)
+![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/c4.png)
 
 
 
 
-![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C5.png)
+![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/c5.png)
 
 
 
@@ -118,7 +118,7 @@ Luego de darle permiso al archivo bash “modules/environment_setup/scripts/init
 
  
 
-![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C6.png)
+![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/c6.png)
 
  
 
