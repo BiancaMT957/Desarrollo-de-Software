@@ -196,13 +196,11 @@ Se creo la carpeta “generated_environmet”, tambien el archivo de texto “bi
       type        = string
        }
 
-       variable "nombre_entorno_modulo" {
+      * variable "nombre_entorno_modulo" {
        description = "Nombre del entorno para este módulo."
        type        = string
        }
-      ´´´
-
-* `modules/environment_setup/scripts/initial_setup.sh`:
+      * `modules/environment_setup/scripts/initial_setup.sh`:
         ```bash
         #!/bin/bash
         # Script: initial_setup.sh
@@ -232,7 +230,9 @@ Se creo la carpeta “generated_environmet”, tambien el archivo de texto “bi
           value = module.config_entorno_principal.ruta_readme_modulo
         }
         ```
-  
+        
+Procedi  a crear estos archivos.
+
 Ejecute y me salian errores, los fui analizando y me di cuenta que debia darle permiso a bash y que habian algunos errores. 
 
 Luego de darle permiso al archivo bash “modules/environment_setup/scripts/initial_setup.sh”( escribiendo en  la terminal “chmod +x    [ruta] ”  ) y de arreglar errores en main.tf de “environment_setup” y alguno que otro error,  procedi a ejecutar y me sale todo bien. 
