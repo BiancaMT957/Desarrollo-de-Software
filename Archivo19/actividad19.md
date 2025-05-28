@@ -2,21 +2,25 @@
 
 Clone el repo Kapumota, luego el archivo de Proyecto_iac_local lo guarde en Ubuntu y ahi lo guarde y abri con Visual Studio Code
 
-/image1
+![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C1.png)
+
+
 Instale Terraform en Ubuntu.
-Ahora me aseguro que esta instlado
+Ahora me aseguro que esta instalado
 
 
-/img
+![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C2.png)
 
 
 
 Descargue la extension de Terraform, en Visual Studio Code.
 Cree un entorno virtual usando loc comandos:
 
+
 ´´´
 python3 -m venv venv
 ´´´
+
 
 Y lo active con:
 
@@ -36,8 +40,7 @@ variable "python_executable" { description = "Ruta al ejecutable de Python (pyth
 
 Al hacer “terraform init” y luego “terraform plan” no tuve problemas, despues al hacer “terraform apply”, tuve problemas porque no habia permisos para los archivos bash.
 
-/img
-
+![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C3.png)
 
 Luego les di permisos mediante :
 
@@ -49,9 +52,16 @@ chmod +x scripts/bash/start_simulated_service.sh
 
 Y ahora despues volvi a hacer “terraform apply”, despues escribir “yes”, tuve exito :
 
-/img
 
-/img2
+![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C4.png)
+
+
+
+
+![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C5.png)
+
+
+
 
 Se creo la carpeta “generated_environmet”, tambien el archivo de texto “bienvenida.txt” y otros mas.
 #### Fase 1: Fundamentos de terraforma y primer recurso local
@@ -80,21 +90,27 @@ o
 terraform.tfvars.example:nombre_entorno = "mi_proyecto_local" numero_instancias_app_simulada = 3 // mensaje_global se puede omitir para usar default, o definir aquí.
 o
 modules/environment_setup/main.tf:variable "base_path" { description = "Ruta base para el entorno." type = string } variable "nombre_entorno_modulo" { description = "Nombre del entorno para este módulo." type = string } resource "null_resource" "crear_directorio_base" { # Usar provisioner para crear el directorio si no existe # Esto asegura que el directorio existe antes de que otros recursos intenten usarlo provisioner "local-exec" { command = "mkdir -p ${var.base_path}/${var.nombre_entorno_modulo}_data" }
+
+
 # Añadir un trigger para que se ejecute si cambia el nombre del entorno triggers = { dir_name = "${var.base_path}/${var.nombre_entorno_modulo}_data" } } resource "local_file" "readme_entorno" { content = "Este es el entorno ${var.nombre_entorno_modulo}. ID: ${random_id.entorno_id_modulo.hex}" filename = "${var.base_path}/${var.nombre_entorno_modulo}_data/README.md" depends_on = [null_resource.crear_directorio_base] } resource "random_id" "entorno_id_modulo" { byte_length = 4 } resource "null_resource" "ejecutar_setup_inicial" { depends_on = [local_file.readme_entorno] triggers = { readme_md5 = local_file.readme_entorno.content_md5 # Se re-ejecuta si el README cambia } provisioner "local-exec" { command = "bash ${path.module}/scripts/initial_setup.sh '${var.nombre_entorno_modulo}' '${local_file.readme_entorno.filename}'" interpreter = ["bash", "-c"] working_dir = "${var.base_path}/${var.nombre_entorno_modulo}_data" # Ejecutar script desde aquí } }
 output "ruta_readme_modulo" { value = local_file.readme_entorno.filename }
 o
 modules/environment_setup/variables.tf:(declarar base_path, nombre_entorno_modulo): Aca procedi a poner las variables: base_path y nombre_entorno_modulo, en “variables.tf”. Esto tiene mas sentido, porque están en declaracion de variables donde deben estar, no en “main.tf”.
-Agarre y agregue:config_entorno_principal, readme_principal
 
-/img
 
-Procedi a crear o agregar a variables.tf:
-variable "nombre_entorno" {
-description = "Nombre del entorno principal"
-type = string
-}  
+´´´
+variable "base_path" {
+  description = "Ruta base para el entorno."
+  type        = string
+}
 
-/imgee
+variable "nombre_entorno_modulo" {
+  description = "Nombre del entorno para este módulo."
+  type        = string
+}
+
+´´´
+
 
 Ejecute y me salian errores, los fui analizando y me di cuenta que debia darle permiso a bash y que habian algunos errores. 
 
@@ -102,7 +118,7 @@ Luego de darle permiso al archivo bash “modules/environment_setup/scripts/init
 
  
 
-PictureAsee 
+![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C6.png)
 
  
 
