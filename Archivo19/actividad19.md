@@ -5,8 +5,9 @@ Clone el repo Kapumota, luego el archivo de Proyecto_iac_local lo guarde en Ubun
 ![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/C1.png)
 
 
-Instale Terraform en Ubuntu.
-Ahora me aseguro que esta instalado
+Instale Terraform en Ubuntu con comandos, porque me resulto mas rapido.
+
+Ahora me aseguro que esta instalado.
 
 
 ![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/c2.png)
@@ -14,7 +15,7 @@ Ahora me aseguro que esta instalado
 
 
 Descargue la extension de Terraform, en Visual Studio Code.
-Cree un entorno virtual usando loc comandos:
+Cree un entorno virtual usando los comandos:
 
 
 ```
@@ -34,18 +35,18 @@ Puse la ruta correcta de Python, que esta dentro del archivo .venv,(enorno virtu
 
 
 ```
-"/home/devasc/Documents/Proyecto_iac_local/venv/bin/python" }
+"/home/devasc/Documents/Proyecto_iac_local/venv/bin/python" 
 ```
 
 
 Al hacer “terraform init” y luego “terraform plan” no tuve problemas.
 "Terraform init", es para inicializar, "Terraform plan" no es para  ejecutar simplemente es para 
-
 despues al hacer “terraform apply”, tuve problemas porque no habia permisos para los archivos bash. Me di cuenta tambien que este comando es importante porque hace las conexiones a las appis y demas archivos.
 
 ![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/c3.png)
 
-Luego les di permisos mediante :
+Luego les di permisos a los 2 archivos bash , uno de sus permisos fue:
+
 
 
 ```
