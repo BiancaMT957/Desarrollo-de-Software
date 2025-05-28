@@ -191,19 +191,16 @@ Se creo la carpeta “generated_environmet”, tambien el archivo de texto “bi
         ```
       * `modules/environment_setup/variables.tf`: (declarar `base_path`, `nombre_entorno_modulo`): Aca procedi a poner las variables: base_path y nombre_entorno_modulo, en “variables.tf”. Esto tiene mas sentido, porque están en declaracion de variables donde deben estar, no en “main.tf”.
 
+      * variable "base_path" {
+      description = "Ruta base para el entorno."
+      type        = string
+       }
 
-´´´
-variable "base_path" {
-  description = "Ruta base para el entorno."
-  type        = string
-}
-
-variable "nombre_entorno_modulo" {
-  description = "Nombre del entorno para este módulo."
-  type        = string
-}
-
-´´´
+       variable "nombre_entorno_modulo" {
+       description = "Nombre del entorno para este módulo."
+       type        = string
+       }
+      ´´´
 
 * `modules/environment_setup/scripts/initial_setup.sh`:
         ```bash
