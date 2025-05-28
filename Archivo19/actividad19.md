@@ -17,9 +17,9 @@ Descargue la extension de Terraform, en Visual Studio Code.
 Cree un entorno virtual usando loc comandos:
 
 
-´´´
+```
 python3 -m venv venv
-´´´
+```
 
 
 Y lo active con:
@@ -34,7 +34,7 @@ Puse la ruta correcta de Python, que esta dentro del archivo .venv,(enorno virtu
 
 
 ```
-variable "python_executable" { description = "Ruta al ejecutable de Python (python o python3)." type = string default = "/home/devasc/Documents/Proyecto_iac_local/venv/bin/python" }
+"/home/devasc/Documents/Proyecto_iac_local/venv/bin/python" }
 ```
 
 
