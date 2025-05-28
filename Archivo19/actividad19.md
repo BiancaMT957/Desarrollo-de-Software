@@ -25,29 +25,32 @@ python3 -m venv venv
 Y lo active con:
 
 
-´´´
+```
 source venv/bin/activate
-´´´
+```
 
 Todo esto para trabajar de una manera más cómoda
-Puse la ruta correcta de Python, del entorno virtual, en la parte de :
+Puse la ruta correcta de Python, que esta dentro del archivo .venv,(enorno virtual), en la mia por ejemplo fue: 
 
 
-´´´
+```
 variable "python_executable" { description = "Ruta al ejecutable de Python (python o python3)." type = string default = "/home/devasc/Documents/Proyecto_iac_local/venv/bin/python" }
-´´´
+```
 
 
-Al hacer “terraform init” y luego “terraform plan” no tuve problemas, despues al hacer “terraform apply”, tuve problemas porque no habia permisos para los archivos bash.
+Al hacer “terraform init” y luego “terraform plan” no tuve problemas.
+"Terraform init", es para inicializar, "Terraform plan" no es para  ejecutar simplemente es para 
+
+despues al hacer “terraform apply”, tuve problemas porque no habia permisos para los archivos bash. Me di cuenta tambien que este comando es importante porque hace las conexiones a las appis y demas archivos.
 
 ![b](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Archivo19/img/c3.png)
 
 Luego les di permisos mediante :
 
 
-´´´
+```
 chmod +x scripts/bash/start_simulated_service.sh
-´´´
+```
 
 
 Y ahora despues volvi a hacer “terraform apply”, despues escribir “yes”, tuve exito :
