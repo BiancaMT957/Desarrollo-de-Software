@@ -1,4 +1,5 @@
-# Actividad 18
+# Actividad 17 y 18
+Se creo un repositorio, que se trabajo de mangera grupal: https://github.com/Dirac2022/repo-kanban
 ### Parte 1 
 Se Configuro un Sprints, se crearon sprints y ademas a las historias se les iba asignando numero de puntos.
 
