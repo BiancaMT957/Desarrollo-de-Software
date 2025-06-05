@@ -1,6 +1,6 @@
 ## Ejercicio 2.3: Mutaciones avanzadas con Prototype
 
-Agrego este método dentro del archivo Prototype.py. 
+Agregue este método dentro del archivo Prototype.py. 
 
 Primero se tiene un diccionario dentro del método(da una configuracion de recursos de Terraform).  Se hacen cambios a los triggers de un recurso null_resource 
 
