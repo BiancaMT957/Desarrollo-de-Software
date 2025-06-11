@@ -1,398 +1,212 @@
-Actividad 22 
-
-### Fase 2: Inyección de dependencias 
-
-Este archivo es el main.py modificado
-
-
-
-``` 
-import json 
-import ipaddress 
-class NetworkMetadata: 
-    def __init__(self, name, cidr, subnet_id, vpc_id): 
-        self.name = name 
-        self.cidr = cidr 
-        self.subnet_id = subnet_id 
-        self.vpc_id = vpc_id 
-class ServerFactory: 
-    def __init__(self, server_name, network_metadata): 
-      self.server_name = server_name 
-        self.network_metadata = network_metadata 
-    def allocate_ip(self): 
-        network = ipaddress.IPv4Network(self.network_metadata.cidr) 
-        return str(list(network.hosts())[4]) 
-    def build(self): 
-        return { 
-            "resource": { 
-                "aws_instance": { 
-                    self.server_name: { 
-                        "ami": "ami-0c55b159cbfafe1f0", 
-                        "instance_type": "t2.micro", 
-                        "subnet_id": self.network_metadata.subnet_id, 
-                        "private_ip": self.allocate_ip(), 
-                        "tags": { 
-                            "env": "dev", 
-                            "team": "infra" 
-                        }, 
-                        "metadata_options": { 
-                            "http_endpoint": "enabled" 
-                        } 
-                    } 
-                } 
-            } 
-        } 
-def get_network_metadata(path="network/network_metadata.json"): 
-    with open(path) as f: 
-        data = json.load(f) 
-    return NetworkMetadata( 
-        name=data["name"], 
-        cidr=data["cidr"], 
-        subnet_id=data["subnet_id"], 
-        vpc_id=data["vpc_id"] 
-    ) 
 
-if __name__ == "__main__": 
-    metadata = get_network_metadata() 
-    factory = ServerFactory(server_name="web_server", network_metadata=metadata) 
-    result = factory.build()
+# PC3_Grupo8_Proyecto4
 
-    with open("server.tf.json", "w") as f: 
-        json.dump(result, f, indent=2) 
-    print(" server.tf.json generado con inyección de dependencias.") 
-``` 
- 
- 
-Picture   
+## Archivo `setup.sh`
 
+**Archivo importante, ejecutar al inicio.**
 
+Este archivo automatiza la creación del setup adecuado para trabajar en este proyecto. Realiza las siguientes operaciones:
 
-
-Se creo un archivo main.tf.json a la hora de ejecturar:
-
-
-``` 
-{ 
-  "resource": { 
-    "aws_instance": { 
-      "web_server": { 
-        "ami": "ami-0c55b159cbfafe1f0", 
-        "instance_type": "t2.micro", 
-        "subnet_id": "subnet-abc123", 
-        "private_ip": "10.0.0.5", 
-        "tags": { 
-          "env": "dev", 
-          "team": "infra" 
-        }, 
-        "metadata_options": { 
-          "http_endpoint": "enabled" 
-        } 
-      } 
-    } 
-  } 
-}
-``` 
- 
-
-
-###  Principio de Inversión de Control (IoC) en tu código 
-El IOC es  un principio de diseño y un concepto clave en la implementación de la inyección de dependencias. Proporciona una forma de diseño y organización del código para lograr una mayor modularidad y flexibilidad.
-En el main.py inicial, la clase ServerFactoryModule controlaba de manera directa cómo se obtenía la metadata de red, cargándola desde un archivo JSON dentro de su constructor. Esto proporcionaba  una fuerte dependencia entre la lógica del servidor y el origen de los datos de red. 
-
-Se aplico inversión de control al:
-Separar la responsabilidad de obtener la metadata de red (get_network_metadata) de la clase ServerFactory, inyectar un objeto NetworkMetadata como dependencia en el constructor de ServerFactory. 
-Esto da a entender  que ServerFactory ya no decide cómo se obtiene la información de red, solo la usa. Este cambio permite: 
-Mayor flexibilidad: puedes inyectar metadata desde archivos, bases de datos o incluso pruebas unitarias sin modificar la clase.Menor acoplamiento: ServerFactory no depende de funciones externas o rutas específicas. Mejor mantenibilidad y testeo: puedes simular fácilmente diferentes redes en tests. 
+- Crea el entorno virtual `venv`. (si es que aún no está creado)
+- Activa dicho entorno.
+- Instalar las dependencias dentro de `requirements.txt` (si es que existe).
+- Mueve los hooks de `hooks/` (`pre-commit`, `commit-msg` y `pre-push`) al directorio `.git/hooks/` y les de permisos de ejecución.
 
+Dicho script bash se puede ejecutar de la siguiente manera
 
-### Fase 5: Patrón Mediator 
+```
+source setup.sh
+```
 
+Cabe mencionar que algunos comandos dentro de `setup.sh` (como `source venv/bin/activate`) solamente funcionan en sistemas tipo Unix, por lo cual, si se usa otro sistema operativo simplemente dichos comandos no tendrán efecto.
 
+## Hooks personalizados
 
-Acá se tiene el patrón Mediator comentado. 
+En este proyecto usamos hooks personalizados para mantener buenas prácticas de desarrollo. Los siguientes hooks los encontramos en `hooks/` y se instalan en `.git/hooks` al ejecutar `setup.sh`
 
- 
+### 1. `pre-commit`
 
-``` pyton  
+Este hook se ejecuta antes de que se aplique un commit y cumple dos funciones importantes:
 
-import json  
+1. Evitar que se comiteen archivos en una rama donde no se pueda trabajar (en nuestro caso son las ramas 'main', 'develop' y 'release').
+2. Ejecutar linters ágiles de manera automática sobre los archivos en el área de staged, para detectar errores antes de confirmar los cambios.
 
-from pathlib import Path 
+**Comportamiento:**
 
-# Funciones para verificar si los archivos de configuración existen
- 
-def check_network_state():
+- Se añade un archivo al área 'staged'.
+- Si nos encontramos trabajando en una rama "prohibida", entonces no se realiza el commit cuando querramos hacerlo.
+- Si nos encontramos trabajando en una rama válida, entonces:
+    - Se ejecuta `flake8` sobre los archivos `.py`.
+    - Se ejecuta `shellcheck` sobre scripts `.sh`.
+    - Se ejecuta `tflint` para validar sintaxis en archivos `.tf`.
 
-# Verifica si el archivo de configuración de red existe  
+**Ejemplo:**
 
-return Path("network.tf.json").exists() 
+```bash
+# Trabajando en la rama 'develop'
+$ git add archivo
+$ git commit -m "mensaje de commit"
 
-def check_server_state():  
+"ERROR: No está permitido hacer commit directamente en la rama 'develop'."
+"Por favor, cree una rama de trabajo para hacer tus commits."
+```
 
-# Checkea si el archivo de configuración del servidor existe  
+**Verificar que se tiene instaladas estas herramientas localmente. Puede ver cómo instalarlas en la sección `Herramientas usadas y cómo instalarlas`**
 
-return Path("server.tf.json").exists() 
+### 2. `commit-msg`
 
-def check_firewall_state():  
+Este hook se ejecuta justo después de escribir el mensaje commit, antes de ser "aceptado" el commit.
 
-# Checkea si el archivo de configuración del firewall existe  
+Con este hook se verifica que el mensaje del commit siga un formato específico siguiendo las rúbricas del proyecto.
 
-return Path("firewall.tf.json").exists() 
+**Formato:**
 
-# Clase que actúa como el Mediador 
+```
+<tipo>(<scope>): (Issue #<número>) <mensaje descriptivo entre 10 y 100 caracteres>
+```
 
-class TerraformMediator:  
+**Comportamiento:**
 
-def __init__(self):  
+- Si el mensaje de commit sigue el formato indicado, el commit es aceptado.
+- Si el mensaje de commit no cumple con el formato, entonces se cancela dicho commit y se muestra la estructura a seguir.
 
-# Guarda el estado de cada módulo (True si existe el archivo correspondiente) 
+**Ejemplo:**
 
-self.states = { "network": check_network_state(), 
+```bash
+$ git commit -m "Cambios en archivo"
 
- "server": check_server_state(),  
+Error: Formato de commit inválido.
+Debe seguir: <tipo>(<scope>): (Issue #<número>) <mensaje de 10-100 caracteres>
+```
 
-"firewall": check_firewall_state() } 
+### 3. `pre-push`
 
-def validate_dependencies(self): 
-    # Valida que los módulos están ahi 
-    if not self.states["network"]: 
-        raise RuntimeError(" Falta la configuración de la red (network.tf.json)") 
-    if not self.states["server"]: 
-        raise RuntimeError(" Falta la configuración del servidor (server.tf.json)") 
-    if not self.states["firewall"]: 
-        raise RuntimeError(" Falta la configuración del firewall (firewall.tf.json)") 
- 
-def generate_main_tf(self): 
-    print(" Todos los módulos están presentes. Generando main.tf.json...") 
-    # Estructura centralizada con dependencias simuladas 
-    main_tf = { 
-        "resource": { 
-            "null_resource": { 
-                "network": { 
-                    "triggers": { 
-                        "name": "vpc-dev" 
-                    } 
-                }, 
-                "server": { 
-                    "triggers": { 
-                        "subnet": "subnet-1234", 
-                        "ip": "10.0.0.5" 
-                    }, 
-                    "depends_on": ["null_resource.network"] 
-                }, 
-                "firewall": { 
-                    "triggers": { 
-                        "allow_ssh": True 
-                    }, 
-                    "depends_on": [ 
-                        "null_resource.network", 
-                        "null_resource.server" 
-                    ] 
-                } 
-            } 
-        } 
-    } 
- 
-    # Guarda la estructura JSON en el archivo final main.tf.json 
-    with open("main.tf.json", "w") as f: 
-        json.dump(main_tf, f, indent=2) 
- 
-    print(" main.tf.json generado con éxito.") 
-  
+Este hook se ejecuta justo antes de enviar los cambios al repositorio remoto usando `git push`.
 
-# Punto de entrada principal del script 
+Con este hook se ejecutan validaciones completas del proyecto, incluyendo linters para python, bash, terraform y pruebas si es que hay alguna.
 
-if name == "main":  
+**Comportamiento:**
 
-mediator = TerraformMediator()  
+- Al ejecutar `git push`, se lanza un pipeline local con:
+    - `flake8`, para validar los códigos python.
+    - `shellcheck` para analizar todos los scripts `.sh`.
+    - `tflint`, `terraform fmt` y `terraform validate` para todas las carpetas con archivos `.tf`.
+    - `pytest`, para ejecutar los tests.
 
-try:  
+**Ejemplo:**
 
-     # Valida que todos los archivos estén presentes  
+```bash
+$ git push origin feature/creando-archivos
 
-     mediator.validate_dependencies()  
+[pre-push] Ejecutando linters y validaciones completas...
+[pre-push] Analizando Terraform en adapter/
+[pre-push] Todos los linters y pruebas pasaron.
+```
 
-     # Genera el archivo main.tf.json con dependencias  
+**Verificar que se tiene instaladas estas herramientas localmente. Puede ver cómo instalarlas en la sección `Herramientas usadas y cómo instalarlas`**
 
-     mediator.generate_main_tf()  
+## Herramientas usadas y cómo instalarlas
 
-except RuntimeError as e:  
+### 1. flake8 y Pytest:
 
-# Captura y muestra errores si falta algún archivo  
+- flake8: Linter para código python, que ayuda a la calidad y estilo del código.
+- pytest: Framework para realizar pruebas unitarias en python.
 
-print(e) 
+Ambas herramientas ya están listadas en el archivo `requirements.txt` y que se instalan automáticamente al ejecutar el script `setup.sh`
 
-```  
+### 2. ShellCheck
 
- 
+Este es un linter para scripts shell (bash, etc) que detecta errores y malas prácticas.
 
- 
+**Instalación**
 
-Ejercicio práctico 
+Dirigirse a `home/` (`cd ~`)
 
-Cree el archivo mediator.py dentro de el patrón Mediator, con las configuraciones necesarias. 
-Luego me fui a mi ruta cd Actividad_22/Mediator 
-Luego ejecute: python3 main.py 
-Me genera un archivo main.tf.json con recursos: network, server y firewall, todos bajo el proveedor null_resource.  
+Ejecutar:
 
- 
+```bash
+sudo apt update
+sudo apt install shellcheck
+```
 
-Picture  
+### 3. TFLint
 
- 
+Es una herramienta para analizar código terraform, para detectar problemas o malas prácticas
 
-``` 
-{ 
+**Instalación**
 
-  "terraform": { 
-    "required_providers": {} 
-  }, 
-  "resource": { 
-    "null_resource": { 
-      "network": { 
-        "triggers": { 
-          "name": "hello-world-network" 
-        } 
-      }, 
-      "server": { 
-        "triggers": { 
-          "name": "hello-world-server", 
-          "depends_on": "null_resource.network" 
-        } 
-      }, 
-      "firewall": { 
-        "triggers": { 
-          "port": "22", 
-          "depends_on": "null_resource.server" 
-        } 
-      } 
-    } 
-  } 
-}
- ``` 
+Dirigirse a `home/` (`cd ~`)
 
- 
-### Diferencias entre Mediator y Facade
-#### Propósito: 
-El patrón Mediator se enfoca en coordinar la comunicación entre varios objetos o módulos. Es especialmente útil cuando esos componentes necesitan interactuar entre sí de forma compleja o cambiante. En cambio, el patrón Facade busca simplificar el acceso a un sistema complicado, pues nos ofrece una interfaz más sencilla para trabajar con múltiples clases o funcionalidades. 
-#### Nivel de control: 
- El Mediator tiene un control alto sobre cómo los objetos interactúan entre sí. Centraliza toda la lógica de interacción en un solo lugar. 
- La Facade, en cambio, no controla tanto; su función es simplemente agrupar y ordenar llamadas a otros subsistemas sin alterar su lógica interna. 
+Ejecutar:
 
-#### Acoplamiento: 
- El Mediator reduce el acoplamiento entre componentes, ya que evita que los objetos se comuniquen directamente. La Facade sí mantiene el acoplamiento con los subsistemas, pero lo hace de forma más ordenada y lo oculta tras una interfaz sencilla. 
+```bash
+curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+```
 
-#### Flujo de interacción: 
- Con Mediator, el flujo de comunicación es más dinámicoy puede variar según la situación, porque está diseñado para coordinar múltiples partes. 
- En el caso de Facade, el flujo suele ser más lineal y directo: se llama a un método de la fachada y esta se encarga de ejecutar acciones en orden. 
+### 4. JQ
 
-Ejemplo común: 
- Un buen ejemplo del uso de Mediator sería un sistema de chat o de eventos, donde muchos componentes necesitan coordinarse sin depender unos de otros. 
- Un ejemplo típico de Facade sería una API que ofrece funciones sencillas para acceder a una biblioteca compleja, como por ejemplo una que se encargue de procesar imágenes o acceder a servicios en la nube. 
+Es una herramienta para procesar y manipular JSONs desde nuestra línea de comandos.
 
+**Instalación**
 
-###  Ejercicios adicionales 
+Dirigirse a `home/` (`cd ~`)
 
-#### 6. Diseña un flujo de trabajo de Git (ramas, etiquetas, pull request) adecuado para ambos modelos, destacando diferencias en la gestión de versiones compartidas. 
+Ejecutar:
 
-####  Mono-repositorio: 
+```bash
+sudo apt update
+sudo apt install jq
+```
 
-Flujo: 
+## Scripts
 
-main → estable, producción. 
-develop → integración de nuevas características. 
-feature/ → ramas para nuevas funciones. 
-release/ → preparaciones de lanzamiento. 
-hotfix/ → correcciones urgentes. 
+### 1. `lint_all.sh`
 
-Gestión de versiones: 
+Este script ejecuta todos los linters disponibles en el proyecto para archivos importantes (`.py`, `.tf` y `.tf`). Además, guarda el resultado en el archivo `lint.log` en `logs/`. Inclusive crea la carpeta `logs/` si es que no existe. 
 
-Etiquetas aplicadas en main para identificar versiones globales del repositorio (v1.2.0). 
-Coordinación fuerte entre módulos (versiones sincronizadas). 
+El objetivo de este script es detectar errores comunes y malas prácticas antes de que el código llegue al controlados de versiones. 
 
-#### Multi-repositorio: 
+Ejecuta:
 
-Flujo por repositorio (por módulo): 
+- `flake8` sobre todos los archivos python del proyecto.
+    - Analiza desde la raiz y sigue por los subdirectorios.
+    - Detecta errores de sintaxis, variables no utilizadas, etc.
+    - Toda la salida se redirigide y guarda en el log.
+- `shellcheck` sobre todos los archivos bash, excluyendo la carpeta del entorno virtual, `venv/`.
+    - Busca scripts `.sh` en el proyecto.
+    - Para cada archivo muestra el nombre del script y el análisis realizado.
+    - Informa malas prácticas, variables sin comillas, etc.
+- `tflint` en cada carpeta que contenga archivos terraform (`.tf`).
+    - Busca todos los archivos `.tf` en todo el proyecto y ejecuta tflint para cada caso.
+    - Detecta problemas como recursos mal definidos, variables sin usar, sintaxis malos, etc.
 
-main → rama estable del módulo. 
-feature/ → cambios individuales. 
-Pull Request → revisión y merge en main. 
-Etiquetas (v1.0.1, v1.1.0, etc.) por módulo. 
+**Uso:**
 
-Gestión de versiones: 
-Cada módulo tiene su propio ciclo de versiones. Mayor independencia, menor coordinación global. 
+```bash
+bash scripts/lint_all.sh
+```
 
- 
- ## 7. Justifica el uso de versionado semántico en módulos Terraform. ¿Qué consecuencias podría tener omitirlo? 
+**Verificar que se tiene instaladas estas herramientas localmente. Puede ver cómo instalarlas en la sección `Herramientas usadas y cómo instalarlas`**
 
-El versionado semántico (MAJOR.MINOR.PATCH) permite: 
+### 2. `validate_adapter.sh`
 
-Claridad para consumidores del módulo, compatibilidad garantizada cuando solo cambian versiones MINOR o PATCH, automatización de upgrades seguros (con constraints como ~> 1.2.0). 
+Este script valida la infraestructura en el directorio `adapter/`, usando herramientas nativas de terraform. También, guarda el resultado en el archivo `validate_adapter.log`, dentro de la carpeta `logs/`. Inclusive crea la carpeta `logs/` si es que no existe.
 
-Consecuencias de omitirlo: 
-Usuarios no sabrán si una actualización rompe compatibilidad. Ser{a mas difícil la conservación en proyectos grandes. Aumento de errores en CI/CD y en despliegues automatizados. Dificultad para auditar cambios entre versiones.  
+El objetivo es asegurar que los archivos terraform dentro de `adapter/` estén bien formateadas y sean validas sintácticamente.
 
-## 8. Política de gestión de lanzamientos para un registro privado de módulos 
+Ejecuta:
 
-La política de versiones sigue el esquema semántico MAJOR.MINOR.PATCH, con normas claras y una cadencia establecida para cada tipo de versión: 
+- `terraform fmt -check` para verificar que los archivos terraform estén correctamente formateados.
+    - No aplica cambios, solamente verifica si el formato es correcto.
+    - Si hay errores, se registran en el log.
+- `terraform validate` para verificar que los archivos `.tf` sean válidos según el punto de vista de terraform .
+    - Revisa errores, como recursos mal definidos, sintaxis inválidas, etc.
+    - La validación se realiza directamente desde el directorio `adapter/`.
 
-Versión PATCH: Se utiliza para correcciones de errores que no afectan la interfaz pública ni introducen nuevas funcionalidades. 
-Ejemplo: v1.2.1 
-Cadencia: Bajo demanda, cada vez que se corrige un bug. 
-Versión MINOR: Se libera cuando se agregan nuevas funcionalidades que son compatibles con versiones anteriores. 
-Ejemplo: v1.3.0 
-Cadencia: Cada 2 a 4 semanas. 
-Versión MAJOR: Se utiliza para cambios que rompen compatibilidad con versiones anteriores, como cambios en nombres de recursos o variables requeridas. 
-Ejemplo: v2.0.0 
-Cadencia: Cada 3 a 6 meses. 
-Normas adicionales: 
-Cada Pull Request (PR) significativo debe actualizar el archivo CHANGELOG.md. 
-Todas las versiones, sin excepción  deben ser verificadas en entornos de staging antes de aplicar el tag correspondiente. 
+**Uso:**
 
+```bash
+bash scripts/validate_adapter.sh
+```
 
-## 9. Ventajas y desventajas de publicar módulos en Terraform Cloud Registry frente a un repositorio Git interno 
-
-Terraform Cloud Registry ofrece accesibilidad global, integración con búsqueda, y documentación automática. Es lo más recomendado  cuando se quiere compartir módulos públicamente o entre múltiples organizaciones. Pero, depende de un servicio externo y requiere cuentas en Terraform Cloud ( versión Enterprise). La autenticación tiene limitaciones y el control del entorno es menor. 
-Repositorio Git Interno, por otro lado, da un control total sobre la infraestructura, autenticación, y procesos de CI/CD. Se usa más  para entornos corporativos con políticas estrictas de seguridad. Necesita más  mantenimiento e infraestructura adicional para manejar el versionado, autenticación, y visibilidad, pero puede abstenerse completamente de internet. 
-
-10. Implementación de autenticación y control de acceso para un registro privado de módulos en un entorno corporativo 
-
-Mecanismo propuesto: 
- Usar un registro privado como Artifactory, Harbor, o un backend personalizado sobre S3, GCS, o almacenamiento local para servir módulos de Terraform de forma segura. 
-
-Infraestructura: 
-
-Exponer el frontend del registro a través de un proxy autenticado. 
-Usar un backend de almacenamiento como S3, GCS, o filesystem local accesible por terraform init. 
-
-Autenticación y autorización: 
-
-Integración con sistemas corporativos como LDAP, Active Directory, OAuth2 o SAML. 
-
-Definición de roles y permisos según grupo: 
-
-Admin: puede publicar y borrar módulos. 
-
-DevOps: puede consumir módulos. 
-
-QA: tiene solo acceso de lectura. 
-
-Medidas de seguridad adicionales: 
-
-Encriptación y acceso obligatorio vía HTTPS. 
-
-Escaneo automático de archivos subidos en busca de vulnerabilidades. 
-
-Auditoría y registro de accesos. 
-
-Uso de tokens personales o temporales para autenticar (bearer tokens). 
-
-Implementación práctica: 
-
-Configurar Artifactory (u otro sistema) con soporte para Terraform. 
-
-Definir grupos y roles con permisos adecuados. 
-
-Publicar módulos usando terraform publish o mediante peticiones curl. 
-
-Configurar las credenciales en el archivo ~/.terraformrc para que Terraform pueda autenticar de forma segura.  
+**Verificar que se tiene instaladas estas herramientas localmente. Puede ver cómo instalarlas en la sección `Herramientas usadas y cómo instalarlas`**
