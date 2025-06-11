@@ -23,7 +23,7 @@ Este tipo de script se usa generalmente para: generar archivos .json de forma au
 
 Este archivo automatiza la lectura de datos generados por un script Python (adapter_output.py) y transforma dicha información en un archivo .tfvars legible por Terraform. También registra logs y exporta variables de entorno para su posible reutilización. Realiza las siguientes operaciones:
 
--  Verificación de dependencias
+- Verificación de dependencias
 - Verificación de archivo de entrada
 - Ejecución del script Python y parseo JSON
 - Creación de archivo Terraform .tfvars
