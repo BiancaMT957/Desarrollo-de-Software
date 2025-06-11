@@ -1,4 +1,4 @@
-##Archivo adapter_output.py
+## Archivo adapter_output.py
 Este script tiene como objetivo generar una salida JSON estática que puede ser utilizada por otros componentes del sistema. Realiza las siguientes operaciones:
 
 - Importa el módulo estándar json de Python, que permite trabajar con datos en formato JSON.
@@ -19,7 +19,7 @@ Este tipo de script se usa generalmente para: generar archivos .json de forma au
 
 
 
-##Archivo adapter_parse.sh
+## Archivo adapter_parse.sh
 
 Este archivo automatiza la lectura de datos generados por un script Python (adapter_output.py) y transforma dicha información en un archivo .tfvars legible por Terraform. También registra logs y exporta variables de entorno para su posible reutilización. Realiza las siguientes operaciones:
 
@@ -54,7 +54,7 @@ Este script es bastante útil para automatizar flujos donde:
 
 
 
-##Archivo main.tf
+## Archivo main.tf
 
 
 Este archivo es importante porque:
