@@ -1,92 +1,67 @@
-## Archivo `adapter_output.py`
-Este script tiene como objetivo generar una salida `JSON` estática que puede ser utilizada por otros componentes del sistema. Realiza las siguientes operaciones:
+## Flujo de los mensajes entre Clientes y  Mediator
 
-- Importa el módulo estándar `json` de `Python`, que permite trabajar con datos en formato `JSON`.
+1. **cliente_a/send_message.sh** genera `cliente_a/message_a.txt` con el mensaje en formato JSON.
+2. El Mediator (por medio de los scripts `mediator_read.sh` y `mediator_forward.sh`) toma ese archivo y lo copia a `mediator/message_b.txt`.
+3. **cliente_b/recibir_message.sh** lee el archivo `mediator/message_b.txt` y lo imprime en la terminal.
 
-- Utiliza la función `json.dumps()` para convertir un diccionario de `Python` en una cadena `JSON` válida.
+#### Diagrama
+cliente_a/send_message.sh
+        │
+        ▼
+cliente_a/message_a.txt
+        │
+        ▼
+cp cliente_a/message_a.txt mediator/tmp_message.txt
+        │
+        ▼
+mediator/mediator_forward.sh
+        │
+        ▼
+mediator/message_b.txt
+        │
+        ▼
+cliente_b/recibir_message.sh
 
-- Imprime el resultado en la salida estándar, lo que permite redirigirlo a un archivo (> adapter_output.json) o capturarlo desde otros scripts.
+---
 
-Este script se puede ejecutar primero con : 
-
-```
-python3 adapter_output.py
-```
-
-
-Esto imprimirá:
-
-
-```
-{"status": "OK", "code": 200}
-```
-
-
-Este tipo de script se usa generalmente para: generar archivos `json` de forma automática dentro de flujos como Terraform (local-exec), pipelines CI/CD, o procesos de prueba.
-
-
-
-## Archivo adapter_parse.sh
-
-Este archivo automatiza la lectura de datos generados por un script Python `adapter_output.py` y transforma dicha información en un archivo `.tfvars` legible por Terraform. También registra logs y exporta variables de entorno para su posible reutilización. Realiza las siguientes operaciones:
-
-- Verificación de dependencias
-- Verificación de archivo de entrada
-- Ejecución del script Python y parseo JSON
-- Creación de archivo Terraform .tfvars
-- Registro en log
-- Exportación de variables de entorno
-
-Se puede ejecutar primero dando permisos:
-
-```
-chmod +x adapter/adapter_parse.sh
-```
-
-después : 
-
-```
-./adapter_parse.sh
-```
-
-
-Este script es bastante útil para automatizar flujos donde: 
-
-- Se generan valores dinámicos desde scripts.
-
-- Esos valores deben ser leídos por Terraform.
-
-- Se quieren reutilizar variables en otras partes del sistema.
-
-
-
-
-## Archivo main.tf
-
-
-Este archivo es importante porque:
-
-- Se encarga de generar archivos locales con datos incluidos( `adapter/.terraform.lock.hcl`, `adapter/.terraform/`, `adapter/adapter_output.json`, `adapter/terraform.tfstate` ), que luego podemos utilizar en el proyecto.
-- Convierte información o estados previos en un archivo para que luego se consuma.
-- Automatiza tareas externas como generar configuraciones, hacer parsing, ejecutar validaciones.
-
-Este script se puede ejecutar primero haciendo `terraform init`, luego `terraform plan` y después `terraform apply`.
-
-
-Lastimosamente no es portable: si otra persona usa Windows o no tiene instalado `python3` , fallará.
-
-Si se desea instalar `python3` desde Ubuntu puedes ejecutar: 
-
+### Ejemplo de prueba aislada
 
 ```bash
-sudo apt update
-sudo apt install python3 python3-pip -y
-```
+# Se ejecuta en cliente_a/
+bash send_messageejecuta.sh "Hola Mediator"
 
-y verificas mediante:
+# Se mueve el mensaje al Mediator desde la raiz del proyecto
 
-```
-python3 --versión
-```
+bash cp cliente_a/message_a.txt mediator/tmp_message.txt
 
+# Desde Mediator/  se ejecuta manualmente el script de mediator
+bash mediator_forward.sh
 
+# Luego se  ejecuta en cliente_b/
+bash recibir_message.sh
+
+Ejemplo de prueba:
+
+### Ejemplo de output
+
+```bash
+# En cliente_a
+bash send_message.sh "Hola Mediators"
+[cliente_a] Mensaje escrito en message_a.txt:
+{"msg": "Hola Mediators", "timestamp": "2025-06-13T21:53:56-04:00"}
+
+# Desde la raíz del proyecto
+cp cliente_a/message_a.txt mediator/tmp_message.txt
+
+# En mediator
+bash mediator/mediator_forward.sh
+[Mediator] Reenviando el mensaje a mediator/message_b.txt...
+[Mediator] Mensaje reenviado exitosamente.
+
+# Contenido en mediator/message_b.txt:
+{"msg": "Hola Mediators", "timestamp": "2025-06-13T21:53:56-04:00"}
+
+# En cliente_b
+bash receive_message.sh
+[cliente_b] Mensaje recibido de ../mediator/message_b.txt:
+{"msg": "Hola Mediators", "timestamp": "2025-06-13T21:53:56-04:00"}
