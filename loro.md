@@ -1,7 +1,9 @@
 # En cliente_b
-bash receive_message.sh
+```
+receive_message.sh
 [cliente_b] Mensaje recibido de ../mediator/message_b.txt:
 {"msg": "Hola Mediators", "timestamp": "2025-06-13T21:53:56-04:00"}
+```
 
 ###  Cambio al script  `adapter_parse.sh`
 
@@ -10,9 +12,14 @@ Ahora puede leer variables terraform.tfvars y registra errores en el archivo ada
 
 **Uso:**
 
-chmod +x adapter_parse.sh
 
+```
+chmod +x adapter_parse.sh
+```
+
+```
 ./parse.sh
+```
 
 ####  Salida: 
 
