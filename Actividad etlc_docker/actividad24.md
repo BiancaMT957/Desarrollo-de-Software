@@ -1,3 +1,5 @@
+
+
 ``` 
 bianca007@MSI:/mnt/c/Users/Bianca/Documents/DS/2025-1$ cd Proyecto_etl_docker_airflow bianca007@MSI:/mnt/c/Users/Bianca/Documents/DS/2025-1/Proyecto_etl_docker_airflow$ docker --version  
 Docker version 27.5.1, build 27.5.1-0ubuntu3~24.04.2 
@@ -15,10 +17,13 @@ Sending build context to Docker daemon 7.168kB Step 1/6 : FROM python:3.11-slim 
 
  
 
-Picture 1
 
-Picture 2
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/1.png)
 
+
+
+
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/2.png)
 
 
 ``` 
@@ -28,8 +33,7 @@ $ sudo docker-compose up –d
 ```
 
 
-Picture 3
-
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/3.png)
  
 ``` 
 bianca007@MSI:/mnt/c/Users/Bianca/Documents/DS/2025-1/Proyecto_etl_docker_airflow 
@@ -39,7 +43,7 @@ $sudo docker-compose ps
 
  
 
-Picture 
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/4.png)
 
  
 ``` 
@@ -49,10 +53,12 @@ $ sudo docker-compose logs -f airflow-webserver
 ```
 
 
-Picture 
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/5.png)
 
-Picture 
 
+
+
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/6.png)
 
 
 ``` 
@@ -63,8 +69,8 @@ $ sudo docker-compose logs -f airflow-scheduler
 
 
 
-Picture 
 
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/7.png)
 
 
 ``` 
@@ -73,20 +79,52 @@ bianca007@MSI:/mnt/c/Users/Bianca/Documents/DS/2025-1/Proyecto_etl_docker_airflo
 
 
 
-Picture 
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/8.png)
 
-Picture 
 
-Picture 
 
-Picture 
 
-picturer
 
-picture
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/9.png)
+
+
+
+
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/10.png)
+
+
+
+
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/11.png)
+
+
+
+
+
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/12.png)
 
 
 Todo está bien hecho. 
+
+
+
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/13.png)
+
+
+
+
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/14.png)
+
+
+
+
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/15.png)
+
+
+
+
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/16.png)
+
 
 
 ```
@@ -96,7 +134,11 @@ bianca007@MSI:/mnt/c/Users/Bianca/Documents/DS/2025-1/Proyecto_etl_docker_airflo
 
 Puedo ver el DAG etl_pipeline 
 
-Picture 
+
+
+![ui](https://github.com/BiancaMT957/Desarrollo-de-Software/blob/main/Actividad%20etlc_docker/img/13.png)
+
+
 
 
 ```
@@ -116,16 +158,21 @@ bianca007@MSI:/mnt/c/Users/Bianca/Documents/DS/2025-1/Proyecto_etl_docker_airflo
 $ sudo docker-compose stop  
 Stopping proyecto_etl_docker_airflow_airflow-webserver_1 ... done Stopping proyecto_etl_docker_airflow_airflow-scheduler_1 ... done Stopping proyecto_etl_docker_airflow_etl-app_1 ... done Stopping proyecto_etl_docker_airflow_postgres_1 ... done 
 ```
+
+
  
 ```
 bianca007@MSI:/mnt/c/Users/Bianca/Documents/DS/2025-1/Proyecto_etl_docker_airflow 
 
 $sudo docker-compose down Removing proyecto_etl_docker_airflow_airflow-webserver_1 ... done Removing proyecto_etl_docker_airflow_airflow-scheduler_1 ... done Removing proyecto_etl_docker_airflow_airflow-init_1 ... done Removing proyecto_etl_docker_airflow_etl-app_1 ... done Removing proyecto_etl_docker_airflow_postgres_1 ... done Removing network proyecto_etl_docker_airflow_default 
 ```
+
+
  
 ```
 bianca007@MSI:/mnt/c/Users/Bianca/Documents/DS/2025-1/Proyecto_etl_docker_airflow$ sudo docker-compose down -v Removing network proyecto_etl_docker_airflow_default WARNING: Network proyecto_etl_docker_airflow_default not found. Removing volume proyecto_etl_docker_airflow_postgres_data 
 ```
+
 
 
 
