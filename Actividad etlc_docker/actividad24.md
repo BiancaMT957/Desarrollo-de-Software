@@ -15,9 +15,9 @@ Sending build context to Docker daemon 7.168kB Step 1/6 : FROM python:3.11-slim 
 
  
 
-Picture 
+Picture 1
 
-Picture 
+Picture 2
 
 
 
@@ -28,7 +28,7 @@ $ sudo docker-compose up –d
 ```
 
 
-Picture 
+Picture 3
 
  
 ``` 
